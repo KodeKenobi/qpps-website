@@ -194,7 +194,11 @@ const BiographyModal = ({
 					</div>
 					<Button
 						onClick={() => {
-							id < total ? setIndex(id + 1) : closeBiography();
+							if (id < total) {
+								setIndex(id + 1);
+							} else {
+								closeBiography();
+							}
 						}}
 						label={id < total ? "Next" : "Close"}
 						color="white"
