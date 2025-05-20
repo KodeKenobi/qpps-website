@@ -7,7 +7,7 @@ interface OpenBiographyStore {
 }
 
 const useOpenBiographyStore = create<OpenBiographyStore>((set) => ({
-  index: 0,
+  index: null,
   setIndex: (index: number) => set({ index }),
   closeBiography: () => set({ index: null }),
 }));

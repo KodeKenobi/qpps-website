@@ -153,7 +153,7 @@ const BiographyModal = ({
 		<div
 			className={`${
 				index === id ? "flex" : "hidden"
-			} fixed z-40 top-1/2 left-1/2 w-3/4 h-8/9 -translate-x-1/2 -translate-y-1/2 bg-slate overflow-y-auto`}
+			} flex fixed z-40 top-1/2 left-1/2 w-3/4 h-8/9 -translate-x-1/2 -translate-y-1/2 bg-slate overflow-y-auto transition-all duration-500 ease-in-out`}
 		>
 			<article className="relative w-full h-full text-white flex flex-col">
 				<header className="p-14 pl-32 pb-16">
@@ -164,7 +164,7 @@ const BiographyModal = ({
 						layout="left"
 					/>
 				</header>
-				<div className="pl-32 pr-28">
+				<div className={`pl-32 pr-28`}>
 					<h4 className="font-serif text-6xl">{data.name}</h4>
 					<div className="flex items-center justify-between">
 						<p className="font-light italic text-xl mt-3">{data.title}</p>

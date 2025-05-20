@@ -3,7 +3,7 @@ import type { Leader } from "@/components/leaadership/LeaderElement";
 import AliAkayAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_ali_akay.webp";
 import PlamenDokovAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_plamen_dokov.webp";
 import ShaneBoltonAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_shane_bolton.webp";
-import ApproachBackground from "@/assets/svgs/3_investment-approach/carrhae-capital-section3-investment-approach-image-background.svg";
+import LeadershipBackground from "@/assets/svgs/4_leadership/carrhae-capital-section4-leadership-image-background.svg";
 import LeaderElement from "@/components/leaadership/LeaderElement";
 
 const leaders: Leader[] = [
@@ -51,12 +51,12 @@ export default function LeadershipSection() {
 		<section className="relative text-navy pr-20">
 			<div className="absolute bottom-0 right-0 w-20 z-0 h-72 bg-navy"></div>
 			<div className="relative overflow-hidden w-full z-10 bg-alt-gray pt-32">
-				<div className="absolute bottom-0 left-0 w-full h-2/3 z-0">
+				<div className="absolute bottom-0 left-0 w-full h-3/4 z-0">
 					<Image
-						src={ApproachBackground}
+						src={LeadershipBackground}
 						alt="Background"
 						fill
-						className="object-cover"
+						className="object-contain object-bottom-left opacity-50"
 					/>
 				</div>
 				<div className="pl-24 pr-28">
