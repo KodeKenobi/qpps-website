@@ -1,9 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import CImage from "@/assets/svgs/2_about/carrhae-capital-section2-about-background-c-cropped.svg";
+import { HandleSectionInView } from "@/utils/handleSectionInView";
 
 export default function AboutSection() {
+	const id = "about";
+	const [ref] = HandleSectionInView(id);
+
 	return (
-		<section className="relative w-screen overflow-x-clip pt-20 pl-20 text-navy">
+		<section
+			ref={ref}
+			id={id}
+			className="relative w-screen overflow-x-clip pt-20 pl-20 text-navy"
+		>
 			<Image src={CImage} alt="C" className="absolute top-20 right-0 z-0" />
 			<div className="w-full px-24 pt-44 pb-44 bg-gray/25">
 				<h2 className="font-sans text-gold uppercase font-semibold tracking-[0.25em]">

@@ -1,10 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import HeroBackground from "@/assets/images/1_landing/carrhae_capital_landing_image.webp";
 import LandingArrow from "@/assets/svgs/1_landing/LandingArrow";
+import { HandleSectionInView } from "@/utils/handleSectionInView";
 
 export default function HeroSection() {
+	const id = "hero";
+	const [ref] = HandleSectionInView(id);
+
 	return (
-		<section className="flex flex-col min-h-screen overflow-x-clip relative justify-center bg-slate text-white pt-[119px]">
+		<section
+			ref={ref}
+			id={id}
+			className="flex flex-col min-h-screen overflow-x-clip relative justify-center bg-slate text-white pt-[200px]"
+		>
 			<Image
 				src={HeroBackground}
 				alt="Background"

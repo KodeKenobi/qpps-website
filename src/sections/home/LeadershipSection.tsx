@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import type { Leader } from "@/components/leaadership/LeaderElement";
 import AliAkayAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_ali_akay.webp";
@@ -5,6 +7,7 @@ import PlamenDokovAvatar from "@/assets/images/4_leadership/carrhae_capital_sect
 import ShaneBoltonAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_shane_bolton.webp";
 import LeadershipBackground from "@/assets/svgs/4_leadership/carrhae-capital-section4-leadership-image-background.svg";
 import LeaderElement from "@/components/leaadership/LeaderElement";
+import { HandleSectionInView } from "@/utils/handleSectionInView";
 
 const leaders: Leader[] = [
 	{
@@ -47,8 +50,11 @@ const leaders: Leader[] = [
 ];
 
 export default function LeadershipSection() {
+	const id = "leadership";
+	const [ref] = HandleSectionInView(id);
+
 	return (
-		<section className="relative text-navy pr-20">
+		<section ref={ref} id={id} className="relative text-navy pr-20">
 			<div className="absolute bottom-0 right-0 w-20 z-0 h-72 bg-navy"></div>
 			<div className="relative overflow-hidden w-full z-10 bg-alt-gray pt-32">
 				<div className="absolute bottom-0 left-0 w-full h-3/4 z-0">

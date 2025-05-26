@@ -8,6 +8,7 @@ import useOpenLocationStore from "@/store/useOpenLocationStore";
 import { AnimatePresence } from "motion/react";
 import LocationElement from "@/components/contact/LocationElement";
 import ContactMap from "@/components/contact/ContactMap";
+import { HandleSectionInView } from "@/utils/handleSectionInView";
 
 export interface Location {
 	city: string;
@@ -36,9 +37,16 @@ const locations: Location[] = [
 ];
 
 export default function ContactSection() {
+	const id = "contact";
+	const [ref] = HandleSectionInView(id);
 	const { index, setIndex } = useOpenLocationStore();
+
 	return (
-		<section id="contact" className="relative bg-navy pt-20 text-white">
+		<section
+			ref={ref}
+			id="contact"
+			className="relative bg-navy pt-20 text-white"
+		>
 			<div className="w-full pr-[89px] pl-24 pt-[58px] relative z-0">
 				<div className="mx-auto w-full relative z-10">
 					<h2 className="font-sans text-gold uppercase font-semibold tracking-[0.25em]">

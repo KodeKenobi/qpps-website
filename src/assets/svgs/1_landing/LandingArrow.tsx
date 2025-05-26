@@ -1,3 +1,5 @@
+import { handleScrollTo } from "@/utils/handleScrollTo";
+
 export default function LandingArrow() {
 	return (
 		<svg
@@ -7,6 +9,7 @@ export default function LandingArrow() {
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			className="group cursor-pointer"
+			onMouseDown={() => handleScrollTo("about")}
 		>
 			<path
 				d="M28 39.9185C12.5252 43.5368 1 57.4224 1 74C1 93.3299 16.67 109 36 109C55.33 109 71 93.3299 71 74C71 57.4224 59.4748 43.5368 44 39.9185"

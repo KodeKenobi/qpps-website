@@ -9,10 +9,18 @@ import ApproachBackground from "@/assets/svgs/3_investment-approach/carrhae-capi
 import ReadMoreArrow from "@/assets/svgs/3_investment-approach/ReadMoreArrow";
 import { AnimatePresence, motion } from "motion/react";
 import CImage from "@/assets/svgs/4_leadership/carrhae-capital-section5-c.svg";
+import { HandleSectionInView } from "@/utils/handleSectionInView";
 
 export default function ApproachSection() {
+	const id = "approach";
+	const [ref] = HandleSectionInView(id);
+
 	return (
-		<section className="relative min-h-screen pt-16 mt-28 px-20 text-navy">
+		<section
+			ref={ref}
+			id={id}
+			className="relative min-h-screen pt-16 mt-28 px-20 text-navy"
+		>
 			<div className="mx-auto w-full relative z-10 px-24">
 				<h2 className="font-sans text-gold uppercase font-semibold tracking-[0.25em]">
 					INVESTMENT APPROACH
