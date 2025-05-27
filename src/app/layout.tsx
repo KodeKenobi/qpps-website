@@ -3,6 +3,9 @@ import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/navigations/Header";
 import Footer from "@/components/navigations/Footer";
+import CookiesModal from "@/components/modals/CookiesModal";
+import { cookies } from "next/headers";
+import { CookiesProvider } from "next-client-cookies/server";
 
 const AlbertSans = Albert_Sans({
 	variable: "--font-albert-sans",
@@ -15,11 +18,14 @@ export const metadata: Metadata = {
 		"Precision in Liquid Emerging Markets, We combine localised research and structured portfolio management to capture the persistent dispersion in emerging markets.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const cookieStore = await cookies();
+	const allCookies = await cookieStore.getAll();
+
 	return (
 		<html lang="en">
 			<head>
@@ -30,11 +36,14 @@ export default function RootLayout({
 					type="text/css"
 				></link>
 			</head>
-			<body className={`${AlbertSans.variable} antialiased relative`}>
-				<Header />
-				{children}
-				<Footer />
-			</body>
+			<CookiesProvider>
+				<body className={`${AlbertSans.variable} antialiased relative`}>
+					<CookiesModal cookiesValues={allCookies} />
+					<Header />
+					{children}
+					<Footer />
+				</body>
+			</CookiesProvider>
 		</html>
 	);
 }
