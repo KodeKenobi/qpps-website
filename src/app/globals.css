@@ -1,28 +1,70 @@
 @import "tailwindcss";
 
 :root {
-	--font-ivyOra-serif: "IvyOra Text Reg", serif;
-	--font-ivyOra-italic: "IvyOra Text It", serif;
+    --font-ivyOra-serif: "IvyOra Text Reg", serif;
+    --font-ivyOra-italic: "IvyOra Text It", serif;
 }
 
 @theme inline {
-	/* MAIN - COLOR */
-	--color-navy: #282a3c;
-	--color-gold: #d5a877;
-	--color-slate: #576f8a;
-	--color-gray: #bec8d4;
+    /* MAIN - COLOR */
+    --color-navy: #282a3c;
+    --color-gold: #d5a877;
+    --color-slate: #576f8a;
+    --color-gray: #bec8d4;
 
-	/* ALT - COLOR */
-	--color-alt-navy: #1d1e2f;
-	--color-alt-gold: #f2d0be;
-	--color-alt-gray: #eff1f4;
+    /* ALT - COLOR */
+    --color-alt-navy: #1d1e2f;
+    --color-alt-gold: #f2d0be;
+    --color-alt-gray: #eff1f4;
 
-	/* FONT */
-	--font-sans: var(--font-albert-sans);
-	--font-serif: var(--font-ivyOra-serif);
-	--font-serif-italic: var(--font-ivyOra-italic);
+    /* FONT */
+    --font-sans: var(--font-albert-sans);
+    --font-serif: var(--font-ivyOra-serif);
+    --font-serif-italic: var(--font-ivyOra-italic);
 }
 
 body {
-	font-family: var(--font-albert-sans);
+    font-family: var(--font-albert-sans);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #576f8a;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(87, 111, 138, 0.15);
+}
+
+strong {
+    @apply font-semibold;
+}
+
+.custom-table {
+    @apply text-base;
+}
+.custom-table tr td {
+    @apply p-4 border border-slate/20 align-top text-justify;
+}
+.custom-table thead {
+    @apply bg-slate/10;
+}
+.custom-table thead th {
+    @apply p-4 border border-slate/20;
+}
+
+.custom-table thead th:first-child {
+    @apply text-left;
+}
+
+.custom-table code {
+    @apply bg-gray/10 px-2 py-1 rounded-sm;
+}
+
+article ul,
+article ol {
+    @apply space-y-4;
 }

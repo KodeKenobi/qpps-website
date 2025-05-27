@@ -120,11 +120,12 @@ export default function ContactSection() {
 				</div>
 				<div className="py-16 flex items-center justify-end pr-12">
 					<div>
-						<Button
-							onClick={() => console.log("click")}
-							label={"Legal & Regulatory"}
-							color={"var(--color-white)"}
-						/>
+						<Link href={"/disclosures/legal-regulatory"}>
+							<Button
+								label={"Legal & Regulatory"}
+								color={"var(--color-white)"}
+							/>
+						</Link>
 					</div>
 				</div>
 			</div>

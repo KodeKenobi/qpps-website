@@ -6,7 +6,7 @@ export default function Button({
 	color,
 	layout = "right",
 }: {
-	onClick: () => void;
+	onClick?: () => void;
 	label: string;
 	color: string;
 	layout?: "left" | "right";
@@ -15,7 +15,7 @@ export default function Button({
 
 	return (
 		<button
-			onMouseDown={onClick}
+			onMouseDown={onClick ?? undefined}
 			className={`group flex items-center justify-start cursor-pointer relative ${
 				isRight ? "pr-4" : "pl-4"
 			}`}
