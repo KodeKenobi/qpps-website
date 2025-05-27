@@ -20,7 +20,7 @@ export const HandleSectionInView = (id: string,): [
     if (inView) {
       setPosition(id);
     }
-  }, [inView, setPosition]);
+  }, [inView, setPosition, id]);
 
 
   return [

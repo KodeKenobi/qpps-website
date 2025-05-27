@@ -153,7 +153,7 @@ const BiographyModal = ({
 		<div
 			className={`${
 				index === id ? "flex" : "hidden"
-			} flex fixed z-40 top-1/2 left-1/2 w-3/4 h-8/9 -translate-x-1/2 -translate-y-1/2 bg-slate overflow-y-auto transition-all duration-500 ease-in-out`}
+			} flex fixed z-40 top-[120px] left-1/2 w-3/4 h-4/5 -translate-x-1/2 bg-slate overflow-y-auto transition-all duration-500 ease-in-out`}
 		>
 			<article className="relative w-full h-full text-white flex flex-col">
 				<header className="p-14 pl-32 pb-16">
@@ -186,7 +186,8 @@ const BiographyModal = ({
 						{Array.from({ length: total + 1 }, (_, i) => (
 							<div
 								key={i}
-								className={`w-[6px] h-[6px] aspect-square rounded-full transition-all duration-300 ${
+								onMouseDown={() => setIndex(i)}
+								className={`w-[6px] h-[6px] aspect-square rounded-full transition-all duration-300 cursor-pointer ${
 									i === id ? "bg-gold" : "bg-gold/40"
 								}`}
 							></div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/navigations/Header";
+import Footer from "@/components/navigations/Footer";
 
 const AlbertSans = Albert_Sans({
 	variable: "--font-albert-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
 			<body className={`${AlbertSans.variable} antialiased relative`}>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

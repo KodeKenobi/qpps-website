@@ -105,6 +105,7 @@ const Card = ({
 			<Image
 				src={image}
 				alt={title}
+				quality={100}
 				className="absolute top-0 left-0 w-full h-full object-center z-0"
 			/>
 			<div className="w-3/4 max-h-3/4 relative z-20 text-center">
