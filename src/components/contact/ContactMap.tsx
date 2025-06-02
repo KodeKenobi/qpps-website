@@ -11,7 +11,7 @@ export default function ContactMap({}: { locations: Location[] }) {
 			viewBox="0 0 1117 667"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			className="h-auto object-contain absolute top-0 left-0 w-[100%]"
+			className="md:h-auto h-full object-contain absolute top-0 left-1/2 md:translate-x-0 -translate-x-1/2 md:left-0 w-auto md:w-[100%]"
 		>
 			<ContactMapMap />
 			<defs>

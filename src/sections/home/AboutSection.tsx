@@ -12,23 +12,23 @@ export default function AboutSection() {
 		<section
 			ref={ref}
 			id={id}
-			className="relative w-screen overflow-x-clip pt-20 pl-20 text-navy"
+			className="relative w-screen overflow-x-clip md:pt-20 md:pl-20 text-navy"
 		>
 			<Image src={CImage} alt="C" className="absolute top-20 right-0 z-0" />
-			<div className="w-full px-24 pt-44 pb-44 bg-gray/25">
-				<h2 className="font-sans text-gold uppercase font-semibold tracking-[0.25em]">
+			<div className="w-full px-8 md:px-12 lg:px-24 pt-44 pb-20 lg:pb-44 bg-gray/25">
+				<h2 className="font-sans text-gold uppercase md:text-left text-center md:text-base text-xs font-semibold tracking-[0.25em]">
 					About
 				</h2>
-				<h3 className="font-serif mt-8 text-7xl leading-24">
+				<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24">
 					<span className="font-serif-italic">Global</span> perspective. <br />
-					<div className="ml-32">
+					<div className="md:ml-32">
 						<span className="font-serif-italic ">Local</span> clarity.
 					</div>
 				</h3>
-				<div className="grid grid-cols-2 gap-16 -mt-12">
-					<div className="border-l-[0.5px] border-b-[0.5px] border-slate/50"></div>
-					<div className="pt-16">
-						<p className="text-xl">
+				<div className="lg:grid md:grid-cols-2 md:gap-16 md:-mt-12 mt-7">
+					<div className="lg:border-l-[0.5px] lg:border-b-[0.5px] border-slate/50"></div>
+					<div className="md:pt-16 md:border-l-[0.5px] lg:border-l-0 lg:border-b-0 md:border-b-[0.5px] border-slate/50 md:pl-8 md:pb-8 lg:pl-0 lg:pb-0">
+						<p className="text-lg md:text-left text-center md:font-normal font-light md:text-xl">
 							Carrhae is a London-based investment partnership specialising in
 							emerging market equity strategies.
 							<br />

@@ -19,19 +19,19 @@ export default function ApproachSection() {
 		<section
 			ref={ref}
 			id={id}
-			className="relative min-h-screen pt-16 mt-28 px-20 text-navy"
+			className="relative min-h-screen pt-20 md:pt-16 lg:mt-28 md:px-20 text-navy"
 		>
-			<div className="mx-auto w-full relative z-10 px-24">
-				<h2 className="font-sans text-gold uppercase font-semibold tracking-[0.25em]">
+			<div className="mx-auto w-full relative z-10 px-8 md:px-12 lg:px-24">
+				<h2 className="font-sans text-gold uppercase text-xs md:text-base text-center md:text-left font-semibold">
 					INVESTMENT APPROACH
 				</h2>
-				<h3 className="font-serif mt-8 text-7xl leading-24">
+				<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24">
 					<span className="font-serif-italic">Capturing</span> emerging
 					<br />
-					<div className="pl-32">market dispersion</div>
+					<div className="md:pl-32">market dispersion</div>
 				</h3>
 
-				<p className="pl-32 mt-16 text-xl">
+				<p className=" md:font-normal font-light md:text-left text-center mt-5 md:pl-32 md:mt-16 text-lg md:text-xl">
 					We leverage granular fundamental analysis, carried out by
 					on-the-ground research teams, to uncover latent risk-return asymmetry
 					within and across emerging market companies, sectors, and borders.
@@ -39,8 +39,8 @@ export default function ApproachSection() {
 					through cycles. Our unified process informs two distinct strategies.
 				</p>
 			</div>
-			<div className="w-full grid grid-cols-2 gap-7 mt-32 relative z-10 pb-1">
-				<div className="pt-[14%] relative z-20">
+			<div className="w-full grid md:grid-cols-2 md:px-0 px-8 gap-7 mt-12 md:mt-32 relative z-10 pb-1">
+				<div className="md:pt-[14%] relative z-20">
 					<Card title={"Long-Short"} image={Image1}>
 						<p>
 							Launched in December 2011 <br />
@@ -69,12 +69,12 @@ export default function ApproachSection() {
 							Concentrated, benchmark-agnostic investing
 							<br />
 							<br />
-							Diversified across 30 – 50 best ideas
+							Diversified across 30 - 50 best ideas
 						</p>
 					</Card>
 				</div>
-				<div className="absolute bottom-0 left-0 w-full h-1/2 z-0 bg-alt-gray" />
-				<div className="absolute bottom-0 left-0 -translate-x-full w-44 h-1/2 z-0 bg-alt-gray" />
+				<div className="absolute bottom-0 left-0 w-full h-1/3 md:h-1/2 z-0 bg-alt-gray" />
+				<div className="hidden md:block absolute bottom-0 left-0 -translate-x-full w-44 h-1/2 z-0 bg-alt-gray" />
 				<Image
 					src={CImage}
 					alt="C Image"
@@ -101,14 +101,14 @@ const Card = ({
 }) => {
 	const [open, setOpen] = useState<boolean>(false);
 	return (
-		<div className="w-full xl:aspect-square min-h-[515px] overflow-hidden relative pb-[84px] flex items-center justify-center text-white">
+		<div className="w-full xl:aspect-square min-h-[362px] md:min-h-[515px] overflow-hidden relative pb-[84px] flex items-center justify-center text-white">
 			<Image
 				src={image}
 				alt={title}
 				quality={100}
 				className="absolute top-0 left-0 w-full h-full object-center z-0"
 			/>
-			<div className="w-3/4 max-h-3/4 relative z-20 text-center">
+			<div className="w-full px-4 md:px-0 md:w-3/4 md:max-h-3/4 relative z-20 text-center">
 				<AnimatePresence mode="wait">
 					{open ? (
 						<motion.div
@@ -117,7 +117,7 @@ const Card = ({
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: 20 }}
 							transition={{ duration: 0.5, ease: "easeInOut" }}
-							className="text-xl"
+							className="md:text-xl text-base md:py-0 py-12"
 						>
 							{children}
 						</motion.div>
@@ -128,7 +128,7 @@ const Card = ({
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: 20 }}
 							transition={{ duration: 0.5, ease: "easeInOut" }}
-							className="font-serif text-6xl"
+							className="font-serif text-4xl md:text-6xl"
 						>
 							<h4>{title}</h4>
 						</motion.div>

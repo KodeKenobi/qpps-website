@@ -54,9 +54,9 @@ export default function LeadershipSection() {
 	const [ref] = HandleSectionInView(id);
 
 	return (
-		<section ref={ref} id={id} className="relative text-navy pr-20">
+		<section ref={ref} id={id} className="relative text-navy md:pr-20">
 			<div className="absolute bottom-0 right-0 w-20 z-0 h-72 bg-navy"></div>
-			<div className="relative overflow-hidden w-full z-10 bg-alt-gray pt-32">
+			<div className="relative overflow-hidden w-full z-10 bg-alt-gray pt-20 md:pt-32">
 				<div className="absolute bottom-0 left-0 w-full h-3/4 z-0">
 					<Image
 						src={LeadershipBackground}
@@ -65,18 +65,18 @@ export default function LeadershipSection() {
 						className="object-contain object-bottom-left opacity-50"
 					/>
 				</div>
-				<div className="pl-24 pr-28">
-					<h2 className="font-sans text-gold uppercase font-semibold text-right ml-auto w-fit tracking-[0.25em]">
+				<div className="px-8 md:pl-24 md:pr-28">
+					<h2 className="font-sans text-gold uppercase md:text-right text-center md:text-base text-xs font-semibold tracking-[0.25em]">
 						LEADERSHIP
 					</h2>
-					<h3 className="font-serif mt-8 text-7xl leading-24 text-left w-fit ml-auto">
+					<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-right text-center lg:leading-24">
 						<span className="font-serif-italic">Seasoned</span> emerging
 						<br />
-						<div className="ml-12">market leaders</div>
+						<div className="md:ml-12">market leaders</div>
 					</h3>
 				</div>
 
-				<div className="flex flex-col w-full relative">
+				<div className="flex flex-col w-full relative md:mt-0 mt-2">
 					{leaders.map((leader, index) => (
 						<LeaderElement
 							key={leader.name}

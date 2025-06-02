@@ -18,7 +18,7 @@ export default function LocationElement({
 			animate={{ opacity: 1, x: 0 }}
 			exit={{ opacity: 0, x: 20 }}
 			transition={{ duration: 0.5, ease: "easeInOut" }}
-			className={`max-w-2xs`}
+			className={`md:max-w-2xs max-w-[230px] text-lg md:text-xl md:text-left text-center mx-auto md:mx-0`}
 		>
 			<p className="font-medium italic">{data.title}</p>
 			<Link href={data.googleMapsUrl} target="_blank">

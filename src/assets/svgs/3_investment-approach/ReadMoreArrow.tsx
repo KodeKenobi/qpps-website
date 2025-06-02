@@ -1,4 +1,12 @@
-export default function ReadMoreArrow({ open }: { open: boolean }) {
+export default function ReadMoreArrow({
+	open,
+	className,
+	strokeColor = "#ffffff",
+}: {
+	open: boolean;
+	className?: string;
+	strokeColor?: string;
+}) {
 	return (
 		<svg
 			width="25"
@@ -6,6 +14,7 @@ export default function ReadMoreArrow({ open }: { open: boolean }) {
 			viewBox="0 0 25 49"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
+			className={className}
 		>
 			<circle
 				cx="12.5"
@@ -20,7 +29,7 @@ export default function ReadMoreArrow({ open }: { open: boolean }) {
 			/>
 			<path
 				d="M12.5 -1.09278e-07L12.5 38M12.5 38L15 35.7792M12.5 38L10 35.7792"
-				stroke="white"
+				stroke={strokeColor}
 				strokeWidth="0.5"
 				className={`${
 					open ? "-scale-y-100" : "scale-y-100"

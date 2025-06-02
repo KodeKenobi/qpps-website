@@ -45,20 +45,26 @@ export default function ContactSection() {
 		<section
 			ref={ref}
 			id="contact"
-			className="relative bg-navy pt-20 text-white"
+			className="relative bg-navy md:pt-20 text-white"
 		>
-			<div className="w-full pr-[89px] pl-24 pt-[58px] relative z-0">
-				<div className="mx-auto w-full relative z-10">
-					<h2 className="font-sans text-gold uppercase font-semibold tracking-[0.25em]">
+			<div className="w-full pt-16 md:w-[58%] lg:w-1/2 md:pl-24 md:pt-[58px] relative z-10">
+				<div className="mx-auto w-full relative z-10 md:px-0 px-8">
+					<h2 className="font-sans text-gold uppercase md:text-left text-center md:text-base text-xs font-semibold tracking-[0.25em]">
 						Contact
 					</h2>
-					<h3 className="font-serif mt-8 text-7xl leading-20 relative">
-						<div className="">Get in</div>
-						<div className="pl-26 font-serif-italic">touch</div>
-						<div className="absolute bottom-0 left-0 h-14 w-px bg-slate/25" />
+					<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24">
+						<div className="md:block inline">Get in</div>
+						<span className="md:hidden inline"> </span>
+						<div className="md:pl-26 font-serif-italic md:block inline">
+							touch
+						</div>
+						<div className="absolute hidden md:block bottom-0 left-0 h-14 w-px bg-slate/25" />
 					</h3>
 				</div>
-				<div className="border-l mx-auto w-full relative z-10 pl-26 pt-[73px] pb-16 border-b border-slate/25 text-xl">
+				<div className="min-w-full min-h-[406px] h-full relative md:hidden mt-8">
+					<ContactMap locations={locations} />
+				</div>
+				<div className="px-8 md:border-l mx-auto w-full relative z-10 md:pl-26 md:pt-[73px] border-slate/25 text-xl">
 					<div className="relative flex flex-col">
 						<AnimatePresence mode="wait">
 							{locations.map((location, id) => {
@@ -74,7 +80,7 @@ export default function ContactSection() {
 								}
 							})}
 						</AnimatePresence>
-						<div className="h-4 flex items-center gap-[6px] mt-7">
+						<div className="h-4 flex md:justify-start justify-center items-center gap-[6px] mt-7">
 							{Array.from({ length: locations.length }, (_, i) => (
 								<div
 									key={i}
@@ -86,8 +92,11 @@ export default function ContactSection() {
 							))}
 						</div>
 					</div>
-
-					<div className="mt-20 flex items-end justify-between text-xl">
+				</div>
+			</div>
+			<div className="w-full md:pl-24 md:pr-[86px] relative z-10">
+				<div className="w-full md:pt-20 md:pl-24 relative z-10 md:border-l md:border-b border-slate/25">
+					<div className="mt-12 md:pb-20 md:mt-0 flex items-center md:flex-row flex-col md:items-end md:justify-between text-lg md:text-xl">
 						<div className="w-fit">
 							<Link
 								href={"tel:+442032054850"}
@@ -104,7 +113,7 @@ export default function ContactSection() {
 								<span>ir@carrhaecap.com</span>
 							</Link>
 						</div>
-						<div className="pb-2">
+						<div className="md:mt-0 mt-9 md:pb-2">
 							<Link
 								href="https://www.linkedin.com/company/carrhae-capital/"
 								target="_blank"
@@ -118,18 +127,22 @@ export default function ContactSection() {
 						</div>
 					</div>
 				</div>
-				<div className="py-16 flex items-center justify-end pr-12">
-					<div>
-						<Link href={"/disclosures/legal-regulatory"}>
-							<Button
-								label={"Legal & Regulatory"}
-								color={"var(--color-white)"}
-							/>
-						</Link>
+			</div>
+			<div className="w-full md:mt-0 mt-12 md:pl-24 relative z-10">
+				<div className="w-full md:pr-[86px] md:pl-24 relative z-10">
+					<div className="py-7 md:border-t-0 border-t border-slate/50 md:py-16 flex items-center justify-center md:justify-end md:pr-12">
+						<div className="md:mr-0 mr-12">
+							<Link href={"/disclosures/legal-regulatory"}>
+								<Button
+									label={"Legal & Regulatory"}
+									color={"var(--color-white)"}
+								/>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div className="absolute top-20 right-0 w-[76%] h-[66%]">
+			<div className="hidden md:block absolute top-20 right-0 w-[76%] h-[66%]">
 				<div className="w-full h-full relative ">
 					<ContactMap locations={locations} />
 				</div>
