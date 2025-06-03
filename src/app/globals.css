@@ -101,7 +101,7 @@ article ol {
 }
 
 .mobile-nav-menu {
-	@apply absolute top-full left-0 w-full bg-navy flex flex-col h-screen overflow-y-auto transition-all duration-800;
+	@apply absolute top-full left-0 w-full bg-navy flex md:hidden flex-col h-screen overflow-y-auto transition-all duration-800;
 	max-height: calc(100vh - 100%);
 }
 
@@ -111,4 +111,14 @@ article ol {
 
 .mobile-nav-menu.open {
 	@apply translate-y-0;
+}
+
+.fade-up {
+	@apply opacity-0 translate-y-6 transition-all duration-700 ease-in-out;
+}
+.fade-up.open {
+	@apply opacity-100 translate-y-0;
+}
+.fade-up.closed {
+	@apply opacity-0 translate-y-6;
 }

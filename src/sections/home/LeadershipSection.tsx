@@ -51,7 +51,7 @@ const leaders: Leader[] = [
 
 export default function LeadershipSection() {
 	const id = "leadership";
-	const [ref] = HandleSectionInView(id);
+	const [ref, , isVis] = HandleSectionInView(id);
 
 	return (
 		<section ref={ref} id={id} className="relative text-navy md:pr-20">
@@ -66,17 +66,46 @@ export default function LeadershipSection() {
 					/>
 				</div>
 				<div className="px-8 md:pl-24 md:pr-28">
-					<h2 className="font-sans text-gold uppercase md:text-right text-center md:text-base text-xs font-semibold tracking-[0.25em]">
+					<h2
+						className={`font-sans text-gold uppercase md:text-right text-center md:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
+							isVis ? "open" : "closed"
+						}`}
+					>
 						LEADERSHIP
 					</h2>
-					<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-right text-center lg:leading-24">
-						<span className="font-serif-italic">Seasoned</span> emerging
-						<br />
-						<div className="md:ml-12">market leaders</div>
+					<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-right justify-center md:justify-end text-center lg:leading-24 flex flex-wrap gap-x-3">
+						<span
+							className={`font-serif-italic delay-200 fade-up ${
+								isVis ? "open" : "closed"
+							}`}
+						>
+							Seasoned
+						</span>
+						<span className={`delay-300 fade-up ${isVis ? "open" : "closed"}`}>
+							emerging
+						</span>
+						<div
+							className={`md:ml-12 w-full flex md:justify-end justify-center flex-wrap gap-x-3`}
+						>
+							<span
+								className={`delay-400 fade-up ${isVis ? "open" : "closed"}`}
+							>
+								market
+							</span>
+							<span
+								className={`delay-500 fade-up ${isVis ? "open" : "closed"}`}
+							>
+								leaders
+							</span>
+						</div>
 					</h3>
 				</div>
 
-				<div className="flex flex-col w-full relative md:mt-0 mt-2">
+				<div
+					className={`flex flex-col w-full relative md:mt-0 mt-2 delay-600 fade-up ${
+						isVis ? "open" : "closed"
+					}`}
+				>
 					{leaders.map((leader, index) => (
 						<LeaderElement
 							key={leader.name}

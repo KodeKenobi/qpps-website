@@ -100,7 +100,11 @@ export default function Header() {
 					</button>
 				</div>
 			</div>
-			<nav className={`mobile-nav-menu pt-14 ${open ? "open" : "closed"}`}>
+			<nav
+				className={`mobile-nav-menu pt-14 md:hidden ${
+					open ? "open" : "closed"
+				}`}
+			>
 				<nav className="flex flex-col items-center justify-start h-full gap-y-8">
 					<ul className="text-2xl font-light uppercase tracking-widest text-slate flex flex-col min-h-[185px] gap-y-[12%] h-full text-center">
 						{navs.map((nav) => (

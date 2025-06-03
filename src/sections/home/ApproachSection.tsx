@@ -13,7 +13,7 @@ import { HandleSectionInView } from "@/utils/handleSectionInView";
 
 export default function ApproachSection() {
 	const id = "approach";
-	const [ref] = HandleSectionInView(id);
+	const [ref, , isVis] = HandleSectionInView(id);
 
 	return (
 		<section
@@ -22,16 +22,38 @@ export default function ApproachSection() {
 			className="relative min-h-screen pt-20 md:pt-16 lg:mt-28 md:px-20 text-navy"
 		>
 			<div className="mx-auto w-full relative z-10 px-8 md:px-12 lg:px-24">
-				<h2 className="font-sans text-gold uppercase text-xs md:text-base text-center md:text-left font-semibold">
+				<h2
+					className={`font-sans text-gold uppercase text-xs md:text-base text-center md:text-left font-semibold delay-100 fade-up ${
+						isVis ? "open" : "closed"
+					}`}
+				>
 					INVESTMENT APPROACH
 				</h2>
-				<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24">
-					<span className="font-serif-italic">Capturing</span> emerging
-					<br />
-					<div className="md:pl-32">market dispersion</div>
+				<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24 flex flex-wrap gap-x-3">
+					<span
+						className={`font-serif-italic delay-200 fade-up ${
+							isVis ? "open" : "closed"
+						}`}
+					>
+						Capturing
+					</span>{" "}
+					<span className={`delay-300 fade-up ${isVis ? "open" : "closed"}`}>
+						emerging
+					</span>
+					<div
+						className={`md:pl-32 w-full delay-400 fade-up ${
+							isVis ? "open" : "closed"
+						}`}
+					>
+						market dispersion
+					</div>
 				</h3>
 
-				<p className=" md:font-normal font-light md:text-left text-center mt-5 md:pl-32 md:mt-16 text-lg md:text-xl">
+				<p
+					className={`md:font-normal font-light md:text-left text-center mt-5 md:pl-32 md:mt-16 text-lg md:text-xl delay-500 fade-up ${
+						isVis ? "open" : "closed"
+					}`}
+				>
 					We leverage granular fundamental analysis, carried out by
 					on-the-ground research teams, to uncover latent risk-return asymmetry
 					within and across emerging market companies, sectors, and borders.
@@ -101,7 +123,12 @@ const Card = ({
 }) => {
 	const [open, setOpen] = useState<boolean>(false);
 	return (
-		<div className="w-full xl:aspect-square min-h-[362px] md:min-h-[515px] overflow-hidden relative pb-[84px] flex items-center justify-center text-white">
+		<motion.div
+			initial={{ opacity: 0, y: 40 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.7, ease: "easeInOut" }}
+			className="w-full xl:aspect-square min-h-[362px] md:min-h-[515px] overflow-hidden relative pb-[84px] flex items-center justify-center text-white"
+		>
 			<Image
 				src={image}
 				alt={title}
@@ -151,6 +178,6 @@ const Card = ({
 					open ? "h-full" : "h-[84px]"
 				} transition-all duration-1000 ease-in-out w-full bg-navy opacity-40 mix-blend-multiply z-10 absolute bottom-0 left-0`}
 			/>
-		</div>
+		</motion.div>
 	);
 };

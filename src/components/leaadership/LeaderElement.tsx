@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../buttons/Button";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 export interface Leader {
 	avatar: StaticImageData;
@@ -80,19 +81,34 @@ const FirstLayout = ({ data, index }: { data: Leader; index: number }) => {
 				<div className="absolute right-0 bottom-0 w-px h-4/5 bg-slate/25" />
 				<Image src={data.avatar} alt={data.name} className="w-1/3" />
 				<div className=" pb-8 lg:pb-12">
-					<h4 className="text-slate font-serif text-4xl lg:text-6xl">
+					<motion.h4
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+						className="text-slate font-serif text-4xl lg:text-6xl"
+					>
 						{data.name}
-					</h4>
-					<p className="text-navy font-light italic text-lg lg:text-xl mt-3">
+					</motion.h4>
+					<motion.p
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+						className="text-navy font-light italic text-lg lg:text-xl mt-3"
+					>
 						{data.title}
-					</p>
-					<div className="pl-20 mt-7 relative z-10">
+					</motion.p>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+						className="pl-20 mt-7 relative z-10"
+					>
 						<Button
 							onClick={() => setIndex(index)}
 							label={"Read Bio"}
 							color="var(--color-navy)"
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>
@@ -111,19 +127,34 @@ const SecondLayout = ({ data, index }: { data: Leader; index: number }) => {
 		<div className="md:-mt-12 lg:-mt-20 pr-8 border-b border-slate/25">
 			<div className="flex items-end justify-end">
 				<div className="pb-8 lg:pb-12 text-right pr-16">
-					<h4 className="text-slate font-serif text-4xl lg:text-6xl">
+					<motion.h4
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+						className="text-slate font-serif text-4xl lg:text-6xl"
+					>
 						{data.name}
-					</h4>
-					<p className="text-navy font-light italic text-lg lg:text-xl mt-3">
+					</motion.h4>
+					<motion.p
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+						className="text-navy font-light italic text-lg lg:text-xl mt-3"
+					>
 						{data.title}
-					</p>
-					<div className="mt-7 flex justify-end">
+					</motion.p>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+						className="mt-7 flex justify-end"
+					>
 						<Button
 							onClick={() => setIndex(index)}
 							label={"Read Bio"}
 							color="var(--color-navy)"
 						/>
-					</div>
+					</motion.div>
 				</div>
 				<Image src={data.avatar} alt={data.name} className="w-1/3" />
 			</div>
@@ -143,19 +174,34 @@ const ThirdLayout = ({ data, index }: { data: Leader; index: number }) => {
 		<div className="flex items-end justify-start md:-mt-16 lg:-mt-[98px] lg:pl-[108px]">
 			<Image src={data.avatar} alt={data.name} className="w-1/3" />
 			<div className="pb-8 lg:pb-12">
-				<h4 className="text-slate font-serif text-4xl lg:text-6xl">
+				<motion.h4
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+					className="text-slate font-serif text-4xl lg:text-6xl"
+				>
 					{data.name}
-				</h4>
-				<p className="text-navy font-light italic text-lg lg:text-xl mt-3">
+				</motion.h4>
+				<motion.p
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+					className="text-navy font-light italic text-lg lg:text-xl mt-3"
+				>
 					{data.title}
-				</p>
-				<div className="pl-20 mt-7 relative z-10">
+				</motion.p>
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+					className="pl-20 mt-7 relative z-10"
+				>
 					<Button
 						onClick={() => setIndex(index)}
 						label={"Read Bio"}
 						color="var(--color-navy)"
 					/>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
@@ -181,19 +227,29 @@ const BiographyModal = ({
 		<div
 			className={`${
 				index === id ? "flex" : "hidden"
-			} flex fixed z-40 top-[120px] left-1/2 w-11/12 h-5/6 md:w-3/4 md:h-4/5 -translate-x-1/2 bg-slate overflow-y-auto transition-all duration-500 ease-in-out`}
+			} fixed z-40 top-[120px] left-1/2 w-11/12 h-5/6 md:w-3/4 md:h-4/5 -translate-x-1/2 bg-slate overflow-y-auto transition-all duration-500 ease-in-out`}
 		>
 			<article className="relative w-full h-full text-white flex flex-col">
 				<header className="md:p-14 px-16 p-8 md:pl-32 md:pb-16 md:block flex items-center justify-between">
-					<span className="md:block hidden">
+					<motion.span
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+						className="md:block hidden"
+					>
 						<Button
 							onClick={() => closeBiography()}
 							label={"Back to Team"}
 							color={"var(--color-white)"}
 							layout="left"
 						/>
-					</span>
-					<span className="block md:hidden">
+					</motion.span>
+					<motion.span
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+						className="block md:hidden"
+					>
 						<Button
 							onClick={() => {
 								if (id > 0) {
@@ -206,8 +262,13 @@ const BiographyModal = ({
 							color="white"
 							layout="left"
 						/>
-					</span>
-					<span className="block md:hidden">
+					</motion.span>
+					<motion.span
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+						className="block md:hidden"
+					>
 						<Button
 							onClick={() => {
 								if (id < total) {
@@ -219,13 +280,23 @@ const BiographyModal = ({
 							label={id < total ? "Next" : "Close"}
 							color="white"
 						/>
-					</span>
+					</motion.span>
 				</header>
 				<div className={`md:pl-32 px-0 md:pr-28`}>
-					<h4 className="font-serif text-4xl md:text-left text-center md:text-6xl">
+					<motion.h4
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+						className="font-serif text-4xl md:text-left text-center md:text-6xl"
+					>
 						{data.name}
-					</h4>
-					<div className="flex flex-col md:flex-row items-center justify-between md:w-full w-2/3 md:mx-0 mx-auto">
+					</motion.h4>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
+						className="flex flex-col md:flex-row items-center justify-between md:w-full w-2/3 md:mx-0 mx-auto"
+					>
 						<p className="font-light italic text-lg md:text-left text-center md:text-xl mt-3">
 							{data.title}
 						</p>
@@ -240,17 +311,22 @@ const BiographyModal = ({
 								className="md:w-5 md:h-5 w-3.5 h-3.5"
 							/>
 						</Link>
-					</div>
+					</motion.div>
 
 					<div className="py-[38px]">
 						<div className="w-full h-px bg-gray"></div>
 					</div>
 
-					<div className="md:px-0 px-8">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
+						className="md:px-0 px-8"
+					>
 						<p className="text-lg md:text-left text-center md:text-xl font-light">
 							{data.biography}
 						</p>
-					</div>
+					</motion.div>
 				</div>
 				<footer className="flex items-center justify-center md:justify-between md:pl-32 md:pr-28 pt-3 mt-auto pb-10 md:pb-12">
 					<div className="h-4 flex items-center gap-[6px]">

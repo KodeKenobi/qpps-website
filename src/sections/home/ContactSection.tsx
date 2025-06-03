@@ -38,7 +38,7 @@ const locations: Location[] = [
 
 export default function ContactSection() {
 	const id = "contact";
-	const [ref] = HandleSectionInView(id);
+	const [ref, , isVis] = HandleSectionInView(id);
 	const { index, setIndex } = useOpenLocationStore();
 
 	return (
@@ -49,13 +49,33 @@ export default function ContactSection() {
 		>
 			<div className="w-full pt-16 md:w-[58%] lg:w-1/2 md:pl-24 md:pt-[58px] relative z-10">
 				<div className="mx-auto w-full relative z-10 md:px-0 px-8">
-					<h2 className="font-sans text-gold uppercase md:text-left text-center md:text-base text-xs font-semibold tracking-[0.25em]">
+					<h2
+						className={`font-sans text-gold uppercase md:text-left text-center md:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
+							isVis ? "open" : "closed"
+						}`}
+					>
 						Contact
 					</h2>
-					<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24">
-						<div className="md:block inline">Get in</div>
-						<span className="md:hidden inline"> </span>
-						<div className="md:pl-26 font-serif-italic md:block inline">
+					<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24 flex justify-center md:justify-start gap-x-3 flex-wrap">
+						<span
+							className={`md:block inline delay-200 fade-up ${
+								isVis ? "open" : "closed"
+							}`}
+						>
+							Get
+						</span>
+						<span
+							className={`md:block inline delay-300 fade-up ${
+								isVis ? "open" : "closed"
+							}`}
+						>
+							in
+						</span>
+						<div
+							className={`md:pl-26 font-serif-italic md:block inline md:w-full delay-400 fade-up ${
+								isVis ? "open" : "closed"
+							}`}
+						>
 							touch
 						</div>
 						<div className="absolute hidden md:block bottom-0 left-0 h-14 w-px bg-slate/25" />
