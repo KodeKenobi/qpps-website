@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import CImage from "../../public/images/0_reveal/carrhae_capital_reveal_image.webp";
+import CImage from "@/assets/images/0_reveal/carrhae_capital_reveal_image.webp";
 import Shimmer from "../../public/shimmer.svg";
 import { useEffect, useState } from "react";
 import useIsVisibleStore from "@/store/useIsVisibleStore";
@@ -36,6 +36,7 @@ export default function Preloader() {
 		if (isVisible) {
 			document.body.style.overflow = "hidden";
 			document.body.style.height = "100vh";
+			window.scrollTo({ top: 0 });
 		} else {
 			document.body.style.overflow = "";
 			document.body.style.height = "auto";
