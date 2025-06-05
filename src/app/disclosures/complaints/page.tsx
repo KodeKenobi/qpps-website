@@ -15,11 +15,13 @@ export default function ComplaintsPage() {
         <br />
         Carrhae Capital LLP
         <br />
-        39 St James’s Street
+        3rd Floor
         <br />
-        London
+        112 Jermyn Street
         <br />
-        SW1A 1JD
+        London, SW1Y 6LS
+        <br />
+        United Kingdom
         <br />
         T: <Link href="tel:+442032054850">+44 (0) 203 205 4850</Link>
       </p>
