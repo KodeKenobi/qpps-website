@@ -72,7 +72,7 @@ const ButtonGraphic = ({
 				</div>
 				<div
 					id="circle"
-					className={`z-0 w-6 h-6 aspect-square rounded-full bg-gold absolute top-1/2 -translate-y-1/2 ${
+					className={`z-0 w-6 h-6 aspect-square origin-center group-hover:scale-150 transition-all duration-500 rounded-full bg-gold absolute top-1/2 -translate-y-1/2 ${
 						isRight ? "right-0 translate-x-1/2" : "left-0 -translate-x-1/2"
 					}`}
 				></div>
