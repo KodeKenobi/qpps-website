@@ -65,16 +65,16 @@ export default function ContactSection() {
     };
     const el = swipableElRef.current;
     if (el) {
-      // @ts-expect-error
+      // @ts-expect-error: We are expecting an error because this function is not defined
       el.addEventListener("touchstart", handleTouchStart);
-      // @ts-expect-error
+      // @ts-expect-error: We are expecting an error because this function is not defined
       el.addEventListener("touchend", handleTouchEnd);
     }
     return () => {
       if (el) {
-        // @ts-expect-error
+        // @ts-expect-error: We are expecting an error because this function is not defined
         el.removeEventListener("touchstart", handleTouchStart);
-        // @ts-expect-error
+        // @ts-expect-error: We are expecting an error because this function is not defined
         el.removeEventListener("touchend", handleTouchEnd);
       }
     };

@@ -71,7 +71,7 @@ export default function TermsConditionsPage() {
         liability partnership registered in England and Wales with company
         number OC365165 and have our registered office at 3rd Floor, 112 Jermyn
         Street, London, United Kingdom, SW1Y 6LS. You can contact us by{" "}
-        <a href="/?scrollTo=contact">writing to us</a> at{" "}
+        <Link href="/?scrollTo=contact">writing to us</Link> at{" "}
         <Link href={"mailto:compliance@carrhaecap.com"}>
           compliance@carrhaecap.com
         </Link>
@@ -171,8 +171,8 @@ export default function TermsConditionsPage() {
           account or password;
         </li>
         <li>
-          not to use any other user's identity to log on to or communicate via
-          this Website;
+          not to use any other user&apos;s identity to log on to or communicate
+          via this Website;
         </li>
         <li>
           not to impersonate other people, particularly employees and
@@ -223,7 +223,8 @@ export default function TermsConditionsPage() {
           information in the possession of any third party, and you will be
           solely responsible for any damages from any claims that may arise
           because you posted files that caused damage to the operation of
-          another person's software, hardware or telecommunications equipment;
+          another person&apos;s software, hardware or telecommunications
+          equipment;
         </li>
         <li>
           you understand that the Website contains information about funds which
@@ -298,10 +299,11 @@ export default function TermsConditionsPage() {
       </p>
       <ul className="list-disc pl-8">
         <li>
-          Any "robot", "bot", "spider", "scraper" or other automated device,
-          program, tool, algorithm, code, process or methodology to access,
-          obtain, copy, monitor or republish any portion of the Website or any
-          data, content, information or services accessed via the same.
+          Any &quot;robot&quot;, &quot;bot&quot;, &quot;spider&quot;,
+          &quot;scraper&quot; or other automated device, program, tool,
+          algorithm, code, process or methodology to access, obtain, copy,
+          monitor or republish any portion of the Website or any data, content,
+          information or services accessed via the same.
         </li>
         <li>
           Any automated analytical technique aimed at analysing text and data in
@@ -417,8 +419,8 @@ export default function TermsConditionsPage() {
       </ul>
       <p>
         If you require additional information, please contact us using the
-        details set out in the “<a href="/?scrollTo=contact">Contact Us</a>”
-        section below.
+        details set out in the “
+        <Link href="/?scrollTo=contact">Contact Us</Link>” section below.
       </p>
       <p>
         <strong>User-Generated Content</strong>

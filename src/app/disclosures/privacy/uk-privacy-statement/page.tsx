@@ -44,41 +44,41 @@ export default function UkPrivacyPolicyPage() {
       </p>
       <ol id="content-index" className="list-decimal pl-8">
         <li>
-          <a href="#introduction">Introduction</a>
+          <Link href="#introduction">Introduction</Link>
         </li>
         <li>
-          <a href="#what-information-can-we-collect">
+          <Link href="#what-information-can-we-collect">
             What information can we collect?
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#how-is-your-personal-data-collected">
+          <Link href="#how-is-your-personal-data-collected">
             How is your personal data collected?
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#how-and-why-do-we-use-and-share-your-personal-data">
+          <Link href="#how-and-why-do-we-use-and-share-your-personal-data">
             How and why do we use and share your personal data?
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#for-how-long-do-we-keep-your-personal-data">
+          <Link href="#for-how-long-do-we-keep-your-personal-data">
             For how long do we keep your personal data?
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#security">Security</a>
+          <Link href="#security">Security</Link>
         </li>
         <li>
-          <a href="#international-data-transfers">
+          <Link href="#international-data-transfers">
             International Data Transfers
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#your-rights">Your Rights</a>
+          <Link href="#your-rights">Your Rights</Link>
         </li>
         <li>
-          <a href="#contact-details">Contact Details</a>
+          <Link href="#contact-details">Contact Details</Link>
         </li>
       </ol>
       <p>
@@ -135,8 +135,8 @@ export default function UkPrivacyPolicyPage() {
         it. You also have various rights to seek information from those
         organisations about how they are using your data, and to prevent them
         from processing it unlawfully. For more information about these rights,
-        please see the ‘<a href="#your-rights">Your Rights</a>’ section of this
-        Policy.
+        please see the ‘<Link href="#your-rights">Your Rights</Link>’ section of
+        this Policy.
       </p>
       <p className="underline">
         What types of data we collect from you when you interact with us or use
@@ -571,7 +571,7 @@ export default function UkPrivacyPolicyPage() {
           analytics and search engine providers to assist us in the improvement
           and optimisation of the Website, or otherwise use other IT systems
           supplied by third parties (see ’
-          <a href="#service-providers">Service Providers</a>’ below); and
+          <Link href="#service-providers">Service Providers</Link>’ below); and
         </li>
         <li>
           with selected third parties who we contract with to provide
@@ -690,10 +690,10 @@ export default function UkPrivacyPolicyPage() {
         contact, identity, financial and transaction Data) for six years after
         they cease being customers for legal, regulatory, compliance and
         insurance purposes. In some circumstances you can ask us to delete some
-        or all of your data earlier: see ’<a href="#your-rights">Your Rights</a>
-        ’ below for further information, although this may not always be
-        possible if we are obliged to retain the data for compliance and
-        insurance purposes.
+        or all of your data earlier: see ’
+        <Link href="#your-rights">Your Rights</Link>’ below for further
+        information, although this may not always be possible if we are obliged
+        to retain the data for compliance and insurance purposes.
       </p>
       <p>
         In some circumstances we may anonymise your personal data (so that it
@@ -806,8 +806,8 @@ export default function UkPrivacyPolicyPage() {
       </p>
       <p>
         You can exercise this right at any time by{" "}
-        <a href="/?scrollTo=contact">writing to us</a> and telling us that you
-        are making a subject access request. You do not have to fill in a
+        <Link href="/?scrollTo=contact">writing to us</Link> and telling us that
+        you are making a subject access request. You do not have to fill in a
         specific form to make this request.
       </p>
       <p className="underline">Your Right to Rectification and Erasure</p>
@@ -827,9 +827,9 @@ export default function UkPrivacyPolicyPage() {
       </p>
       <p>
         You can exercise this right at any time by{" "}
-        <a href="/?scrollTo=contact">writing to us</a> and telling us that you
-        are making a request to have your personal data rectified or erased and
-        on what basis you are making that request. If you want us to replace
+        <Link href="/?scrollTo=contact">writing to us</Link> and telling us that
+        you are making a request to have your personal data rectified or erased
+        and on what basis you are making that request. If you want us to replace
         inaccurate data with new data, you should tell us what that new data is.
         You do not have to fill in a specific form to make this kind of request.
       </p>
@@ -860,9 +860,9 @@ export default function UkPrivacyPolicyPage() {
       </p>
       <p>
         You can exercise this right at any time by{" "}
-        <a href="/?scrollTo=contact">writing to us</a> and telling us that you
-        are making a request to have us stop processing the relevant aspect of
-        your personal data and describing which of the above conditions you
+        <Link href="/?scrollTo=contact">writing to us</Link> and telling us that
+        you are making a request to have us stop processing the relevant aspect
+        of your personal data and describing which of the above conditions you
         believe is relevant to that request. You do not have to fill in a
         specific form to make this kind of request.
       </p>
@@ -898,7 +898,7 @@ export default function UkPrivacyPolicyPage() {
       <p>
         Alternatively, if for any reason you cannot use those links, or if you
         would prefer to contact us directly – you can unsubscribe by{" "}
-        <a href="/?scrollTo=contact">writing to us</a> at
+        <Link href="/?scrollTo=contact">writing to us</Link> at
         compliance@carrhaecap.com and telling us which communications you would
         like us to stop sending you. Please note that where you request a change
         in this way it is likely to take longer for your request to take effect.
@@ -916,8 +916,8 @@ export default function UkPrivacyPolicyPage() {
       <p>
         If you want more information about any automated decision making and
         profiling or to object to the same you can exercise this right at any
-        time by <a href="/?scrollTo=contact">writing to us</a> and telling us
-        that you are making such a request. You do not have to fill in a
+        time by <Link href="/?scrollTo=contact">writing to us</Link> and telling
+        us that you are making such a request. You do not have to fill in a
         specific form to make this kind of request.
       </p>
       <p className="underline">

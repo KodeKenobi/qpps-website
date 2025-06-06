@@ -23,14 +23,14 @@ export default function Header() {
     } else {
       setTrans(true);
     }
-  }, [setTrans, trans]);
+  }, [setTrans]);
 
   useEffect(() => {
     if (pathname === "/") {
       window.addEventListener("scroll", () => handleScroll());
       return () => window.removeEventListener("scroll", () => handleScroll());
     }
-  }, [pathname]);
+  }, [pathname, handleScroll]);
 
   return (
     <header
