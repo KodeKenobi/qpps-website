@@ -5,6 +5,7 @@ import HeroBackground from "@/assets/images/1_landing/carrhae_capital_landing_im
 import LandingArrow from "@/assets/svgs/1_landing/LandingArrow";
 import { HandleSectionInView } from "@/utils/handleSectionInView";
 import { motion } from "motion/react";
+import Counter from "@/components/fragments/Counter";
 
 export default function HeroSection() {
   const id = "hero";
@@ -15,17 +16,19 @@ export default function HeroSection() {
       <section
         ref={ref}
         id={id}
-        className="flex flex-col md:min-h-screen overflow-x-clip relative justify-center bg-slate text-white md:mx-0 px-8 md:pb-0 pb-44 pt-44 md:pt-[200px]"
+        className="flex flex-col lg:min-h-screen overflow-x-clip relative justify-center bg-slate text-white lg:mx-0 px-8 lg:pr-0 lg:pb-0 pb-44 pt-44 lg:pt-[200px]"
       >
         <Image
           src={HeroBackground}
           alt="Background"
           fill
           className="object-cover object-center absolute top-0 left-0 w-full h-full z-0"
+          priority
+          quality={100}
         />
 
-        <div className="relative py-auto w-fit max-w-2xl mx-auto md:ml-auto md:mr-[12%] my-auto">
-          <h1 className="text-5xl md:text-left text-center md:text-white text-navy md:text-6xl lg:text-7xl md:justify-start justify-center font-serif font-normal md:pr-24 flex flex-wrap">
+        <div className="relative py-auto w-fit max-w-2xl mx-auto lg:ml-auto lg:mr-[12%] my-auto">
+          <h1 className="text-5xl lg:text-left text-center lg:text-white text-navy lg:text-7xl lg:justify-start justify-center font-serif font-normal lg:pr-24 flex flex-wrap">
             <span
               className={`font-serif-italic relative delay-200 fade-up ${
                 isVis ? "open" : "closed"
@@ -48,14 +51,14 @@ export default function HeroSection() {
             </span>
           </h1>
           <div
-            className={`md:hidden flex justify-center py-20 delay-700 fade-up ${
+            className={`lg:hidden flex justify-center py-20 delay-700 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
             <LandingArrow />
           </div>
           <p
-            className={`w-full md:max-w-[334px] text-lg text-center md:text-left lg:text-xl md:ml-auto delay-700 fade-up ${
+            className={`w-full lg:max-w-[334px] text-lg text-center lg:text-left lg:text-xl lg:ml-auto delay-700 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
@@ -63,7 +66,7 @@ export default function HeroSection() {
             capture the persistent dispersion in emerging markets.
           </p>
           <div
-            className={`pl-14 -mt-10 hidden md:block delay-800 fade-up ${
+            className={`pl-14 -mt-10 hidden lg:block delay-800 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
@@ -72,43 +75,61 @@ export default function HeroSection() {
         </div>
 
         <div
-          className={`hidden md:block mx-auto md:mr-0 md:ml-auto w-full md:w-5/6 bg-navy relative z-10 md:min-h-32 md:translate-y-1/2 py-16 md:py-20`}
+          className={`hidden lg:block mx-auto lg:mr-0 lg:ml-auto w-full lg:w-5/6 bg-navy relative z-10 lg:min-h-32 lg:translate-y-1/2 py-16 lg:py-20`}
         >
-          <div className="border-b-gold/40 md:border-b flex flex-col md:flex-row justify-between gap-[10%] md:px-14 lg:px-28">
+          <div className="flex flex-col lg:flex-row justify-between gap-[10%] lg:px-28 relative">
             <TimelineItem
               index={0}
-              title="2011"
+              number={2011}
               description="Firm founded <br> by Ali Akay"
             />
             <TimelineItem
               index={1}
-              title="~$2.2bn"
-              description="AUM across EM equity strategies, as of 05 June, 2025"
+              prefix="~$"
+              number={2.2}
+              suffix="bn"
+              description="AUM across EM equity strategies,<br> as of 05 June, 2025"
             />
             <TimelineItem
               index={2}
-              title="45 years"
+              number={45}
+              suffix=" years"
               description="Combined EM experience <br> of CIO & deputy CIO"
+            />
+            <motion.i
+              initial={{
+                width: 0,
+              }}
+              whileInView={{
+                width: "100%",
+              }}
+              transition={{
+                duration: 3,
+              }}
+              className="absolute bottom-0 left-0 w-full h-px bg-gold opacity-40"
             />
           </div>
         </div>
       </section>
-      <section className="px-8 md:px-0 md:hidden -mt-28 -mb-28">
-        <div className="text-white mx-auto md:mr-0 md:ml-auto w-full md:w-5/6 bg-navy relative z-10 md:min-h-32 md:translate-y-1/2 py-16 md:py-20">
-          <div className="border-b-gold/40 md:border-b flex flex-col md:flex-row justify-between gap-[10%] md:px-28">
+      <section className="px-8 lg:px-0 lg:hidden -mt-28 -mb-28">
+        <div className="text-white mx-auto lg:mr-0 lg:ml-auto w-full lg:w-5/6 bg-navy relative z-10 lg:min-h-32 lg:translate-y-1/2 py-16 lg:py-20">
+          <div className="border-b-gold/40 lg:border-b flex flex-col lg:flex-row justify-between gap-[10%] lg:px-28">
             <TimelineItem
               index={0}
-              title="2011"
+              number={2011}
               description="Firm founded <br> by Ali Akay"
             />
             <TimelineItem
               index={1}
-              title="~$2.2bn"
-              description="Current AUM across EM <br> equity strategies"
+              prefix="~$"
+              number={2.2}
+              suffix="bn"
+              description="AUM across EM equity strategies,<br> as of 05 June, 2025"
             />
             <TimelineItem
               index={2}
-              title="45 years"
+              number={45}
+              suffix=" years"
               description="Combined EM experience <br> of CIO & deputy CIO"
             />
           </div>
@@ -119,23 +140,29 @@ export default function HeroSection() {
 }
 
 const TimelineItem = ({
-  title,
+  prefix,
+  suffix,
+  number,
   description,
   index,
 }: {
-  title: string;
+  prefix?: string;
+  suffix?: string;
+  number: number;
   description: string;
   index: number;
 }) => {
   return (
-    <div className="flex flex-col relative pb-8 md:text-left text-center py-8 md:pt-0 first:pt-0 md:border-b border-b border-b-gold/40">
+    <div className="flex flex-col relative pb-8 lg:text-left text-center py-8 lg:pt-0 first:pt-0 lg:border-b-0 border-b border-b-gold/40">
       <motion.h4
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1 * index }}
         className={`font-serif text-gold text-5xl lg:text-6xl`}
       >
-        {title}
+        {prefix}
+        <Counter target={number} />
+        {suffix}
       </motion.h4>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -146,8 +173,18 @@ const TimelineItem = ({
           __html: description,
         }}
       ></motion.p>
-      <span
-        className={`absolute bottom-0 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-0 h-[2px] bg-gold`}
+      <motion.span
+        initial={{
+          width: 0,
+        }}
+        whileInView={{
+          width: 60 + 60 * index,
+        }}
+        transition={{
+          duration: 1.2,
+          delay: 0.7 * index,
+        }}
+        className={`absolute bottom-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 h-[2px] bg-gold`}
         style={{
           width: 60 + 60 * index,
         }}

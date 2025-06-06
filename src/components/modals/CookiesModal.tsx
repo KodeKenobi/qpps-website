@@ -121,7 +121,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
         duration: 0.5,
         ease: "easeInOut",
       }}
-      className="shadow-2xl overflow-y-auto shadow-black/30 z-50 fixed bottom-0 left-1/2 -translate-x-1/2 bg-navy font-light text-white py-9 px-32 text-center"
+      className="shadow-2xl w-full overflow-y-auto max-w-[700px] shadow-black/30 z-[99999] fixed bottom-0 left-1/2 -translate-x-1/2 bg-navy font-light text-white py-9 px-8 md:px-32 text-center"
       style={{
         maxHeight: "calc(100% - 116px)",
       }}
@@ -138,7 +138,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
             transition={{
               duration: 0.5,
             }}
-            className="mx-auto w-3/4 min-h-0 grid overflow-hidden"
+            className="mx-auto w-full max-w-[480px] min-h-0 grid overflow-hidden"
           >
             <div className="min-h-0">
               <h2 className="font-serif text-2xl">
@@ -225,7 +225,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
             transition={{
               duration: 0.5,
             }}
-            className="mx-auto w-3/4 min-h-0 grid overflow-hidden"
+            className="mx-auto max-w-[480px] w-full min-h-0 grid overflow-hidden"
           >
             <div className="min-h-0">
               <h2 className="font-serif text-2xl">
@@ -252,7 +252,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex justify-between gap-x-24 mt-10">
+      <div className="flex justify-between gap-x-10 mt-10">
         {customize ? (
           <>
             <CookiesButton
@@ -264,11 +264,11 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
         ) : (
           <>
             <CookiesButton
-              label="Accept All non-Essential cookies"
+              label="Accept All"
               onClick={() => handleAcceptAll()}
             />
             <CookiesButton
-              label="Reject All non-Essential cookies"
+              label="Reject All"
               onClick={() => handleRejectAll()}
             />
           </>
@@ -299,7 +299,12 @@ const CookiesButton = ({
         active ? "opacity-100" : "opacity-35 hover:opacity-100"
       } transition-opacity duration-300`}
     >
-      <span className="uppercase tracking-widest font-semibold">{label}</span>
+      <span
+        className="uppercase tracking-widest font-semibold leading-[0.25em]"
+        dangerouslySetInnerHTML={{
+          __html: label,
+        }}
+      ></span>
       <i className="w-11 h-px bg-gold/35 block absolute bottom-0 left-0" />
     </button>
   );

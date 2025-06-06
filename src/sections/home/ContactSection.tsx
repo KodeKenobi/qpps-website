@@ -9,164 +9,205 @@ import { AnimatePresence } from "motion/react";
 import LocationElement from "@/components/contact/LocationElement";
 import ContactMap from "@/components/contact/ContactMap";
 import { HandleSectionInView } from "@/utils/handleSectionInView";
+import { useRef, useEffect } from "react";
 
 export interface Location {
-	city: string;
-	title: string;
-	address: string;
-	googleMapsUrl: string;
+  city: string;
+  title: string;
+  address: string;
+  googleMapsUrl: string;
 }
 
 const locations: Location[] = [
-	{
-		city: "London",
-		title: "Carrhae Capital UK LLP London, UK",
-		address: `3rd Floor, 112 Jermyn Street,
+  {
+    city: "London",
+    title: "Carrhae Capital UK LLP London, UK",
+    address: `
+    3rd Floor, 112 Jermyn Street,
 		London, SW1Y 6LS,
 		United Kingdom`,
-		googleMapsUrl: "https://goo.gl/maps/2v7Y5Z8x1a6g3k4C8",
-	},
-	{
-		city: "Dubai",
-		title: "Carrhae Capital UK LLP Dubai, UAE",
-		address: `Dubai International
+    googleMapsUrl:
+      "https://www.google.com/maps/place/112+Jermyn+St,+London+SW1Y+6LS,+UK/@51.5088023,-0.137681,683m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487604d14cff0f7b:0x1491fc7bfbf15951!8m2!3d51.5088023!4d-0.1351061!16s%2Fg%2F11b8z_f5bw?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D",
+  },
+  {
+    city: "Dubai",
+    title: "Carrhae Capital UK LLP Dubai, UAE",
+    address: `
+    Dubai International
 		Financial Centre,
 		Dubai, UAE`,
-		googleMapsUrl: "https://goo.gl/maps/2v7Y5Z8x1a6g3k4C8",
-	},
+    googleMapsUrl:
+      "https://www.google.com/maps/place/Trade+Centre+-+DIFC+-+Dubai+-+United+Arab+Emirates/@25.2106778,55.2726353,1986m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3e5f428f0d45e889:0x5c0e0c234547d18!8m2!3d25.20884!4d55.2770323!16s%2Fg%2F1hc1jflhz?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D",
+  },
 ];
 
 export default function ContactSection() {
-	const id = "contact";
-	const [ref, , isVis] = HandleSectionInView(id);
-	const { index, setIndex } = useOpenLocationStore();
+  const id = "contact";
+  const [ref, , isVis] = HandleSectionInView(id);
+  const { index, setIndex } = useOpenLocationStore();
+  const swipableElRef = useRef(null);
 
-	return (
-		<section
-			ref={ref}
-			id="contact"
-			className="relative bg-navy md:pt-20 text-white"
-		>
-			<div className="w-full pt-16 md:w-[58%] lg:w-1/2 md:pl-24 md:pt-[58px] relative z-10">
-				<div className="mx-auto w-full relative z-10 md:px-0 px-8">
-					<h2
-						className={`font-sans text-gold uppercase md:text-left text-center md:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
-							isVis ? "open" : "closed"
-						}`}
-					>
-						Contact
-					</h2>
-					<h3 className="font-serif mt-2 md:mt-8 text-4xl md:text-6xl lg:text-7xl leading-snug md:text-left text-center lg:leading-24 flex justify-center md:justify-start gap-x-3 flex-wrap">
-						<span
-							className={`md:block inline delay-200 fade-up ${
-								isVis ? "open" : "closed"
-							}`}
-						>
-							Get
-						</span>
-						<span
-							className={`md:block inline delay-300 fade-up ${
-								isVis ? "open" : "closed"
-							}`}
-						>
-							in
-						</span>
-						<div
-							className={`md:pl-26 font-serif-italic md:block inline md:w-full delay-400 fade-up ${
-								isVis ? "open" : "closed"
-							}`}
-						>
-							touch
-						</div>
-						<div className="absolute hidden md:block bottom-0 left-0 h-14 w-px bg-slate/25" />
-					</h3>
-				</div>
-				<div className="min-w-full min-h-[406px] h-full relative md:hidden mt-8">
-					<ContactMap locations={locations} />
-				</div>
-				<div className="px-8 md:border-l mx-auto w-full relative z-10 md:pl-26 md:pt-[73px] border-slate/25 text-xl">
-					<div className="relative flex flex-col">
-						<AnimatePresence mode="wait">
-							{locations.map((location, id) => {
-								if (id === index) {
-									return (
-										<LocationElement
-											key={location.city}
-											index={id}
-											total={locations.length}
-											data={location}
-										/>
-									);
-								}
-							})}
-						</AnimatePresence>
-						<div className="h-4 flex md:justify-start justify-center items-center gap-[6px] mt-7">
-							{Array.from({ length: locations.length }, (_, i) => (
-								<div
-									key={i}
-									onMouseDown={() => setIndex(i)}
-									className={`w-[6px] h-[6px] aspect-square rounded-full transition-all duration-300 cursor-pointer ${
-										i === index ? "bg-gold" : "bg-gold/40"
-									}`}
-								></div>
-							))}
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className="w-full md:pl-24 md:pr-[86px] relative z-10">
-				<div className="w-full md:pt-20 md:pl-24 relative z-10 md:border-l md:border-b border-slate/25">
-					<div className="mt-12 md:pb-20 md:mt-0 flex items-center md:flex-row flex-col md:items-end md:justify-between text-lg md:text-xl">
-						<div className="w-fit">
-							<Link
-								href={"tel:+442032054850"}
-								className="flex items-center gap-2"
-							>
-								<strong className="mr-0">t</strong>{" "}
-								<span>+44 (0) 203 205 4850</span>
-							</Link>
-							<Link
-								href={"mailto:ir@carrhaecap.com"}
-								className="flex items-center gap-2 mt-4"
-							>
-								<strong className="mr-0">e</strong>{" "}
-								<span>ir@carrhaecap.com</span>
-							</Link>
-						</div>
-						<div className="md:mt-0 mt-9 md:pb-2">
-							<Link
-								href="https://www.linkedin.com/company/carrhae-capital/"
-								target="_blank"
-							>
-								<Image
-									src={LinkedInLogo}
-									alt="LinkedIn"
-									className="w-[18px] h-[18px]"
-								/>
-							</Link>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className="w-full md:mt-0 mt-12 md:pl-24 relative z-10">
-				<div className="w-full md:pr-[86px] md:pl-24 relative z-10">
-					<div className="py-7 md:border-t-0 border-t border-slate/50 md:py-16 flex items-center justify-center md:justify-end md:pr-12">
-						<div className="md:mr-0 mr-12">
-							<Link href={"/disclosures/legal-regulatory"}>
-								<Button
-									label={"Legal & Regulatory"}
-									color={"var(--color-white)"}
-								/>
-							</Link>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className="hidden md:block absolute top-20 right-0 w-[76%] h-[66%]">
-				<div className="w-full h-full relative ">
-					<ContactMap locations={locations} />
-				</div>
-			</div>
-		</section>
-	);
+  // Handle switch of index when swiped by thumb on mobile
+  useEffect(() => {
+    let startX = 0;
+    const handleTouchStart = (e: TouchEvent) => {
+      startX = e.touches[0].clientX;
+    };
+    const handleTouchEnd = (e: TouchEvent) => {
+      const diff = e.changedTouches[0].clientX - startX;
+      if (diff > 50) {
+        // Swipe right
+        setIndex(Math.max(index - 1, 0));
+      } else if (diff < -50) {
+        // Swipe left
+        setIndex(Math.min(index + 1, locations.length - 1));
+      }
+    };
+    const el = swipableElRef.current;
+    if (el) {
+      // @ts-expect-error
+      el.addEventListener("touchstart", handleTouchStart);
+      // @ts-expect-error
+      el.addEventListener("touchend", handleTouchEnd);
+    }
+    return () => {
+      if (el) {
+        // @ts-expect-error
+        el.removeEventListener("touchstart", handleTouchStart);
+        // @ts-expect-error
+        el.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
+  }, [swipableElRef, index, setIndex]);
+
+  return (
+    <section
+      ref={ref}
+      id="contact"
+      className="relative bg-navy lg:pt-20 text-white"
+    >
+      <div className="w-full pt-16 lg:w-1/2 lg:pl-24 lg:pt-[58px] relative z-10">
+        <div className="mx-auto w-full relative z-10 lg:px-0 px-8">
+          <h2
+            className={`font-sans text-gold uppercase lg:text-left text-center lg:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
+              isVis ? "open" : "closed"
+            }`}
+          >
+            Contact
+          </h2>
+          <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-snug lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-3 flex-wrap">
+            <span
+              className={`lg:block inline delay-200 fade-up ${
+                isVis ? "open" : "closed"
+              }`}
+            >
+              Get
+            </span>
+            <span
+              className={`lg:block inline delay-300 fade-up ${
+                isVis ? "open" : "closed"
+              }`}
+            >
+              in
+            </span>
+            <div
+              className={`lg:pl-26 font-serif-italic lg:block inline lg:w-full delay-400 fade-up ${
+                isVis ? "open" : "closed"
+              }`}
+            >
+              touch
+            </div>
+            <div className="absolute hidden lg:block bottom-0 left-0 h-14 w-px bg-slate/25" />
+          </h3>
+        </div>
+        <div className="min-w-full min-h-[406px] h-full relative lg:hidden mt-8">
+          <ContactMap locations={locations} />
+        </div>
+        <div className="px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[73px] border-slate/25 text-xl">
+          <div className="relative flex flex-col">
+            <div ref={swipableElRef}>
+              <AnimatePresence mode="wait">
+                {locations.map((location, id) => {
+                  if (id === index) {
+                    return (
+                      <LocationElement
+                        key={location.city}
+                        index={id}
+                        total={locations.length}
+                        data={location}
+                      />
+                    );
+                  }
+                })}
+              </AnimatePresence>
+            </div>
+            <div className="h-4 flex lg:justify-start justify-center items-center gap-[6px] mt-7">
+              {Array.from({ length: locations.length }, (_, i) => (
+                <div
+                  key={i}
+                  onMouseDown={() => setIndex(i)}
+                  className={`w-[6px] h-[6px] aspect-square rounded-full transition-all duration-300 cursor-pointer ${
+                    i === index ? "bg-gold" : "bg-gold/40"
+                  }`}
+                ></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full lg:pl-24 lg:pr-[86px] relative z-10">
+        <div className="w-full lg:pt-20 lg:pl-26 relative z-10 lg:border-l lg:border-b border-slate/25">
+          <div className="mt-12 lg:pb-20 lg:mt-0 flex items-center lg:flex-row flex-col lg:items-end lg:justify-between text-lg lg:text-xl">
+            <div className="w-fit flex items-center flex-col justify-center lg:items-start lg:text-left text-center">
+              <Link
+                href={"tel:+442032054850"}
+                className="flex items-center gap-2"
+              >
+                <strong className="mr-0">t</strong>{" "}
+                <span>+44 (0) 203 205 4850</span>
+              </Link>
+              <Link
+                href={"mailto:ir@carrhaecap.com"}
+                className="flex items-center gap-2 mt-4"
+              >
+                <strong className="mr-0">e</strong>{" "}
+                <span>ir@carrhaecap.com</span>
+              </Link>
+            </div>
+            <div className="lg:mt-0 mt-9 lg:pb-2">
+              <Link
+                href="https://www.linkedin.com/company/carrhae-capital/"
+                target="_blank"
+              >
+                <Image
+                  src={LinkedInLogo}
+                  alt="LinkedIn"
+                  className="w-[18px] h-[18px]"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full lg:mt-0 mt-12 lg:pl-24 relative z-10">
+        <div className="w-full lg:pr-[86px] lg:pl-24 relative z-10">
+          <div className="py-7 lg:border-t-0 border-t border-slate/50 lg:py-16 flex items-center justify-center lg:justify-end lg:pr-12">
+            <div className="lg:mr-0 mr-12">
+              <Link href={"/disclosures/legal-regulatory"}>
+                <Button
+                  label={"Legal & Regulatory"}
+                  color={"var(--color-white)"}
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="hidden lg:block absolute top-20 right-0 w-[76%] h-[66%]">
+        <div className="w-full max-w-7xl h-full relative overflow-hidden">
+          <ContactMap locations={locations} />
+        </div>
+      </div>
+    </section>
+  );
 }

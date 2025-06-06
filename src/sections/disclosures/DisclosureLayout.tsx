@@ -2,9 +2,11 @@
 
 import ReadMoreArrow from "@/assets/svgs/3_investment-approach/ReadMoreArrow";
 import Button from "@/components/buttons/Button";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import CImage from "@/assets/svgs/8_disclosures/carrhae-capital-disclosures-background-c-cropped.svg";
 
 interface Props {
   title: string;
@@ -23,23 +25,23 @@ export default function DisclosureLayout({ title, children }: Props) {
   };
 
   return (
-    <div className="md:pt-36 lg:pt-[195px] md:pl-12 lg:pl-[90px]">
-      <div className="w-full h-full bg-alt-gray pt-32 pb-12 md:pt-20 md:pl-12 md:pr-12 md:pb-32 lg:pt-[110px] lg:pl-[113px] lg:pr-[90px] lg:pb-[145px]">
-        <div className="pl-21 md:pl-12">
-          <Button
-            layout="left"
-            label={"Back Home"}
-            color={"var(--color-navy)"}
-          />
+    <div className="lg:pt-[195px] lg:pl-[90px] relative z-10">
+      <div className="w-full h-full bg-alt-gray pt-32 pb-12 lg:pt-[110px] lg:pl-[113px] lg:pr-[90px] lg:pb-[145px]">
+        <div className="pl-21 lg:pl-12">
+          <Link href={"/"}>
+            <Button
+              layout="left"
+              label={"Back Home"}
+              color={"var(--color-navy)"}
+            />
+          </Link>
         </div>
-        <div className="md:px-0 px-9 pt-[67px]">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl">
-            {title}
-          </h1>
+        <div className="lg:px-0 px-9 pt-[67px]">
+          <h1 className="font-serif text-4xl lg:text-7xl">{title}</h1>
         </div>
         <hr className="my-[73px] text-slate/50" />
         <div
-          className={`md:hidden fixed top-1/2 -translate-y-1/2 transition-all duration-700 ${
+          className={`lg:hidden fixed top-1/2 -translate-y-1/2 transition-all duration-700 ${
             showNav ? "translate-x-[285px]" : "translate-x-0"
           } left-0 z-10`}
         >
@@ -61,13 +63,13 @@ export default function DisclosureLayout({ title, children }: Props) {
             />
           </button>
         </div>
-        <div className="grid md:grid-cols-3 gap-x-[51px] md:px-0 px-9">
+        <div className="grid lg:grid-cols-3 gap-x-[51px] lg:px-0 px-9">
           <div
             className={`col-span-1 ${
               showNav
-                ? "translate-x-0 md:translate-x-0"
-                : "-translate-x-full md:translate-x-0"
-            } transition-all w-[285px] duration-700 fixed md:bg-transparent bg-white top-1/2 md:pt-0 pt-28 md:px-0 px-8 left-0 -translate-y-1/2 md:translate-y-0 md:top-auto md:left-auto md:relative flex h-full max-h-full md:max-h-[644px] md:w-full overflow-y-auto overflow-x-visible`}
+                ? "translate-x-0 lg:translate-x-0"
+                : "-translate-x-full lg:translate-x-0"
+            } transition-all w-[285px] duration-700 fixed lg:bg-transparent bg-white top-1/2 lg:pt-0 pt-28 lg:px-0 px-8 left-0 -translate-y-1/2 lg:translate-y-0 lg:top-auto lg:left-auto lg:relative flex h-full max-h-full lg:max-h-[644px] lg:w-full overflow-y-auto overflow-x-visible`}
           >
             <ul className="w-full flex flex-col">
               {navs.map((nav) => (
@@ -76,18 +78,21 @@ export default function DisclosureLayout({ title, children }: Props) {
             </ul>
           </div>
           <div
-            className={`md:col-span-2 md:max-h-[644px] md:overflow-y-scroll overflow-x-auto custom-scrollbar md:pr-16`}
+            className={`lg:col-span-2 lg:max-h-[644px] lg:overflow-y-scroll overflow-x-auto custom-scrollbar lg:pr-16`}
           >
-            <article className="min-h-full space-y-8 text-navy font-light md:text-lg lg:text-xl">
+            <article className="min-h-full space-y-8 text-navy font-light lg:text-xl article">
               {children}
             </article>
           </div>
         </div>
-        <div className="flex items-center justify-end px-9 pt-12 md:hidden">
+        <div className="flex items-center justify-end px-9 pt-12 lg:hidden">
           <button onMouseDown={() => scrollToTop()}>
             <ReadMoreArrow strokeColor="var(--color-navy)" open={true} />
           </button>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 max-w-[291px] w-1/3 lg:block hidden h-[220px]">
+        <Image src={CImage} alt="C-Image" />
       </div>
     </div>
   );
@@ -150,7 +155,7 @@ const NavItem = ({ data }: { data: DisclosureNavItem }) => {
 
   const NavLink = ({ label, url }: { label: string; url: string }) => (
     <li>
-      <Link href={url} className="text-navy md:text-lg lg:text-xl py-3 block">
+      <Link href={url} className="text-navy lg:text-xl py-3 block">
         <span
           className={`${
             pathname.includes(data.url) ? "font-bold" : "font-light"
@@ -170,7 +175,7 @@ const NavItem = ({ data }: { data: DisclosureNavItem }) => {
           className="cursor-pointer py-3 border-b border-b-slate/50 w-full flex items-center justify-between"
         >
           <p
-            className={`md:text-lg lg:text-xl ${
+            className={`lg:text-xl ${
               pathname.includes(data.url) ? "font-semibold" : "font-light"
             }`}
           >
@@ -192,7 +197,7 @@ const NavItem = ({ data }: { data: DisclosureNavItem }) => {
               <li key={subItem.url} className="border-b border-slate/50">
                 <Link href={subItem.url} className="py-3 block">
                   <span
-                    className={`md:text-lg lg:text-xl italic text-slate ${
+                    className={`lg:text-xl italic text-slate ${
                       pathname.includes(subItem.url)
                         ? "font-bold"
                         : "font-light"
