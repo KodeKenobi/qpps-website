@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "IvyOraText-RegularItalic";
+    src: url("/fonts/IvyOraText-RegularItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
 :root {
     --font-ivyOra-serif: "IvyOra Text Reg", serif;
-    --font-ivyOra-italic: "IvyOra Text It", serif;
+    --font-ivyOra-italic: "IvyOraText-RegularItalic", serif;
 }
 
 @theme inline {
