@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-@font-face {
+/* @font-face {
     font-family: "IvyOraText-RegularItalic";
     src: url("/fonts/IvyOraText-RegularItalic.woff") format("woff");
     font-weight: 400;
-}
+} */
 
 @font-face {
     font-family: "Lunaquete-TextItalic";
@@ -14,8 +14,17 @@
     font-weight: 400;
 }
 
+@font-face {
+    font-family: "Lunaquete-TextRegular";
+    src:
+        url("/fonts/LunaqueteRegular/font.woff") format("woff"),
+        url("/fonts/LunaqueteRegular/font.woff2") format("woff2");
+    font-weight: 400;
+}
+
 :root {
     --font-ivyOra-serif: "IvyOra Text Reg", serif;
+    --font-lunaquete-serif: "Lunaquete-TextRegular", serif;
     --font-ivyOra-italic: "IvyOraText-RegularItalic", serif;
     --font-lunaquete: "Lunaquete-TextItalic", serif;
 }
@@ -34,7 +43,7 @@
 
     /* FONT */
     --font-sans: var(--font-albert-sans);
-    --font-serif: var(--font-ivyOra-serif);
+    --font-serif: var(--font-lunaquete-serif);
     --font-serif-italic: var(--font-lunaquete);
 }
 
