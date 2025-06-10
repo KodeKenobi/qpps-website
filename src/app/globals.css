@@ -8,7 +8,9 @@
 
 @font-face {
     font-family: "Lunaquete-TextItalic";
-    src: url("/fonts/Lunaquete-TextItalic.woff") format("woff");
+    src:
+        url("/fonts/LunaqueteItalic/font.woff") format("woff"),
+        url("/fonts/LunaqueteItalic/font.woff2") format("woff2");
     font-weight: 400;
 }
 
