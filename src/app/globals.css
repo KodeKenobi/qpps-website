@@ -4,12 +4,18 @@
     font-family: "IvyOraText-RegularItalic";
     src: url("/fonts/IvyOraText-RegularItalic.woff") format("woff");
     font-weight: 400;
-    font-style: italic;
+}
+
+@font-face {
+    font-family: "Lunaquete-TextItalic";
+    src: url("/fonts/Lunaquete-TextItalic.woff") format("woff");
+    font-weight: 400;
 }
 
 :root {
     --font-ivyOra-serif: "IvyOra Text Reg", serif;
     --font-ivyOra-italic: "IvyOraText-RegularItalic", serif;
+    --font-lunaquete: "Lunaquete-TextItalic", serif;
 }
 
 @theme inline {
@@ -27,7 +33,7 @@
     /* FONT */
     --font-sans: var(--font-albert-sans);
     --font-serif: var(--font-ivyOra-serif);
-    --font-serif-italic: var(--font-ivyOra-italic);
+    --font-serif-italic: var(--font-lunaquete);
 }
 
 body {
