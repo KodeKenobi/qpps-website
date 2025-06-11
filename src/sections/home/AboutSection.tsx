@@ -24,27 +24,29 @@ export default function AboutSection() {
         >
           About
         </h2>
-        <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-snug lg:text-left text-center lg:leading-24 flex flex-wrap lg:justify-start justify-center gap-x-3">
+        <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl lg:text-left text-center lg:leading-24 flex flex-wrap lg:justify-start justify-center gap-x-2 lg:gap-x-3">
           <span
-            className={`font-serif-italic delay-200 fade-up ${
+            className={`font-serif-italic leading-tight delay-200 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
             Global
           </span>
-          <span className={`delay-300 fade-up ${isVis ? "open" : "closed"}`}>
+          <span
+            className={`delay-300 leading-tight fade-up ${isVis ? "open" : "closed"}`}
+          >
             perspective.
           </span>
-          <div className="lg:ml-32 w-full flex lg:justify-start justify-center flex-wrap gap-x-3">
+          <div className="lg:ml-32 w-full leading-tight flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
             <span
-              className={`font-serif-italic delay-400 fade-up ${
+              className={`font-serif-italic leading-tight delay-400 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
               Local
             </span>{" "}
             <span
-              className={`lg:pl-3 delay-500 fade-up ${
+              className={`lg:pl-3 delay-500 fade-up leading-tight ${
                 isVis ? "open" : "closed"
               }`}
             >

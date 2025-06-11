@@ -54,18 +54,19 @@ const ButtonGraphic = ({
           className="flex relative transition-all duration-500 group-hover:w-12 w-9 h-2 items-center z-10"
         >
           <div
-            className="w-full h-[0.5px] absolute top-1/2 left-0 -translate-y-1/2"
+            className="w-full h-px absolute top-1/2 left-0 -translate-y-1/2"
             style={{
               backgroundColor: color,
             }}
           />
           <div
-            className={`h-[5px] w-[5px] aspect-square border-t-[0.5px] absolute top-1/2 -translate-y-1/2 ${
-              isRight
-                ? "rotate-45 right-0 border-r-[0.5px]"
-                : "-rotate-45 left-0 border-l-[0.5px]"
-            } `}
+            className={`h-[5px] w-[5px] aspect-square border-t-[1px] absolute top-1/2 -translate-y-1/2 ${
+              isRight ? "rotate-45 right-0" : "-rotate-45 left-0"
+            }`}
             style={{
+              borderTop: "1px solid",
+              borderLeft: isRight ? "" : "1px solid",
+              borderRight: isRight ? "1px solid" : "",
               borderColor: color,
             }}
           />

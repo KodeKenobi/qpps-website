@@ -31,19 +31,21 @@ export default function ApproachSection() {
         >
           INVESTMENT APPROACH
         </h2>
-        <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-snug lg:text-left text-center lg:leading-24 flex lg:justify-start justify-center flex-wrap gap-x-3">
+        <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
           <span
-            className={`font-serif-italic delay-200 fade-up ${
+            className={`font-serif-italic leading-tight delay-200 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
             Capturing
           </span>{" "}
-          <span className={`delay-300 fade-up ${isVis ? "open" : "closed"}`}>
+          <span
+            className={`delay-300 leading-tight fade-up ${isVis ? "open" : "closed"}`}
+          >
             emerging
           </span>
           <div
-            className={`lg:pl-32 w-full delay-400 fade-up ${
+            className={`lg:pl-32 w-full leading-tight delay-400 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >

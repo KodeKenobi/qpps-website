@@ -108,15 +108,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
       initial={{
         y: "100%",
       }}
-      animate={
-        open
-          ? {
-              y: 0,
-            }
-          : {
-              y: "100%",
-            }
-      }
+      animate={open ? { y: 0 } : { y: "100%" }}
       transition={{
         duration: 0.5,
         ease: "easeInOut",
@@ -232,7 +224,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
                 Welcome to Carrhae Capital
               </h2>
 
-              <p className="mt-8 mx-auto">
+              <p className="mt-8 mx-auto font-light leading-[1.37em]">
                 Our website uses essential cookies that are required for the
                 website to function properly. Our website also uses analytical,
                 functionality and marketing cookies.
@@ -252,7 +244,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex justify-between gap-x-10 mt-10">
+      <div className="flex justify-between gap-x-1 lg:gap-x-10 mt-10">
         {customize ? (
           <>
             <CookiesButton
@@ -300,7 +292,7 @@ const CookiesButton = ({
       } transition-opacity duration-300`}
     >
       <span
-        className="uppercase tracking-widest font-semibold leading-[0.25em]"
+        className="uppercase tracking-widest font-semibold leading-[0.25em] whitespace-nowrap"
         dangerouslySetInnerHTML={{
           __html: label,
         }}

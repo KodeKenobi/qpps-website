@@ -56,7 +56,7 @@ export default function Header() {
               ))}
             </ul>
           </nav>
-          <div className="flex items-center justify-end h-full lg:pr-[114px] lg:pl-[57px]">
+          {/* <div className="flex items-center justify-end h-full lg:pr-[114px] lg:pl-[57px]">
             <Link href="https://google.com/" target="_blank">
               <Button
                 onClick={() => {}}
@@ -64,7 +64,7 @@ export default function Header() {
                 label={"Login"}
               />
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="lg:hidden pr-8">
           <button
@@ -156,7 +156,7 @@ const NavButton = ({
         {nav.label}
       </button>
       <span
-        className={`w-2/3 h-0.5 bg-slate absolute -bottom-[0.8px] left-1/2 -translate-x-1/2 transition-opacity duration-1000 group-hover:opacity-100 ${
+        className={`w-8 h-0.5 bg-slate absolute -bottom-[0.8px] left-1/2 -translate-x-1/2 transition-opacity duration-1000 group-hover:opacity-100 ${
           pathname === "/" && position === nav.url ? "opacity-100" : "opacity-0"
         }`}
       />

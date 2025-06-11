@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-alt-navy py-14 lg:py-9 px-8 lg:px-20 min-h-28 relative z-0 text-white font-sans">
+    <footer className="bg-alt-navy py-14 lg:py-9 px-8 lg:px-20 min-h-28 relative z-10 text-white font-sans">
       <div className="flex lg:flex-row flex-col items-center justify-between w-full">
         <div className="md:order-1 order-2 lg:pt-0 pt-8">
           <Link href="/#hero">
@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="text-center lg:text-right font-light leading-6 text-xs lg:text-sm lg:order-2 order-1">
           <p>©{year} Carrhae Capital LLP.</p>
           <p>
-            All Rights Reserved Authorised and Regulated by the Financial
+            All Rights Reserved. Authorised and Regulated by the Financial
             Conduct Authority.
           </p>
         </div>

@@ -95,23 +95,23 @@ export default function ContactSection() {
           >
             Contact
           </h2>
-          <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-snug lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-3 flex-wrap">
+          <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-2 lg:gap-x-3 flex-wrap">
             <span
-              className={`lg:block inline delay-200 fade-up ${
+              className={`lg:block inline leading-tight delay-200 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
               Get
             </span>
             <span
-              className={`lg:block inline delay-300 fade-up ${
+              className={`lg:block inline leading-tight delay-300 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
               in
             </span>
             <div
-              className={`lg:pl-26 font-serif-italic lg:block inline lg:w-full delay-400 fade-up ${
+              className={`lg:pl-26 leading-tight font-serif-italic lg:block inline lg:w-full delay-400 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >

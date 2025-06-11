@@ -358,7 +358,7 @@ const BiographyModal = ({
               <Image
                 src={LinkedInLogo}
                 alt="LinkedIn"
-                className="lg:w-5 lg:h-5 w-3.5 h-3.5"
+                className="w-[18px] h-[18px]"
               />
             </Link>
           </motion.div>
@@ -373,7 +373,7 @@ const BiographyModal = ({
             transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
             className="lg:px-0 px-8"
           >
-            <p className="text-lg lg:text-left text-center lg:text-xl leading-[1.75em] font-light">
+            <p className="text-lg lg:text-left text-center lg:text-xl leading-[1.40em] font-light">
               {data.biography}
             </p>
           </motion.div>

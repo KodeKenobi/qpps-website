@@ -73,27 +73,29 @@ export default function LeadershipSection() {
           >
             LEADERSHIP
           </h2>
-          <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-snug lg:text-right justify-center lg:justify-end text-center lg:leading-24 flex flex-wrap gap-x-3">
+          <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-tight lg:text-right justify-center lg:justify-end text-center lg:leading-24 flex flex-wrap gap-x-2 lg:gap-x-3">
             <span
-              className={`font-serif-italic delay-200 fade-up ${
+              className={`font-serif-italic leading-tight delay-200 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
               Seasoned
             </span>
-            <span className={`delay-300 fade-up ${isVis ? "open" : "closed"}`}>
+            <span
+              className={`delay-300 leading-tight fade-up ${isVis ? "open" : "closed"}`}
+            >
               emerging
             </span>
             <div
-              className={`lg:ml-12 w-full flex lg:justify-end justify-center flex-wrap gap-x-3`}
+              className={`lg:ml-12 leading-tight w-full flex lg:justify-end justify-center flex-wrap gap-x-3`}
             >
               <span
-                className={`delay-400 fade-up ${isVis ? "open" : "closed"}`}
+                className={`delay-400 leading-tight fade-up ${isVis ? "open" : "closed"}`}
               >
                 market
               </span>
               <span
-                className={`delay-500 fade-up ${isVis ? "open" : "closed"}`}
+                className={`delay-500  leading-tight fade-up ${isVis ? "open" : "closed"}`}
               >
                 leaders
               </span>
