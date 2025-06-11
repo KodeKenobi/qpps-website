@@ -178,12 +178,12 @@ export default function DisclaimerPage() {
           account or password;
         </li>
         <li>
-          not to use any other user's identity to log on to or communicate via
-          this Website;
+          not to use any other user&apos;s identity to log on to or communicate
+          via this Website;
         </li>
         <li>
-          not to use any other user's identity to log on to or communicate via
-          this Website;
+          not to use any other user&apos;s identity to log on to or communicate
+          via this Website;
         </li>
         <li>
           not to transmit any material nor submit information or content that is
@@ -230,7 +230,8 @@ export default function DisclaimerPage() {
           information in the possession of any third party, and you will be
           solely responsible for any damages from any claims that may arise
           because you posted files that caused damage to the operation of
-          another person's software, hardware or telecommunications equipment;
+          another person&apos;s software, hardware or telecommunications
+          equipment;
         </li>
         <li>
           you understand that the Website contains information about funds which
@@ -305,10 +306,11 @@ export default function DisclaimerPage() {
       </p>
       <ul className="list-disc pl-8">
         <li>
-          Any "robot", "bot", "spider", "scraper" or other automated device,
-          program, tool, algorithm, code, process or methodology to access,
-          obtain, copy, monitor or republish any portion of the Website or any
-          data, content, information or services accessed via the same.
+          Any &quot;robot&quot;, &quot;bot&quot;, &quot;spider&quot;,
+          &quot;scraper&quot; or other automated device, program, tool,
+          algorithm, code, process or methodology to access, obtain, copy,
+          monitor or republish any portion of the Website or any data, content,
+          information or services accessed via the same.
         </li>
         <li>
           Any automated analytical technique aimed at analysing text and data in
