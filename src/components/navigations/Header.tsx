@@ -93,7 +93,7 @@ export default function Header() {
                 setOpen={setOpen}
               />
             ))}
-            <MobileNavButton
+            {/* <MobileNavButton
               nav={{
                 label: "Login",
                 url: "https://google.com",
@@ -101,7 +101,7 @@ export default function Header() {
               }}
               position={"right"}
               setOpen={() => {}}
-            />
+            /> */}
           </ul>
         </nav>
         <div className="flex items-center justify-center mt-auto pt-8">
