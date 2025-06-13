@@ -21,7 +21,7 @@ export interface Location {
 const locations: Location[] = [
   {
     city: "London",
-    title: "Carrhae Capital UK LLP London, UK",
+    title: "Carrhae Capital LLP",
     address: `
     3rd Floor, 112 Jermyn Street,
 		London, SW1Y 6LS,
@@ -31,13 +31,16 @@ const locations: Location[] = [
   },
   {
     city: "Dubai",
-    title: "Carrhae Capital UK LLP Dubai, UAE",
+    title: "Carrhae Capital (DIFC) Limited",
     address: `
-    Dubai International
-		Financial Centre,
-		Dubai, UAE`,
+    Unit 1606, Level 16,
+    Index Tower, Dubai
+    International Financial Centre,
+    Dubai,
+    United Arab Emirates
+		`,
     googleMapsUrl:
-      "https://www.google.com/maps/place/Trade+Centre+-+DIFC+-+Dubai+-+United+Arab+Emirates/@25.2106778,55.2726353,1986m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3e5f428f0d45e889:0x5c0e0c234547d18!8m2!3d25.20884!4d55.2770323!16s%2Fg%2F1hc1jflhz?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D",
+      "https://www.google.com/maps/place/Index+Tower/@25.2074073,55.2728716,17z/data=!3m2!4b1!5s0x3e5f428f6556ed15:0x7f6a5abc303ae5d1!4m6!3m5!1s0x3e5f42859a4cc907:0x6b271195776928f0!8m2!3d25.2074025!4d55.2777425!16zL20vMGgzaHY0?entry=ttu&g_ep=EgoyMDI1MDYxMC4xIKXMDSoASAFQAw%3D%3D",
   },
 ];
 

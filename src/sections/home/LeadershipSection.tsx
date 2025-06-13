@@ -41,7 +41,7 @@ const leaders: Leader[] = [
   {
     avatar: ShaneBoltonAvatar,
     name: "Shane Bolton",
-    title: 'Chief Operating Officer &  <br class="lg:hidden"> Founding Partner',
+    title: `Chief Executive Officer & <br class="lg:hidden"> Partner`,
     linkedInUrl: "https://www.linkedin.com/in/shanebolton/",
     biography:
       "Shane is an operations specialist with extensive experience in managing complex financial operations. He ensures that Carrhae's operations run smoothly and efficiently.",

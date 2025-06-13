@@ -20,11 +20,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="text-center lg:text-right font-light leading-6 text-xs lg:text-sm lg:order-2 order-1">
-          <p>©{year} Carrhae Capital LLP.</p>
-          <p>
-            All Rights Reserved. Authorised and Regulated by the Financial
-            Conduct Authority.
-          </p>
+          <p>©{year} Carrhae Capital LLP. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

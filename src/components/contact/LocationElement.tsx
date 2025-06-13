@@ -20,7 +20,7 @@ export default function LocationElement({
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className={`lg:max-w-2xs max-w-[230px] text-lg lg:text-xl lg:text-left text-center mx-auto lg:mx-0`}
     >
-      <p className="font-medium italic">{data.title}</p>
+      <p className="font-medium">{data.title}</p>
       <Link href={data.googleMapsUrl} target="_blank">
         <p
           className="mt-6 font-light"

@@ -79,7 +79,7 @@ export default function AboutSection() {
                 isVis ? "open" : "closed"
               }`}
             >
-              Carrhae is a London-based investment partnership specialising in
+              Carrhae is a London-based investment manager specialising in
               emerging market equity strategies.
               <br />
               <br />
