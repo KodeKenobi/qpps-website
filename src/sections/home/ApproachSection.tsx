@@ -175,6 +175,7 @@ const Card = ({
       </div>
       <button
         onMouseDown={() => setOpen(!open)}
+        type="button"
         className="absolute bottom-0 left-0 w-full h-[84px] flex items-center justify-center z-20 cursor-pointer transition-colors duration-100 active:bg-white/5"
       >
         <div className="absolute top-3 left-1/2 -translate-x-1/2 -translate-y-full">

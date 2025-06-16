@@ -3,7 +3,7 @@
 import Button from "@/components/buttons/Button";
 import Link from "next/link";
 import Image from "next/image";
-import LinkedInLogo from "@/assets/svgs/4_leadership/carrhae-capital-section5-leadership-linkedin.svg";
+import LinkedInLogo from "@/assets/svgs/5_contact/carrhae-linkedin-logo-v2.svg";
 import useOpenLocationStore from "@/store/useOpenLocationStore";
 import { AnimatePresence } from "motion/react";
 import LocationElement from "@/components/contact/LocationElement";
@@ -36,8 +36,7 @@ const locations: Location[] = [
     Unit 1606, Level 16,
     Index Tower, Dubai
     International Financial Centre,
-    Dubai,
-    United Arab Emirates
+    Dubai, United Arab Emirates
 		`,
     googleMapsUrl:
       "https://www.google.com/maps/place/Index+Tower/@25.2074073,55.2728716,17z/data=!3m2!4b1!5s0x3e5f428f6556ed15:0x7f6a5abc303ae5d1!4m6!3m5!1s0x3e5f42859a4cc907:0x6b271195776928f0!8m2!3d25.2074025!4d55.2777425!16zL20vMGgzaHY0?entry=ttu&g_ep=EgoyMDI1MDYxMC4xIKXMDSoASAFQAw%3D%3D",
@@ -185,7 +184,7 @@ export default function ContactSection() {
                 <Image
                   src={LinkedInLogo}
                   alt="LinkedIn"
-                  className="w-[18px] h-[18px]"
+                  className="w-[28px] h-[28px]"
                 />
               </Link>
             </div>

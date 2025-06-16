@@ -1,7 +1,7 @@
 "use client";
 
 import useOpenBiographyStore from "@/store/useOpenBiographyStore";
-import LinkedInLogo from "@/assets/svgs/4_leadership/carrhae-capital-section5-leadership-linkedin.svg";
+import LinkedInLogo from "@/assets/svgs/5_contact/carrhae-linkedin-logo-v2.svg";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -358,7 +358,7 @@ const BiographyModal = ({
               <Image
                 src={LinkedInLogo}
                 alt="LinkedIn"
-                className="w-[18px] h-[18px]"
+                className="w-[28px] h-[28px]"
               />
             </Link>
           </motion.div>

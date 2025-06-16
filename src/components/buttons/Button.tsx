@@ -16,7 +16,7 @@ export default function Button({
   return (
     <button
       onMouseDown={onClick ?? undefined}
-      className={`group flex items-center justify-start cursor-pointer relative ${
+      className={`group flex items-center justify-start hover:cursor-pointer cursor-pointer relative ${
         isRight ? "pr-4" : "pl-4"
       }`}
     >
