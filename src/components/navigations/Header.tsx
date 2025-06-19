@@ -10,6 +10,7 @@ import { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import useMobileNavStore from "@/store/useMobileNavStore";
 import LinkedInLogo from "../../../public/svgs/_nav-bar/carrhae-capital-nav-linkedin.svg";
+import LinkedInLogoWhite from "../../../public/svgs/_nav-bar/linkedin.svg";
 
 export default function Header() {
   const { navs, position } = usePositionStore();
@@ -120,7 +121,7 @@ export default function Header() {
         <div className="flex items-center justify-center mt-auto pt-8">
           <Link href="https://linkedin.com/" target="_blank">
             <Image
-              src={LinkedInLogo}
+              src={LinkedInLogoWhite}
               alt="LinkedIn Logo"
               width={28}
               height={28}
