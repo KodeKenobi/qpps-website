@@ -19,8 +19,8 @@ export default function Footer() {
             />
           </Link>
         </div>
-        <div className="text-center lg:text-right font-light leading-6 text-xs lg:text-sm lg:order-2 order-1">
-          <p>©{year} Carrhae Capital LLP. All Rights Reserved.</p>
+        <div className="text-center lg:text-right font-light leading-6 text-xs lg:text-sm lg:order-2 order-1 flex items-center gap-3 flex-col md:flex-row">
+          <p>©{year} Carrhae Capital LLP. All Rights Reserved.</p> <span className="hidden md:flex">|</span> <Link href={"/disclosures/legal-regulatory"}>Disclosures</Link>
         </div>
       </div>
     </footer>

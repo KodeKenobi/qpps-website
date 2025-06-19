@@ -1,9 +1,6 @@
 "use client";
 
-import Button from "@/components/buttons/Button";
 import Link from "next/link";
-import Image from "next/image";
-import LinkedInLogo from "@/assets/svgs/5_contact/carrhae-linkedin-logo-v2.svg";
 import useOpenLocationStore from "@/store/useOpenLocationStore";
 import { AnimatePresence } from "motion/react";
 import LocationElement from "@/components/contact/LocationElement";
@@ -176,7 +173,7 @@ export default function ContactSection() {
                 <span>ir@carrhaecap.com</span>
               </Link>
             </div>
-            <div className="lg:mt-0 mt-9 lg:pb-2">
+            {/* <div className="lg:mt-0 mt-9 lg:pb-2">
               <Link
                 href="https://www.linkedin.com/company/carrhae-capital/"
                 target="_blank"
@@ -187,21 +184,21 @@ export default function ContactSection() {
                   className="w-[28px] h-[28px]"
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       <div className="w-full lg:mt-0 mt-12 lg:pl-24 relative z-10">
         <div className="w-full lg:pr-[86px] lg:pl-24 relative z-10">
           <div className="py-7 lg:border-t-0 border-t border-slate/50 lg:py-16 flex items-center justify-center lg:justify-end lg:pr-12">
-            <div className="lg:mr-0 mr-12">
+            {/* <div className="lg:mr-0 mr-12">
               <Link href={"/disclosures/legal-regulatory"}>
                 <Button
                   label={"Legal & Regulatory"}
                   color={"var(--color-white)"}
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import { handleScrollTo } from "@/utils/handleScrollTo";
 import { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import useMobileNavStore from "@/store/useMobileNavStore";
-import LinkedInLogo from "../../../public/svgs/5_contact/carrhae-capital-section5-contact-icon-linkedin.svg";
+import LinkedInLogo from "../../../public/svgs/_nav-bar/carrhae-capital-nav-linkedin.svg";
 
 export default function Header() {
   const { navs, position } = usePositionStore();
@@ -54,7 +54,20 @@ export default function Header() {
               {navs.map((nav) => (
                 <NavButton key={nav.url} nav={nav} position={position} />
               ))}
+              <div className="rounded-full flex items-center justify-center">
+              <Link
+                href="https://www.linkedin.com/company/carrhae-capital/"
+                target="_blank"
+              >
+                <Image
+                  src={LinkedInLogo}
+                  alt="LinkedIn"
+                  className="w-full h-full object-cover"
+                />
+              </Link>
+            </div>
             </ul>
+            
           </nav>
           {/* <div className="flex items-center justify-end h-full lg:pr-[114px] lg:pl-[57px]">
             <Link href="https://google.com/" target="_blank">
@@ -109,8 +122,8 @@ export default function Header() {
             <Image
               src={LinkedInLogo}
               alt="LinkedIn Logo"
-              width={18}
-              height={18}
+              width={28}
+              height={28}
             />
           </Link>
         </div>
@@ -119,7 +132,7 @@ export default function Header() {
             href={"/disclosures/legal-regulatory"}
             onMouseDown={() => setOpen(false)}
           >
-            <Button color={"white"} label={"LEGAL & REGULATORY"} />
+            <Button color={"white"} label={"DISCLOSURES"} />
           </Link>
         </div>
       </nav>
