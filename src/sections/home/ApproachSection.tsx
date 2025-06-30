@@ -23,7 +23,7 @@ export default function ApproachSection() {
       id={id}
       className="relative min-h-screen pt-20 lg:pt-16 lg:mt-28 lg:px-20 text-navy"
     >
-      <div className="mx-auto w-full relative z-10 px-8 lg:px-12 lg:px-24">
+      <div className="mx-auto w-full relative z-10 px-8 lg:px-24">
         <h2
           className={`font-sans text-gold uppercase lg:text-left text-center lg:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
             isVis ? "open" : "closed"
