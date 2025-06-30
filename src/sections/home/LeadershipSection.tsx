@@ -14,7 +14,7 @@ const leaders: Leader[] = [
     avatar: AliAkayAvatar,
     name: "Ali Akay",
     title: 'Chief Investment Officer & <br class="lg:hidden"> Founding Partner',
-    linkedInUrl: "https://www.linkedin.com/in/aliakay/",
+    linkedInUrl: "https://www.linkedin.com/in/ali-akay-3061a3/",
     biography: `With 25 years of experience in global long-short equity,
 		Ali specializes in emerging markets and financials. He spent much of
 		his career at SAC Global and HBK Investments before founding Carrhae
@@ -32,19 +32,46 @@ const leaders: Leader[] = [
   {
     avatar: PlamenDokovAvatar,
     name: "Plamen Dokov",
-    title: 'Chief Technology Officer & <br class="lg:hidden"> Founding Partner',
-    linkedInUrl: "https://www.linkedin.com/in/plamendokov/",
-    biography:
-      "Plamen is a technology expert with a strong background in software development and data analysis. He has been instrumental in building Carrhae's technology infrastructure and investment platform.",
+    title: "Deputy Chief Investment Officer",
+    linkedInUrl: "https://www.linkedin.com/in/plamen-dokov-9b2b271/",
+    biography: `
+      Plamen Dokov joined Carrhae Capital at its inception from SAC Global Investors where
+      he was a Senior Analyst focussed on the Energy sector and working directly with Ali
+      Akay.
+      <br><br>
+      Prior to that, Plamen was an Associate with the Morgan Stanley Principal Strategies
+      group, covering pan-European special situations.
+      <br><br>
+      Plamen began his career as an analyst at Lazard where he focussed on generalist M&A
+      practices.
+      <br><br>
+      Plamen is a CFA Charterholder and holds a BA in Economics and Business Administration
+      from the University of Sofia in Bulgaria.
+    `,
     layout: "second",
   },
   {
     avatar: ShaneBoltonAvatar,
     name: "Shane Bolton",
-    title: `Chief Executive Officer & <br class="lg:hidden"> Partner`,
-    linkedInUrl: "https://www.linkedin.com/in/shanebolton/",
-    biography:
-      "Shane is an operations specialist with extensive experience in managing complex financial operations. He ensures that Carrhae's operations run smoothly and efficiently.",
+    title: `Chief Executive Officer`,
+    linkedInUrl: "https://www.linkedin.com/in/shane-bolton-a7967197/",
+    biography: `
+      Shane Bolton has extensive experience within Emerging Markets.  He worked at Goldman
+      Sachs for 21 years and was the Partner responsible for the Asia Prime Brokerage
+      business and was based in Hong Kong for eleven years.  Prior to this he ran the Asia
+      Prime Brokerage sales, capital introduction and consulting teams; Asia Execution Sales
+      (prime brokerage, futures, electronic trading and CSAs) and was co-head of the Asia
+      electronic trading business in Hong Kong.
+      <br><br>
+      Prior to this, Shane was Co-Head of Prime Brokerage Sales and worked in capital
+      introduction having been Co-Head of the Emerging Europe product.
+      <br><br>
+      Shane originally worked at Lehman Brothers for 6 years in corporate finance, equity
+      capital markets, and then in Asian and Emerging European equity sales.
+      <br><br>
+      Shane’s most recent role was COO for a family backed private venture/growth business
+      investing in technology companies.
+    `,
     layout: "third",
   },
 ];

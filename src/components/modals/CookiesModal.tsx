@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useCookies } from "next-client-cookies";
 import { AnimatePresence, motion } from "motion/react";
+import CookieIcon from "@/assets/svgs/_nav-bar/Environment/Cookie.svg";
+import Image from "next/image";
 
 export interface Cookie extends RequestCookie {
   type: "essential" | "analytics" | "marketing" | "functional";
@@ -104,174 +106,185 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
   }, [activeCookies]);
 
   return (
-    <motion.div
-      initial={{
-        y: "100%",
-      }}
-      animate={open ? { y: 0 } : { y: "100%" }}
-      transition={{
-        duration: 0.5,
-        ease: "easeInOut",
-      }}
-      className="shadow-2xl w-full overflow-y-auto max-w-[700px] shadow-black/30 z-[99999] fixed bottom-0 left-1/2 -translate-x-1/2 bg-navy font-light text-white py-9 px-8 md:px-32 text-center"
-      style={{
-        maxHeight: "calc(100% - 116px)",
-      }}
-    >
-      <AnimatePresence mode="wait">
-        {customize ? (
-          <motion.div
-            animate={{
-              gridTemplateRows: "1fr",
-            }}
-            exit={{
-              gridTemplateRows: "0fr",
-            }}
-            transition={{
-              duration: 0.5,
-            }}
-            className="mx-auto w-full max-w-[480px] min-h-0 grid overflow-hidden"
-          >
-            <div className="min-h-0">
-              <h2 className="font-serif text-2xl">
-                Choose your cookie preferences
-              </h2>
+    <>
+      <button
+        onClick={() => setOpen(!open)}
+        className="cursor-pointer p-2 pr-8 bg-navy shadow-sm shadow-black/20 fixed bottom-6 right-0 z-50 rounded-l-full translate-x-4 hover:translate-x-0 transition-transform duration-300"
+      >
+        <Image src={CookieIcon} alt="Cookie Icon" />
+      </button>
+      <motion.div
+        initial={{
+          y: "100%",
+        }}
+        animate={open ? { y: 0 } : { y: "100%" }}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+        className="shadow-2xl w-full overflow-y-auto max-w-[700px] shadow-black/30 z-[99999] fixed bottom-0 left-1/2 -translate-x-1/2 bg-navy font-light text-white py-9 px-8 md:px-32 text-center"
+        style={{
+          maxHeight: "calc(100% - 116px)",
+        }}
+      >
+        <AnimatePresence mode="wait">
+          {customize ? (
+            <motion.div
+              animate={{
+                gridTemplateRows: "1fr",
+              }}
+              exit={{
+                gridTemplateRows: "0fr",
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              className="mx-auto w-full max-w-[480px] min-h-0 grid overflow-hidden"
+            >
+              <div className="min-h-0">
+                <h2 className="font-serif text-2xl">
+                  Choose your cookie preferences
+                </h2>
 
-              <div className="flex items-center justify-center flex-col text-center space-y-8 mt-6">
-                <div className="flex items-center justify-center space-y-2.5 flex-col">
-                  <CheckButton
-                    value={"allow_analytics_cookies"}
-                    cookies={cookies}
-                    handleCheck={handleCheckCookie}
-                    disabled
-                  />
-                  <p className="uppercase tracking-widest font-semibold text-sm">
-                    ESSENTIAL
-                  </p>
-                  <p className="text-xs">
-                    Our website uses essential cookies that are required for the
-                    website to function properly. Our website also uses
-                    analytical, functionality and marketing cookies.
-                  </p>
-                </div>
-                <div className="flex items-center justify-center space-y-2.5 flex-col">
-                  <CheckButton
-                    value={"allow_analytics_cookies"}
-                    cookies={cookies}
-                    handleCheck={handleCheckCookie}
-                  />
-                  <p className="uppercase tracking-widest font-semibold text-sm">
-                    Analytical or performance cookies
-                  </p>
-                  <p className="text-xs">
-                    We use analytical cookies to measure how you use our website
-                    and help improve carrhaecap.com.
-                  </p>
-                </div>
-                <div className="flex items-center justify-center space-y-2.5 flex-col">
-                  <CheckButton
-                    value={"allow_functional_cookies"}
-                    cookies={cookies}
-                    handleCheck={handleCheckCookie}
-                  />
-                  <p className="uppercase tracking-widest font-semibold">
-                    Functionality cookies
-                  </p>
-                  <p className="text-xs">
-                    These cookies let us save the choices you make and some of
-                    the information you provide when browsing basispoint.group.
-                    They don’t track your browsing activity on other websites.
-                    Without functional cookies, carrhaecap.com may not work
-                    reliably.
-                  </p>
-                </div>
-                <div className="flex items-center justify-center space-y-2.5 flex-col text-sm">
-                  <CheckButton
-                    value={"allow_marketing_cookies"}
-                    cookies={cookies}
-                    handleCheck={handleCheckCookie}
-                  />
-                  <p className="uppercase tracking-widest font-semibold text-sm">
-                    Marketing cookies
-                  </p>
-                  <p className="text-xs">
-                    We use marketing cookies to display personalised messages on
-                    the carrhaecap.com website and to show you advertisements
-                    from us and selected third parties on other sites you may
-                    visit. We work with approved partners to deliver relevant
-                    content and to measure the effectiveness of these
-                    advertisements.
-                  </p>
+                <div className="flex items-center justify-center flex-col text-center space-y-8 mt-6">
+                  <div className="flex items-center justify-center space-y-2.5 flex-col">
+                    <CheckButton
+                      value={"allow_analytics_cookies"}
+                      cookies={cookies}
+                      handleCheck={handleCheckCookie}
+                      disabled
+                    />
+                    <p className="uppercase tracking-widest font-semibold text-sm">
+                      ESSENTIAL
+                    </p>
+                    <p className="text-xs">
+                      Our website uses essential cookies that are required for
+                      the website to function properly. Our website also uses
+                      analytical, functionality and marketing cookies.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center space-y-2.5 flex-col">
+                    <CheckButton
+                      value={"allow_analytics_cookies"}
+                      cookies={cookies}
+                      handleCheck={handleCheckCookie}
+                    />
+                    <p className="uppercase tracking-widest font-semibold text-sm">
+                      Analytical or performance cookies
+                    </p>
+                    <p className="text-xs">
+                      We use analytical cookies to measure how you use our
+                      website and help improve carrhaecap.com.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center space-y-2.5 flex-col">
+                    <CheckButton
+                      value={"allow_functional_cookies"}
+                      cookies={cookies}
+                      handleCheck={handleCheckCookie}
+                    />
+                    <p className="uppercase tracking-widest font-semibold">
+                      Functionality cookies
+                    </p>
+                    <p className="text-xs">
+                      These cookies let us save the choices you make and some of
+                      the information you provide when browsing
+                      basispoint.group. They don’t track your browsing activity
+                      on other websites. Without functional cookies,
+                      carrhaecap.com may not work reliably.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center space-y-2.5 flex-col text-sm">
+                    <CheckButton
+                      value={"allow_marketing_cookies"}
+                      cookies={cookies}
+                      handleCheck={handleCheckCookie}
+                    />
+                    <p className="uppercase tracking-widest font-semibold text-sm">
+                      Marketing cookies
+                    </p>
+                    <p className="text-xs">
+                      We use marketing cookies to display personalised messages
+                      on the carrhaecap.com website and to show you
+                      advertisements from us and selected third parties on other
+                      sites you may visit. We work with approved partners to
+                      deliver relevant content and to measure the effectiveness
+                      of these advertisements.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        ) : (
-          <motion.div
-            animate={{
-              gridTemplateRows: "1fr",
-            }}
-            exit={{
-              gridTemplateRows: "0fr",
-            }}
-            transition={{
-              duration: 0.5,
-            }}
-            className="mx-auto max-w-[480px] w-full min-h-0 grid overflow-hidden"
-          >
-            <div className="min-h-0">
-              <h2 className="font-serif text-2xl">
-                Welcome to Carrhae Capital
-              </h2>
+            </motion.div>
+          ) : (
+            <motion.div
+              animate={{
+                gridTemplateRows: "1fr",
+              }}
+              exit={{
+                gridTemplateRows: "0fr",
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              className="mx-auto max-w-[480px] w-full min-h-0 grid overflow-hidden"
+            >
+              <div className="min-h-0">
+                <h2 className="font-serif text-2xl">
+                  Welcome to Carrhae Capital
+                </h2>
 
-              <p className="mt-8 mx-auto font-light leading-[1.37em]">
-                Our website uses essential cookies that are required for the
-                website to function properly. Our website also uses analytical,
-                functionality and marketing cookies.
-              </p>
-              <p className="mt-4">
-                For more information please see our{" "}
-                <Link
-                  href="/disclosures/cookies-policy"
-                  target="_blank"
-                  className="underline"
-                >
-                  Cookie Policy
-                </Link>
-                .
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <div className="flex justify-between gap-x-1 lg:gap-x-10 mt-10">
-        {customize ? (
-          <>
-            <CookiesButton
-              label="Accept"
-              onClick={() => handleSubmitCustomCookieConfig()}
-            />
-            <CookiesButton label="Reject" onClick={() => setCustomize(false)} />
-          </>
-        ) : (
-          <>
-            <CookiesButton
-              label="Accept All"
-              onClick={() => handleAcceptAll()}
-            />
-            <CookiesButton
-              label="Reject All"
-              onClick={() => handleRejectAll()}
-            />
-          </>
-        )}
-        <CookiesButton
-          label="Customise"
-          onClick={() => handleCustomize()}
-          active={customize}
-        />
-      </div>
-    </motion.div>
+                <p className="mt-8 mx-auto font-light leading-[1.37em]">
+                  Our website uses essential cookies that are required for the
+                  website to function properly. Our website also uses
+                  analytical, functionality and marketing cookies.
+                </p>
+                <p className="mt-4">
+                  For more information please see our{" "}
+                  <Link
+                    href="/disclosures/cookies-policy"
+                    target="_blank"
+                    className="underline"
+                  >
+                    Cookie Policy
+                  </Link>
+                  .
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <div className="flex justify-between gap-x-1 lg:gap-x-10 mt-10">
+          {customize ? (
+            <>
+              <CookiesButton
+                label="Accept"
+                onClick={() => handleSubmitCustomCookieConfig()}
+              />
+              <CookiesButton
+                label="Reject"
+                onClick={() => setCustomize(false)}
+              />
+            </>
+          ) : (
+            <>
+              <CookiesButton
+                label="Accept All"
+                onClick={() => handleAcceptAll()}
+              />
+              <CookiesButton
+                label="Reject All"
+                onClick={() => handleRejectAll()}
+              />
+            </>
+          )}
+          <CookiesButton
+            label="Customise"
+            onClick={() => handleCustomize()}
+            active={customize}
+          />
+        </div>
+      </motion.div>
+    </>
   );
 }
 

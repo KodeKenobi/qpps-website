@@ -65,7 +65,7 @@ export default function ApproachSection() {
         </p>
       </div>
       <div className="w-full grid lg:grid-cols-2 lg:px-0 px-8 gap-7 mt-12 lg:mt-32 relative z-10 pb-1">
-        <div className="lg:pt-[14%] relative z-20">
+        <div className="relative z-20">
           <Card title={"Long-Short"} image={Image1} mobileImage={MobileImage1}>
             <p>
               Launched in December 2011 <br />
