@@ -81,9 +81,9 @@ export default function LeadershipSection() {
   const [ref, , isVis] = HandleSectionInView(id);
 
   return (
-    <section ref={ref} id={id} className="relative text-navy lg:pr-20 z-0">
+    <section ref={ref} id={id} className="text-navy lg:pr-20 z-0">
       <div className="absolute bottom-0 right-0 w-20 z-0 h-72 bg-navy"></div>
-      <div className="relative overflow-hidden w-full z-10 bg-alt-gray pt-20 lg:pt-32">
+      <div className="overflow-hidden w-full z-10 bg-alt-gray pt-20 lg:pt-32">
         <div className="absolute bottom-0 left-0 w-full h-3/4 z-0">
           <Image
             src={LeadershipBackground}
@@ -131,7 +131,7 @@ export default function LeadershipSection() {
         </div>
 
         <div
-          className={`flex flex-col w-full relative lg:mt-0 mt-2 delay-600 fade-up ${
+          className={`w-full lg:mt-0 mt-2 delay-600 fade-up ${
             isVis ? "open" : "closed"
           }`}
         >

@@ -60,7 +60,7 @@ export default function LeaderElement({
   };
 
   return (
-    <div id={`leader-${index}`}>
+    <div>
       <Layout />
       <BiographyModal data={data} id={index} total={total} />
     </div>
@@ -274,7 +274,7 @@ const BiographyModal = ({
     <div
       className={`${
         index === id ? "flex" : "hidden"
-      } fixed z-40 top-[120px] left-1/2 w-11/12 h-auto lg:w-3/4 -translate-x-1/2 bg-slate overflow-y-auto transition-all duration-500 ease-in-out`}
+      } fixed z-40 top-1/2 -translate-y-1/2 left-1/2 w-11/12 h-auto lg:w-3/4 -translate-x-1/2 bg-slate overflow-y-auto transition-all duration-500 ease-in-out`}
     >
       <article className="relative w-full h-full text-white flex flex-col">
         <header className="lg:p-14 px-16 p-8 lg:pl-32 lg:pb-16 lg:block flex items-center justify-between">
@@ -373,9 +373,12 @@ const BiographyModal = ({
             transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
             className="lg:px-0 px-8"
           >
-            <p className="text-lg lg:text-left text-center lg:text-xl leading-[1.40em] font-light">
-              {data.biography}
-            </p>
+            <p
+              className="text-lg lg:text-left text-center lg:text-xl leading-[1.40em] font-light"
+              dangerouslySetInnerHTML={{
+                __html: data.biography,
+              }}
+            ></p>
           </motion.div>
         </div>
         <footer className="flex items-center justify-center lg:justify-between lg:pl-32 lg:pr-28 pt-3 mt-auto pb-10 lg:pb-12">
