@@ -10,6 +10,7 @@ export default function ComplaintsPage() {
         LLP.
       </p>
       <p>Please write to:</p>
+
       <p>
         The Compliance Officer,
         <br />
