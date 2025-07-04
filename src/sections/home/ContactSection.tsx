@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import useOpenLocationStore from "@/store/useOpenLocationStore";
-import { AnimatePresence } from "motion/react";
 import LocationElement from "@/components/contact/LocationElement";
 import ContactMap from "@/components/contact/ContactMap";
 import { HandleSectionInView } from "@/utils/handleSectionInView";
