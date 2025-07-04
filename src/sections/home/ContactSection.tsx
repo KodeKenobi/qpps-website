@@ -124,33 +124,15 @@ export default function ContactSection() {
         </div>
         <div className="px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[73px] border-slate/25 text-xl">
           <div className="relative flex flex-col">
-            <div ref={swipableElRef}>
-              <AnimatePresence mode="wait">
-                {locations.map((location, id) => {
-                  if (id === index) {
-                    return (
-                      <LocationElement
-                        key={location.city}
-                        index={id}
-                        total={locations.length}
-                        data={location}
-                      />
-                    );
-                  }
-                })}
-              </AnimatePresence>
-            </div>
-            <div className="h-4 flex lg:justify-start justify-center items-center gap-[6px] mt-7">
-              {Array.from({ length: locations.length }, (_, i) => (
-                <div
-                  key={i}
-                  onMouseDown={() => setIndex(i)}
-                  className={`w-[6px] h-[6px] aspect-square rounded-full transition-all duration-300 cursor-pointer ${
-                    i === index ? "bg-gold" : "bg-gold/40"
-                  }`}
-                ></div>
-              ))}
-            </div>
+            {/* Show all locations stacked vertically */}
+            {locations.map((location, id) => (
+              <LocationElement
+                key={location.city}
+                index={id}
+                total={locations.length}
+                data={location}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ const leaders: Leader[] = [
       Prior to that, Plamen was an Associate with the Morgan Stanley Principal Strategies
       group, covering pan-European special situations.
       <br><br>
-      Plamen began his career as an analyst at Lazard where he focussed on generalist M&A
+      Plamen began his career as an analyst at Lazard where he focused on generalist M&A
       practices.
       <br><br>
       Plamen is a CFA Charterholder and holds a BA in Economics and Business Administration
