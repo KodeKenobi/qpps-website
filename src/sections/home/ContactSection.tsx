@@ -121,8 +121,8 @@ export default function ContactSection() {
         <div className="min-w-full min-h-[406px] h-full relative lg:hidden mt-8">
           <ContactMap locations={locations} />
         </div>
-        <div className="px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[73px] border-slate/25 text-xl">
-          <div className="relative flex flex-col">
+        <div className="px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[60px] border-slate/25 text-xl">
+          <div className="relative flex flex-col gap-10 lg:gap-12">
             {/* Show all locations stacked vertically */}
             {locations.map((location, id) => (
               <LocationElement

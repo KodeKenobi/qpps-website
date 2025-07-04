@@ -20,9 +20,27 @@ export default function ContactMap({}: { locations: Location[] }) {
 
       <g id="0" transform="translate(525, 227)">
         <circle cx="10.5" cy="14.5" r="10.37" fill="#CFAA72" />
+        <text
+          x="30"
+          y="20"
+          fontSize="20"
+          fill="#CFAA72"
+          fontFamily="Albert Sans, sans-serif"
+        >
+          London
+        </text>
       </g>
       <g id="1" transform="translate(715, 340)">
         <circle cx="10.5" cy="14.5" r="10.37" fill="#CFAA72" />
+        <text
+          x="30"
+          y="20"
+          fontSize="20"
+          fill="#CFAA72"
+          fontFamily="Albert Sans, sans-serif"
+        >
+          Dubai
+        </text>
       </g>
     </svg>
   );
