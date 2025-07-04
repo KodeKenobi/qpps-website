@@ -13,7 +13,7 @@ const leaders: Leader[] = [
   {
     avatar: AliAkayAvatar,
     name: "Ali Akay",
-    title: 'Chief Investment Officer & <br class="lg:hidden"> Founding Partner',
+    title: "Chief Investment Officer",
     linkedInUrl: "https://www.linkedin.com/in/ali-akay-3061a3/",
     biography: `With 25 years of experience in global long-short equity,
 		Ali specializes in emerging markets and financials. He spent much of
@@ -36,8 +36,9 @@ const leaders: Leader[] = [
     linkedInUrl: "https://www.linkedin.com/in/plamen-dokov-9b2b271/",
     biography: `
       Plamen Dokov joined Carrhae Capital at its inception from SAC Global Investors where
-      he was a Senior Analyst focussed on the Energy sector and working directly with Ali
-      Akay.
+      he was a Senior Analyst focused on the Energy sector and working directly with Ali
+      Akay. Ali and Plamen have worked together for 17 years, building a strong partnership
+      that has been fundamental to Carrhae's success.
       <br><br>
       Prior to that, Plamen was an Associate with the Morgan Stanley Principal Strategies
       group, covering pan-European special situations.
@@ -69,7 +70,7 @@ const leaders: Leader[] = [
       Shane originally worked at Lehman Brothers for 6 years in corporate finance, equity
       capital markets, and then in Asian and Emerging European equity sales.
       <br><br>
-      Shane’s most recent role was COO for a family backed private venture/growth business
+      Shane's most recent role was COO for a family backed private venture/growth business
       investing in technology companies.
     `,
     layout: "third",
@@ -109,7 +110,9 @@ export default function LeadershipSection() {
               Seasoned
             </span>
             <span
-              className={`delay-300 leading-tight fade-up ${isVis ? "open" : "closed"}`}
+              className={`delay-300 leading-tight fade-up ${
+                isVis ? "open" : "closed"
+              }`}
             >
               emerging
             </span>
@@ -117,12 +120,16 @@ export default function LeadershipSection() {
               className={`lg:ml-12 leading-tight w-full flex lg:justify-end justify-center flex-wrap gap-x-3`}
             >
               <span
-                className={`delay-400 leading-tight fade-up ${isVis ? "open" : "closed"}`}
+                className={`delay-400 leading-tight fade-up ${
+                  isVis ? "open" : "closed"
+                }`}
               >
                 market
               </span>
               <span
-                className={`delay-500  leading-tight fade-up ${isVis ? "open" : "closed"}`}
+                className={`delay-500  leading-tight fade-up ${
+                  isVis ? "open" : "closed"
+                }`}
               >
                 leaders
               </span>

@@ -83,9 +83,9 @@ export default function HeroSection() {
             <TimelineItem
               index={1}
               prefix="~$"
-              number={3}
+              number={3.4}
               suffix="bn"
-              description="AUM across EM equity strategies,<br> as of March 2025"
+              description="AUM across EM equity strategies,<br> as of July 2025"
             />
             <TimelineItem
               index={2}
@@ -119,7 +119,7 @@ export default function HeroSection() {
             <TimelineItem
               index={1}
               prefix="~$"
-              number={3}
+              number={3.4}
               suffix="bn"
               description="AUM across EM equity strategies,<br> as of March 2025"
             />

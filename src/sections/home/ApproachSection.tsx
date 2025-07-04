@@ -40,7 +40,9 @@ export default function ApproachSection() {
             Capturing
           </span>{" "}
           <span
-            className={`delay-300 leading-tight fade-up ${isVis ? "open" : "closed"}`}
+            className={`delay-300 leading-tight fade-up ${
+              isVis ? "open" : "closed"
+            }`}
           >
             emerging
           </span>
@@ -59,7 +61,7 @@ export default function ApproachSection() {
         >
           We aim to leverage granular fundamental analysis, carried out by
           on-the-ground research teams, to uncover latent risk-return asymmetry
-          within and across emerging market companies, sectors, and borders.
+          within and across emerging market countries, sectors and companies.
           Dynamic portfolio and risk management drive optimal capital allocation
           through cycles. Our unified process informs two distinct strategies.
         </p>
@@ -94,7 +96,7 @@ export default function ApproachSection() {
               Concentrated, benchmark-agnostic investing
               <br />
               <br />
-              Diversified across 30 - 50 best ideas
+              Diversified across 45 - 55 best ideas
             </p>
           </Card>
         </div>
