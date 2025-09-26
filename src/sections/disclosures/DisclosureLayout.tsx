@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import CImage from "@/assets/svgs/8_disclosures/carrhae-capital-disclosures-background-c-cropped.svg";
+import CImage from "@/assets/svgs/8_disclosures/qpps-disclosures-background-c-cropped.svg";
 
 interface Props {
   title: string;
@@ -110,11 +110,11 @@ const navs: DisclosureNavItem[] = [
     url: "/disclosures/legal-regulatory",
   },
   {
-    label: "MIFIDPRU 8 Disclosure",
+    label: "Company Information & Governance",
     url: "/disclosures/mifidpru-8-disclosure",
   },
   {
-    label: "UK Stewardship Code",
+    label: "Corporate Social Responsibility",
     url: "/disclosures/uk-stewardship-code",
   },
   {
@@ -122,17 +122,17 @@ const navs: DisclosureNavItem[] = [
     url: "/disclosures/privacy",
     sub: [
       {
-        label: "Dubai Privacy Statement",
+        label: "South African Privacy Statement",
         url: "/disclosures/privacy/dubai-privacy-statement",
       },
       {
-        label: "UK Privacy Statement",
+        label: "Data Protection Policy",
         url: "/disclosures/privacy/uk-privacy-statement",
       },
     ],
   },
   {
-    label: "Shareholder Rights Directive II",
+    label: "Data Protection & Privacy",
     url: "/disclosures/shareholder-rights-directive-ii",
   },
   {

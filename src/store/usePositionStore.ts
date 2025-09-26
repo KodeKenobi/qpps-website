@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 export type Nav = {
   label: string;
@@ -6,15 +6,14 @@ export type Nav = {
   external?: boolean;
 };
 
-
 const navs: Nav[] = [
   {
     label: "About",
     url: "about",
   },
   {
-    label: "Approach",
-    url: "approach",
+    label: "Services",
+    url: "services",
   },
   {
     label: "Leadership",
@@ -25,7 +24,6 @@ const navs: Nav[] = [
     url: "contact",
   },
 ];
-
 
 interface PositionState {
   position: string | null;

@@ -7,145 +7,143 @@
 } */
 
 @font-face {
-    font-family: "Lunaquete-TextItalic";
-    src:
-        url("/fonts/LunaqueteItalic/font.woff") format("woff"),
-        url("/fonts/LunaqueteItalic/font.woff2") format("woff2");
-    font-weight: 400;
+  font-family: "Lunaquete-TextItalic";
+  src: url("/fonts/LunaqueteItalic/font.woff") format("woff"),
+    url("/fonts/LunaqueteItalic/font.woff2") format("woff2");
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "Lunaquete-TextRegular";
-    src:
-        url("/fonts/LunaqueteRegular/font.woff") format("woff"),
-        url("/fonts/LunaqueteRegular/font.woff2") format("woff2");
-    font-weight: 400;
+  font-family: "Lunaquete-TextRegular";
+  src: url("/fonts/LunaqueteRegular/font.woff") format("woff"),
+    url("/fonts/LunaqueteRegular/font.woff2") format("woff2");
+  font-weight: 400;
 }
 
 :root {
-    --font-ivyOra-serif: "IvyOra Text Reg", serif;
-    --font-lunaquete-serif: "Lunaquete-TextRegular", serif;
-    --font-ivyOra-italic: "IvyOraText-RegularItalic", serif;
-    --font-lunaquete: "Lunaquete-TextItalic", serif;
+  --font-ivyOra-serif: "IvyOra Text Reg", serif;
+  --font-lunaquete-serif: "Lunaquete-TextRegular", serif;
+  --font-ivyOra-italic: "IvyOraText-RegularItalic", serif;
+  --font-lunaquete: "Lunaquete-TextItalic", serif;
 }
 
 @theme inline {
-    /* MAIN - COLOR */
-    --color-navy: #282a3c;
-    --color-gold: #d5a877;
-    --color-slate: #576f8a;
-    --color-gray: #bec8d4;
+  /* MAIN - COLOR */
+  --color-navy: #282a3c;
+  --color-gold: #ff2a27;
+  --color-slate: #576f8a;
+  --color-gray: #bec8d4;
 
-    /* ALT - COLOR */
-    --color-alt-navy: #1d1e2f;
-    --color-alt-gold: #f2d0be;
-    --color-alt-gray: #eff1f4;
+  /* ALT - COLOR */
+  --color-alt-navy: #1d1e2f;
+  --color-alt-gold: #ff6b6b;
+  --color-alt-gray: #eff1f4;
 
-    /* FONT */
-    --font-sans: var(--font-albert-sans);
-    --font-serif: var(--font-lunaquete-serif);
-    --font-serif-italic: var(--font-lunaquete);
+  /* FONT */
+  --font-sans: var(--font-albert-sans);
+  --font-serif: var(--font-lunaquete-serif);
+  --font-serif-italic: var(--font-lunaquete);
 }
 
 body {
-    font-family: var(--font-albert-sans);
+  font-family: var(--font-albert-sans);
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #576f8a;
+  background-color: #576f8a;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgba(87, 111, 138, 0.15);
+  background-color: rgba(87, 111, 138, 0.15);
 }
 
 strong {
-    @apply font-semibold;
+  @apply font-semibold;
 }
 
 .custom-table {
-    @apply text-base;
+  @apply text-base;
 }
 .custom-table tr td {
-    @apply p-4 border border-slate/20 align-top;
+  @apply p-4 border border-slate/20 align-top;
 }
 .custom-table thead {
-    @apply bg-slate/10;
+  @apply bg-slate/10;
 }
 .custom-table thead th {
-    @apply p-4 border border-slate/20;
+  @apply p-4 border border-slate/20;
 }
 
 .custom-table thead th:first-child {
-    @apply text-left;
+  @apply text-left;
 }
 
 .custom-table code {
-    @apply bg-gray/10 px-2 py-1 rounded-sm;
+  @apply bg-gray/10 px-2 py-1 rounded-sm;
 }
 
 article ul,
 article ol {
-    @apply space-y-4;
+  @apply space-y-4;
 }
 article.article a {
-    @apply underline hover:text-gold;
+  @apply underline hover:text-gold;
 }
 
 .mobile-nav {
-    @apply lg:hidden w-[27px] h-4 relative;
+  @apply lg:hidden w-[27px] h-4 relative;
 }
 
 .mobile-nav span {
-    @apply absolute w-full h-px bg-slate transition-all duration-300 ease-in-out;
+  @apply absolute w-full h-px bg-slate transition-all duration-300 ease-in-out;
 }
 
 .mobile-nav span:first-child {
-    top: 0;
+  top: 0;
 }
 .mobile-nav span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 .mobile-nav span:last-child {
-    bottom: 0;
+  bottom: 0;
 }
 .mobile-nav.active span:first-child {
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 .mobile-nav.active span:nth-child(2) {
-    width: 0;
+  width: 0;
 }
 .mobile-nav.active span:last-child {
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .mobile-nav-menu {
-    @apply absolute top-full left-0 w-full bg-navy flex lg:hidden flex-col h-screen overflow-y-auto transition-all duration-800;
-    max-height: calc(100vh - 100%);
+  @apply absolute top-full left-0 w-full bg-navy flex lg:hidden flex-col h-screen overflow-y-auto transition-all duration-800 z-50;
+  max-height: calc(100vh - 100%);
 }
 
 .mobile-nav-menu.closed {
-    @apply translate-y-full;
+  @apply translate-y-full;
 }
 
 .mobile-nav-menu.open {
-    @apply translate-y-0;
+  @apply translate-y-0;
 }
 
 .fade-up {
-    @apply opacity-0 translate-y-6 transition-all duration-700 ease-in-out;
+  @apply opacity-0 translate-y-6 transition-all duration-700 ease-in-out;
 }
 .fade-up.open {
-    @apply opacity-100 translate-y-0;
+  @apply opacity-100 translate-y-0;
 }
 .fade-up.closed {
-    @apply opacity-0 translate-y-6;
+  @apply opacity-0 translate-y-6;
 }

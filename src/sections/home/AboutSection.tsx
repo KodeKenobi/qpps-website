@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import CImage from "@/assets/svgs/2_about/carrhae-capital-section2-about-background-c-cropped.svg";
+import CImage from "@/assets/svgs/2_about/qpps-section2-about-background-c-cropped.svg";
 import { HandleSectionInView } from "@/utils/handleSectionInView";
 import { motion } from "motion/react";
 
@@ -30,12 +30,14 @@ export default function AboutSection() {
               isVis ? "open" : "closed"
             }`}
           >
-            Global
+            Digital
           </span>
           <span
-            className={`delay-300 leading-tight fade-up ${isVis ? "open" : "closed"}`}
+            className={`delay-300 leading-tight fade-up ${
+              isVis ? "open" : "closed"
+            }`}
           >
-            perspective.
+            innovation.
           </span>
           <div className="lg:ml-32 w-full leading-tight flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
             <span
@@ -50,7 +52,7 @@ export default function AboutSection() {
                 isVis ? "open" : "closed"
               }`}
             >
-              clarity.
+              impact.
             </span>
           </div>
         </h3>
@@ -79,14 +81,16 @@ export default function AboutSection() {
                 isVis ? "open" : "closed"
               }`}
             >
-              Carrhae is a London-based investment manager specialising in
-              emerging market equity strategies.
+              Quality Projects People and Solutions (QPPS) is a newly
+              established company proudly founded by a previously disadvantaged
+              candidate and is based in East London, South Africa.
               <br />
               <br />
-              Our research teams in Brazil, China, India and the UAE generate
-              esoteric insights, monetised via a cycle-tested investment
-              process. We offer absolute return and alpha-driven solutions that
-              enhance global equity and multi-asset investor portfolios.
+              Our core objective is to play a meaningful and significant role in
+              government, municipal, and private sector projects by leveraging
+              technology to improve lives and simplify operations. We are
+              committed to protecting and enhancing service delivery through
+              tailored digital solutions.
             </p>
           </div>
         </div>

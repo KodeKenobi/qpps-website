@@ -46,7 +46,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
   const [cookies, setCookies] = useState<Cookie[]>(cookiesArray);
 
   const activeCookies = cookiesArray.some((cookie) =>
-    cookiesValues.some((value) => value.name === cookie.name),
+    cookiesValues.some((value) => value.name === cookie.name)
   );
 
   const handleAcceptAll = () => {
@@ -174,7 +174,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
                     </p>
                     <p className="text-xs">
                       We use analytical cookies to measure how you use our
-                      website and help improve carrhaecap.com.
+                      website and help improve qpp.co.za.
                     </p>
                   </div>
                   <div className="flex items-center justify-center space-y-2.5 flex-col">
@@ -190,8 +190,8 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
                       These cookies let us save the choices you make and some of
                       the information you provide when browsing
                       basispoint.group. They don’t track your browsing activity
-                      on other websites. Without functional cookies,
-                      carrhaecap.com may not work reliably.
+                      on other websites. Without functional cookies, qpp.co.za
+                      may not work reliably.
                     </p>
                   </div>
                   <div className="flex items-center justify-center space-y-2.5 flex-col text-sm">
@@ -205,11 +205,11 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
                     </p>
                     <p className="text-xs">
                       We use marketing cookies to display personalised messages
-                      on the carrhaecap.com website and to show you
-                      advertisements from us and selected third parties on other
-                      sites you may visit. We work with approved partners to
-                      deliver relevant content and to measure the effectiveness
-                      of these advertisements.
+                      on the qpp.co.za website and to show you advertisements
+                      from us and selected third parties on other sites you may
+                      visit. We work with approved partners to deliver relevant
+                      content and to measure the effectiveness of these
+                      advertisements.
                     </p>
                   </div>
                 </div>
@@ -229,9 +229,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
               className="mx-auto max-w-[480px] w-full min-h-0 grid overflow-hidden"
             >
               <div className="min-h-0">
-                <h2 className="font-serif text-2xl">
-                  Welcome to Carrhae Capital
-                </h2>
+                <h2 className="font-serif text-2xl">Welcome to QPPS</h2>
 
                 <p className="mt-8 mx-auto font-light leading-[1.37em]">
                   Our website uses essential cookies that are required for the

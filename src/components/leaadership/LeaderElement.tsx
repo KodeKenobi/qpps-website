@@ -1,7 +1,7 @@
 "use client";
 
 import useOpenBiographyStore from "@/store/useOpenBiographyStore";
-import LinkedInLogo from "@/assets/svgs/5_contact/carrhae-linkedin-logo-v2.svg";
+import LinkedInLogo from "@/assets/svgs/5_contact/qpps-linkedin-logo-v2.svg";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -99,7 +99,9 @@ const FirstLayout = ({ data, index }: { data: Leader; index: number }) => {
         <Image
           src={data.avatar}
           alt={data.name}
-          className={`w-1/3 transition-all duration-1000 delay-1000 ${inVis ? "opacity-100" : "opacity-0"}`}
+          className={`w-1/3 transition-all duration-1000 delay-1000 ${
+            inVis ? "opacity-100" : "opacity-0"
+          }`}
         />
         <div className=" pb-8 lg:pb-12">
           <motion.h4
@@ -192,7 +194,9 @@ const SecondLayout = ({ data, index }: { data: Leader; index: number }) => {
         <Image
           src={data.avatar}
           alt={data.name}
-          className={`w-1/3 lg:-mt-20 transition-all duration-1000 delay-1000 ${inVis ? "opacity-100" : "opacity-0"}`}
+          className={`w-1/3 lg:-mt-20 transition-all duration-1000 delay-1000 ${
+            inVis ? "opacity-100" : "opacity-0"
+          }`}
         />
       </div>
     </div>
@@ -217,7 +221,9 @@ const ThirdLayout = ({ data, index }: { data: Leader; index: number }) => {
       <Image
         src={data.avatar}
         alt={data.name}
-        className={`w-1/3 lg:-mt-[98px] transition-all duration-1000 delay-1000 ${inVis ? "opacity-100" : "opacity-0"}`}
+        className={`w-1/3 lg:-mt-[98px] transition-all duration-1000 delay-1000 ${
+          inVis ? "opacity-100" : "opacity-0"
+        }`}
       />
       <div className="pb-8 lg:pb-12">
         <motion.h4

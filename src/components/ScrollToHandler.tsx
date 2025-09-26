@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { handleScrollTo } from "@/utils/handleScrollTo";
 
-const ScrollToHandler = () => {
+const ScrollToHandlerInner = () => {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -25,6 +25,14 @@ const ScrollToHandler = () => {
   }, [searchParams]);
 
   return null;
+};
+
+const ScrollToHandler = () => {
+  return (
+    <Suspense fallback={null}>
+      <ScrollToHandlerInner />
+    </Suspense>
+  );
 };
 
 export default ScrollToHandler;

@@ -3,18 +3,18 @@
 import type { StaticImageData } from "next/image";
 import { ReactNode, useState } from "react";
 import Image from "next/image";
-import Image1 from "@/assets/images/3_investment-approach/carrhae_capital_section3_investment_approach_image_long_short.webp";
-import Image2 from "@/assets/images/3_investment-approach/carrhae_capital_section3_investment_approach_image_long_only.webp";
-import MobileImage1 from "@/assets/images/3_investment-approach/carrhae_capital_section3_investment_approach_mobile-image_long_short.webp";
-import MobileImage2 from "@/assets/images/3_investment-approach/carrhae_capital_section3_investment_approach_mobile-image_long_only.webp";
-import ApproachBackground from "@/assets/svgs/3_investment-approach/carrhae-capital-section3-investment-approach-image-background.svg";
+import Image1 from "@/assets/images/3_investment-approach/qpps_section3_services_image_long_short.webp";
+import Image2 from "@/assets/images/3_investment-approach/qpps_section3_services_image_long_only.webp";
+import MobileImage1 from "@/assets/images/3_investment-approach/qpps_section3_services_mobile-image_long_short.webp";
+import MobileImage2 from "@/assets/images/3_investment-approach/qpps_section3_services_mobile-image_long_only.webp";
+import ApproachBackground from "@/assets/svgs/3_investment-approach/qpps-section3-services-image-background.svg";
 import ReadMoreArrow from "@/assets/svgs/3_investment-approach/ReadMoreArrow";
 import { AnimatePresence, motion } from "motion/react";
-import CImage from "@/assets/svgs/4_leadership/carrhae-capital-section5-c.svg";
+import CImage from "@/assets/svgs/4_leadership/qpps-section5-c.svg";
 import { HandleSectionInView } from "@/utils/handleSectionInView";
 
 export default function ApproachSection() {
-  const id = "approach";
+  const id = "services";
   const [ref, , isVis] = HandleSectionInView(id);
 
   return (
@@ -29,7 +29,7 @@ export default function ApproachSection() {
             isVis ? "open" : "closed"
           }`}
         >
-          INVESTMENT APPROACH
+          OUR SERVICES
         </h2>
         <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
           <span
@@ -37,21 +37,21 @@ export default function ApproachSection() {
               isVis ? "open" : "closed"
             }`}
           >
-            Capturing
+            Comprehensive
           </span>{" "}
           <span
             className={`delay-300 leading-tight fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
-            emerging
+            digital
           </span>
           <div
             className={`lg:pl-32 w-full leading-tight delay-400 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
-            market dispersion
+            transformation solutions
           </div>
         </h3>
         <p
@@ -59,44 +59,116 @@ export default function ApproachSection() {
             isVis ? "open" : "closed"
           }`}
         >
-          We aim to leverage granular fundamental analysis, carried out by
-          on-the-ground research teams, to uncover latent risk-return asymmetry
-          within and across emerging market countries, sectors and companies.
-          Dynamic portfolio and risk management drive optimal capital allocation
-          through cycles. Our unified process informs two distinct strategies.
+          We deliver comprehensive digital transformation services that empower
+          government, municipal, and private sector organizations. Our expertise
+          spans cybersecurity, digital consultancy, smart community projects,
+          and supply of goods and services to drive meaningful change across
+          South Africa.
         </p>
       </div>
-      <div className="w-full grid lg:grid-cols-2 lg:px-0 px-8 gap-7 mt-12 lg:mt-32 relative z-10 pb-1">
+      <div className="w-full grid lg:grid-cols-3 lg:px-0 px-8 gap-7 mt-12 lg:mt-32 relative z-10 pb-1">
         <div className="relative z-20">
-          <Card title={"Long-Short"} image={Image1} mobileImage={MobileImage1}>
+          <Card
+            title={"Digital Transformation"}
+            image={Image1}
+            mobileImage={MobileImage1}
+          >
             <p>
-              Launched in December 2011 <br />
+              E-government solutions development <br />
               <br />
-              Absolute return target
-              <br />
-              <br />
-              Dynamic, low-net approach
+              Custom software and application development
               <br />
               <br />
-              UCITS version launched March 2022
+              Digital transformation roadmap formulation
               <br />
               <br />
+              System integration and legacy digitisation
             </p>
           </Card>
         </div>
         <div className="z-20 relative">
-          <Card title={"Long-Only"} image={Image2} mobileImage={MobileImage2}>
+          <Card
+            title={"Cybersecurity Services"}
+            image={Image2}
+            mobileImage={MobileImage2}
+          >
             <p>
-              Launched in February 2014
+              Cybersecurity awareness campaigns
               <br />
               <br />
-              Alpha-driven return target
+              Risk assessment and incident response
               <br />
               <br />
-              Concentrated, benchmark-agnostic investing
+              Implementation of security policies
               <br />
               <br />
-              Diversified across 45 - 55 best ideas
+              Security audits and compliance support
+              <br />
+              <br />
+              Staff training and capacity building
+            </p>
+          </Card>
+        </div>
+        <div className="z-20 relative">
+          <Card
+            title={"Digital Consultancy"}
+            image={Image1}
+            mobileImage={MobileImage1}
+          >
+            <p>
+              Digital strategy and roadmap development
+              <br />
+              <br />
+              Change management and digital adoption
+              <br />
+              <br />
+              Digital skills training and capacity building
+              <br />
+              <br />
+              Technology audits and governance assessments
+            </p>
+          </Card>
+        </div>
+        <div className="z-20 relative">
+          <Card
+            title={"Smart Community Projects"}
+            image={Image2}
+            mobileImage={MobileImage2}
+          >
+            <p>
+              Digital inclusion initiatives for rural communities
+              <br />
+              <br />
+              Tech-enabled education and e-learning platforms
+              <br />
+              <br />
+              Public service access through mobile platforms
+              <br />
+              <br />
+              Collaboration tools for municipalities
+            </p>
+          </Card>
+        </div>
+        <div className="z-20 relative">
+          <Card
+            title={"Supply of Goods & Services"}
+            image={Image1}
+            mobileImage={MobileImage1}
+          >
+            <p>
+              ICT hardware and software supply
+              <br />
+              <br />
+              Office and networking hardware supply
+              <br />
+              <br />
+              Procurement and logistics coordination
+              <br />
+              <br />
+              General supplies for public and private sectors
+              <br />
+              <br />
+              Technology infrastructure solutions
             </p>
           </Card>
         </div>

@@ -21,8 +21,8 @@ export default function ReadMoreArrow({
 				cy="36.5"
 				r="12"
 				transform="rotate(90 12.5 36.5)"
-				fill="#CFAA72"
-				stroke="#CFAA72"
+				fill="#ff2a27"
+				stroke="#ff2a27"
 				className={`${
 					open ? "-translate-y-6" : "translate-y-0"
 				} transition-all duration-500`}

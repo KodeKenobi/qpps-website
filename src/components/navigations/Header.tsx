@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "../../../public/svgs/_nav-bar/carrhae-capital-nav-logo.svg";
+import Logo from "../../../public/logos/logo-colour.svg";
 import Link from "next/link";
 import Button from "../buttons/Button";
 import usePositionStore, { Nav } from "@/store/usePositionStore";
@@ -9,22 +9,15 @@ import { handleScrollTo } from "@/utils/handleScrollTo";
 import { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import useMobileNavStore from "@/store/useMobileNavStore";
-import LinkedInLogo from "../../../public/svgs/_nav-bar/carrhae-capital-nav-linkedin.svg";
-import LinkedInLogoWhite from "../../../public/svgs/_nav-bar/linkedin.svg";
 
 export default function Header() {
   const { navs, position } = usePositionStore();
   const { open, setOpen } = useMobileNavStore();
-  const [trans, setTrans] = useState<boolean>(true);
   const pathname = usePathname();
 
   const handleScroll = useCallback(() => {
-    if (window.scrollY > 0) {
-      setTrans(false);
-    } else {
-      setTrans(true);
-    }
-  }, [setTrans]);
+    // Scroll handling removed
+  }, []);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -34,15 +27,13 @@ export default function Header() {
   }, [pathname, handleScroll]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${trans ? "bg-transparent" : "bg-white"}`}
-    >
-      <div className="flex items-center justify-between border-b border-slate/40 py-6 lg:py-0">
+    <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white">
+      <div className="flex items-center justify-between border-b border-slate/40 py-6 lg:py-0 text-navy">
         <div className="pl-6 lg:pl-4 lg:pl-20">
           <Link href="/#hero">
             <Image
               src={Logo}
-              alt="Carrhae Capital Logo"
+              alt="QPPS Logo"
               width={220}
               height={51}
               className="max-w-[167px] lg:max-w-[220px]"
@@ -51,24 +42,11 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex items-center justify-end h-full">
           <nav className="border-r border-slate/40 h-full">
-            <ul className="justify-end items-center h-full  text-xs font-light uppercase tracking-widest text-slate flex md:pr-8 lg:pr-[57px] md:gap-x-4 lg:gap-x-12 xl:gap-x-[69px]">
+            <ul className="justify-end items-center h-full  text-xs font-light uppercase tracking-widest text-navy flex md:pr-8 lg:pr-[57px] md:gap-x-4 lg:gap-x-12 xl:gap-x-[69px]">
               {navs.map((nav) => (
                 <NavButton key={nav.url} nav={nav} position={position} />
               ))}
-              <div className="rounded-full flex items-center justify-center">
-              <Link
-                href="https://www.linkedin.com/company/carrhae-capital/"
-                target="_blank"
-              >
-                <Image
-                  src={LinkedInLogo}
-                  alt="LinkedIn"
-                  className="w-full h-full object-cover"
-                />
-              </Link>
-            </div>
             </ul>
-            
           </nav>
           {/* <div className="flex items-center justify-end h-full lg:pr-[114px] lg:pl-[57px]">
             <Link href="https://google.com/" target="_blank">
@@ -98,7 +76,7 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col items-center justify-start h-full gap-y-8">
-          <ul className="text-2xl font-light uppercase tracking-widest text-slate flex flex-col min-h-[185px] gap-y-[12%] h-full text-center">
+          <ul className="text-2xl font-light uppercase tracking-widest text-white flex flex-col min-h-[185px] gap-y-[12%] h-full text-center">
             {navs.map((nav) => (
               <MobileNavButton
                 key={nav.url}
@@ -118,16 +96,6 @@ export default function Header() {
             /> */}
           </ul>
         </nav>
-        <div className="flex items-center justify-center mt-auto pt-8">
-          <Link href="https://linkedin.com/" target="_blank">
-            <Image
-              src={LinkedInLogoWhite}
-              alt="LinkedIn Logo"
-              width={28}
-              height={28}
-            />
-          </Link>
-        </div>
         <div className="flex items-center justify-center border-t border-t-slate/50 py-7 text-white mt-9">
           <Link
             href={"/disclosures/legal-regulatory"}
@@ -205,16 +173,16 @@ const MobileNavButton = ({
         <Link
           href={nav.url}
           target="_blank"
-          className={`uppercase cursor-pointer tracking-[0.25em]`}
+          className={`uppercase cursor-pointer text-white hover:text-gold transition-colors duration-300 tracking-[0.25em]`}
         >
           {nav.label}
         </Link>
       ) : (
         <button
           onMouseDown={() => handleClick()}
-          className={`uppercase cursor-pointer ${
+          className={`uppercase cursor-pointer text-white hover:text-gold transition-colors duration-300 ${
             pathname === "/" && position === nav.url
-              ? "font-semibold italic text-gray tracking-[0.25em]"
+              ? "font-semibold italic text-gold tracking-[0.25em]"
               : ""
           }`}
         >

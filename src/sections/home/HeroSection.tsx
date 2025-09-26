@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import HeroBackground from "@/assets/images/1_landing/carrhae_capital_landing_image.webp";
 import LandingArrow from "@/assets/svgs/1_landing/LandingArrow";
 import { HandleSectionInView } from "@/utils/handleSectionInView";
 import { motion } from "motion/react";
@@ -19,12 +18,13 @@ export default function HeroSection() {
         className="flex flex-col lg:min-h-screen overflow-x-clip relative justify-center bg-slate text-white lg:mx-0 px-8 lg:pr-0 lg:pb-0 pb-44 pt-44 lg:pt-[200px]"
       >
         <Image
-          src={HeroBackground}
-          alt="Background"
+          src="/hero/hero.jpg"
+          alt="QPPS Hero Background"
           fill
           className="object-cover object-center absolute top-0 left-0 w-full h-full z-0"
           priority
           quality={100}
+          sizes="100vw"
         />
 
         <div className="relative py-auto w-fit max-w-2xl mx-auto lg:ml-auto lg:mr-[12%] my-auto">
@@ -34,17 +34,19 @@ export default function HeroSection() {
                 isVis ? "open" : "closed"
               }`}
             >
-              Precision
+              Digital
             </span>
             <span className={`delay-400 fade-up ${isVis ? "open" : "closed"}`}>
-              in
+              Transformation
             </span>
             <span className={`delay-500 fade-up ${isVis ? "open" : "closed"}`}>
-              Liquid Emerging
+              for
             </span>{" "}
             <br />
-            <span className={`delay-600 fade-up ${isVis ? "open" : "closed"}`}>
-              Markets
+            <span
+              className={`mb-8 delay-600 fade-up ${isVis ? "open" : "closed"}`}
+            >
+              South Africa
             </span>
           </h1>
           <div
@@ -55,12 +57,13 @@ export default function HeroSection() {
             <LandingArrow />
           </div>
           <p
-            className={`w-full lg:max-w-[334px] text-lg text-center lg:text-left lg:text-xl lg:ml-auto delay-700 fade-up ${
+            className={`w-full lg:max-w-[434px] text-lg text-center lg:text-left lg:text-xl lg:ml-auto delay-700 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
-            We combine localised research and structured portfolio management to
-            capture the persistent dispersion in emerging markets.
+            Empowering people and institutions through digital transformation.
+            We deliver innovative, secure, and user-friendly systems that drive
+            transformation across South Africa.
           </p>
           <div
             className={`pl-14 -mt-10 hidden lg:block delay-800 fade-up ${
@@ -77,21 +80,20 @@ export default function HeroSection() {
           <div className="flex flex-col lg:flex-row justify-between gap-[10%] lg:px-28 relative">
             <TimelineItem
               index={0}
-              number={2011}
-              description="Firm founded <br> by Ali Akay"
+              number={2024}
+              description="QPPS founded <br> by Simlindile Bantom"
             />
             <TimelineItem
               index={1}
-              prefix="~$"
-              number={3.4}
-              suffix="bn"
-              description="AUM across EM equity strategies,<br> as of July 2025"
+              number={11}
+              suffix="+ years"
+              description="Combined ICT experience <br> of our leadership team"
             />
             <TimelineItem
               index={2}
-              number={45}
-              suffix=" years"
-              description="Combined EM experience <br> of CIO & deputy CIO"
+              number={5}
+              suffix=" services"
+              description="Core service offerings <br> for digital transformation"
             />
             <motion.i
               initial={{
@@ -113,21 +115,20 @@ export default function HeroSection() {
           <div className="border-b-gold/40 lg:border-b flex flex-col lg:flex-row justify-between gap-[10%] lg:px-28">
             <TimelineItem
               index={0}
-              number={2011}
-              description="Firm founded <br> by Ali Akay"
+              number={2024}
+              description="QPPS founded <br> by Simlindile Bantom"
             />
             <TimelineItem
               index={1}
-              prefix="~$"
-              number={3.4}
-              suffix="bn"
-              description="AUM across EM equity strategies,<br> as of March 2025"
+              number={11}
+              suffix="+ years"
+              description="Combined ICT experience <br> of our leadership team"
             />
             <TimelineItem
               index={2}
-              number={45}
-              suffix=" years"
-              description="Combined EM experience <br> of CIO & deputy CIO"
+              number={5}
+              suffix=" services"
+              description="Core service offerings <br> for digital transformation"
             />
           </div>
         </div>

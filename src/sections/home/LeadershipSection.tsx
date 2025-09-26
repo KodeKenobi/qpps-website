@@ -1,81 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import type { Leader } from "@/components/leaadership/LeaderElement";
-import AliAkayAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_ali_akay.webp";
-import PlamenDokovAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_plamen_dokov.webp";
-import ShaneBoltonAvatar from "@/assets/images/4_leadership/carrhae_capital_section4_leadership_image_shane_bolton.png";
-import LeadershipBackground from "@/assets/svgs/4_leadership/carrhae-capital-section4-leadership-image-background.svg";
-import LeaderElement from "@/components/leaadership/LeaderElement";
+import LeadershipBackground from "@/assets/svgs/4_leadership/qpps-section4-leadership-image-background.svg";
 import { HandleSectionInView } from "@/utils/handleSectionInView";
-
-const leaders: Leader[] = [
-  {
-    avatar: AliAkayAvatar,
-    name: "Ali Akay",
-    title: "Chief Investment Officer",
-    linkedInUrl: "https://www.linkedin.com/in/ali-akay-3061a3/",
-    biography: `With 25 years of experience in global long-short equity,
-		Ali specializes in emerging markets and financials. He spent much of
-		his career at SAC Global and HBK Investments before founding Carrhae
-		Capital in 2011. At SAC Global, he
-		managed the emerging markets long/short equity portfolio and served
-		on the Investment Committee. Previously, he was a partner at HBK
-		Investments, leading emerging market equities and establishing their
-		Istanbul office in 2008. Ali began his career at McKinsey & Company
-		and later joined Goldman Sachs as an Associate in the Principal
-		Strategies Group. He holds a BSc in Economics and a BA in German
-		Literature and International Studies from the Wharton School of
-		Business.`,
-    layout: "first",
-  },
-  {
-    avatar: PlamenDokovAvatar,
-    name: "Plamen Dokov",
-    title: "Deputy Chief Investment Officer",
-    linkedInUrl: "https://www.linkedin.com/in/plamen-dokov-9b2b271/",
-    biography: `
-      Plamen Dokov joined Carrhae Capital at its inception from SAC Global Investors where
-      he was a Senior Analyst focused on the Energy sector and working directly with Ali
-      Akay. Ali and Plamen have worked together for 17 years, building a strong partnership
-      that has been fundamental to Carrhae's success.
-      <br><br>
-      Prior to that, Plamen was an Associate with the Morgan Stanley Principal Strategies
-      group, covering pan-European special situations.
-      <br><br>
-      Plamen began his career as an analyst at Lazard where he focused on generalist M&A
-      practices.
-      <br><br>
-      Plamen is a CFA Charterholder and holds a BA in Economics and Business Administration
-      from the University of Sofia in Bulgaria.
-    `,
-    layout: "second",
-  },
-  {
-    avatar: ShaneBoltonAvatar,
-    name: "Shane Bolton",
-    title: `Chief Executive Officer`,
-    linkedInUrl: "https://www.linkedin.com/in/shane-bolton-a7967197/",
-    biography: `
-      Shane Bolton has extensive experience within Emerging Markets.  He worked at Goldman
-      Sachs for 21 years and was the Partner responsible for the Asia Prime Brokerage
-      business and was based in Hong Kong for eleven years.  Prior to this he ran the Asia
-      Prime Brokerage sales, capital introduction and consulting teams; Asia Execution Sales
-      (prime brokerage, futures, electronic trading and CSAs) and was co-head of the Asia
-      electronic trading business in Hong Kong.
-      <br><br>
-      Prior to this, Shane was Co-Head of Prime Brokerage Sales and worked in capital
-      introduction having been Co-Head of the Emerging Europe product.
-      <br><br>
-      Shane originally worked at Lehman Brothers for 6 years in corporate finance, equity
-      capital markets, and then in Asian and Emerging European equity sales.
-      <br><br>
-      Shane's most recent role was COO for a family backed private venture/growth business
-      investing in technology companies.
-    `,
-    layout: "third",
-  },
-];
 
 export default function LeadershipSection() {
   const id = "leadership";
@@ -101,20 +28,20 @@ export default function LeadershipSection() {
           >
             LEADERSHIP
           </h2>
-          <h3 className="font-serif mt-2 lg:mt-8 text-4xl lg:text-7xl leading-tight lg:text-right justify-center lg:justify-end text-center lg:leading-24 flex flex-wrap gap-x-2 lg:gap-x-3">
+          <h3 className="font-serif mt-2 lg:mt-8 mb-8 lg:mb-0 text-4xl lg:text-7xl leading-tight lg:text-right justify-center lg:justify-end text-center lg:leading-24 flex flex-wrap gap-x-2 lg:gap-x-3">
             <span
               className={`font-serif-italic leading-tight delay-200 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
-              Seasoned
+              Expert
             </span>
             <span
               className={`delay-300 leading-tight fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
-              emerging
+              ICT
             </span>
             <div
               className={`lg:ml-12 leading-tight w-full flex lg:justify-end justify-center flex-wrap gap-x-3`}
@@ -124,32 +51,81 @@ export default function LeadershipSection() {
                   isVis ? "open" : "closed"
                 }`}
               >
-                market
+                expertise
               </span>
               <span
                 className={`delay-500  leading-tight fade-up ${
                   isVis ? "open" : "closed"
                 }`}
               >
-                leaders
+                team
               </span>
             </div>
           </h3>
         </div>
 
-        <div
-          className={`w-full lg:mt-0 mt-2 delay-600 fade-up ${
-            isVis ? "open" : "closed"
-          }`}
-        >
-          {leaders.map((leader, index) => (
-            <LeaderElement
-              key={leader.name}
-              data={leader}
-              index={index}
-              total={leaders.length - 1}
-            />
-          ))}
+        <div className="px-8 lg:pl-24 lg:pr-28 pb-20 lg:pb-32">
+          <div className={`delay-600 fade-up ${isVis ? "open" : "closed"}`}>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+              <div className="space-y-6 mt-8 lg:mt-0">
+                <h4 className="font-serif text-2xl lg:text-3xl text-navy">
+                  Our Expertise
+                </h4>
+                <p className="text-lg text-navy leading-relaxed">
+                  QPPS is powered by a highly skilled workforce, with the
+                  majority of our professionals holding degrees and
+                  internationally recognized certifications including ITIL v3,
+                  Cisco, Microsoft Certified Solutions Associate, Fortinet NSE
+                  4, VMware, and AWS.
+                </p>
+                <p className="text-lg text-navy leading-relaxed">
+                  Our organizational structure demonstrates a balance of
+                  leadership, technical expertise, and operational capacity,
+                  ensuring we deliver end-to-end ICT and digital transformation
+                  services with professionalism and scalability.
+                </p>
+              </div>
+
+              <div className="space-y-6 mt-8 lg:mt-0">
+                <h4 className="font-serif text-2xl lg:text-3xl text-navy">
+                  Our Approach
+                </h4>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-navy">
+                      <strong>Innovation First:</strong> We leverage
+                      cutting-edge technology to solve complex challenges and
+                      drive digital transformation.
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-navy">
+                      <strong>Security Focused:</strong> Every solution is built
+                      with cybersecurity and data protection as core principles.
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-navy">
+                      <strong>People-Centered:</strong> We design solutions that
+                      enhance user experience and improve operational
+                      efficiency.
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-navy">
+                      <strong>Local Impact:</strong> Committed to empowering
+                      South African communities through technology and digital
+                      inclusion.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
