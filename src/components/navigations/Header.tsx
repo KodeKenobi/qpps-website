@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white">
-      <div className="flex items-center justify-between border-b border-slate/40 py-6 lg:py-0 text-navy">
+      <div className="flex items-center justify-between border-b border-slate/40 py-3 lg:py-0 text-navy">
         <div className="pl-6 lg:pl-4 lg:pl-20">
           <Link href="/#hero">
             <Image
@@ -36,7 +36,7 @@ export default function Header() {
               alt="QPPS Logo"
               width={220}
               height={51}
-              className="max-w-[167px] lg:max-w-[220px]"
+              className="max-w-[140px] lg:max-w-[180px]"
             />
           </Link>
         </div>
@@ -71,7 +71,7 @@ export default function Header() {
         </div>
       </div>
       <nav
-        className={`mobile-nav-menu pt-14 lg:hidden ${
+        className={`mobile-nav-menu pt-8 lg:hidden ${
           open ? "open" : "closed"
         }`}
       >
@@ -128,7 +128,7 @@ const NavButton = ({
   };
 
   return (
-    <li key={nav.url} className="h-full py-[50px] relative group">
+    <li key={nav.url} className="h-full py-[30px] relative group">
       <button
         onMouseDown={() => handleClick()}
         className={`uppercase cursor-pointer ${
