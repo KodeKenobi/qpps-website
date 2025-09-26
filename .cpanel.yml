@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - export NODE_VERSION=22
+    - npm install
+    - npm run build
