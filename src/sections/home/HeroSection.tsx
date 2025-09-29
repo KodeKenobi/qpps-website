@@ -19,7 +19,7 @@ export default function HeroSection() {
       >
         <Image
           src="/hero/hero.jpg"
-          alt="QPPS Hero Background"
+          alt="Coastal landscape with cows grazing near the ocean and Hole in the Wall arch formation"
           fill
           className="object-cover object-center absolute top-0 left-0 w-full h-full z-0"
           priority
