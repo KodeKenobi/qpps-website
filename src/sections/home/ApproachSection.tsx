@@ -55,7 +55,7 @@ export default function ApproachSection() {
           </div>
         </h3>
         <p
-          className={`lg:font-normal font-light lg:text-left text-center mt-5 lg:pl-32 lg:mt-16 text-lg lg:text-xl delay-500 fade-up ${
+          className={`lg:font-normal font-light lg:text-left text-center mt-3 lg:pl-32 lg:mt-6 text-lg lg:text-xl delay-500 fade-up ${
             isVis ? "open" : "closed"
           }`}
         >

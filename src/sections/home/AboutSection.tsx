@@ -56,7 +56,7 @@ export default function AboutSection() {
             </span>
           </div>
         </h3>
-        <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:-mt-12 mt-7">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:-mt-4 mt-3">
           <div className="relative">
             <motion.i
               initial={{
