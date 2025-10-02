@@ -68,17 +68,17 @@ export default function LeadershipSection() {
           <div className={`delay-600 fade-up ${isVis ? "open" : "closed"}`}>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <div className="space-y-6 mt-8 lg:mt-0">
-                <h2 className="font-satoshi text-2xl lg:text-3xl text-navy">
+                <h2 className="font-satoshi text-2xl lg:text-3xl text-navy text-center lg:text-left">
                   Our Expertise
                 </h2>
-                <p className="text-2xl text-navy leading-relaxed">
+                <p className="text-lg md:text-xl lg:text-2xl text-navy leading-relaxed text-center lg:text-left">
                   QPPS is powered by a highly skilled workforce, with the
                   majority of our professionals holding degrees and
                   internationally recognized certifications including ITIL v3,
                   Cisco, Microsoft Certified Solutions Associate, Fortinet NSE
                   4, VMware, and AWS.
                 </p>
-                <p className="text-2xl text-navy leading-relaxed">
+                <p className="text-lg md:text-xl lg:text-2xl text-navy leading-relaxed text-center lg:text-left">
                   Our organizational structure demonstrates a balance of
                   leadership, technical expertise, and operational capacity,
                   ensuring we deliver end-to-end ICT and digital transformation
@@ -87,13 +87,13 @@ export default function LeadershipSection() {
               </div>
 
               <div className="space-y-6 mt-8 lg:mt-0">
-                <h2 className="font-satoshi text-2xl lg:text-3xl text-navy">
+                <h2 className="font-satoshi text-2xl lg:text-3xl text-navy text-center lg:text-left">
                   Our Approach
                 </h2>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-2xl text-navy">
+                    <p className="text-lg md:text-xl lg:text-2xl text-navy text-center lg:text-left">
                       <strong>Innovation First:</strong> We leverage
                       cutting-edge technology to solve complex challenges and
                       drive digital transformation.
@@ -101,14 +101,14 @@ export default function LeadershipSection() {
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-2xl text-navy">
+                    <p className="text-lg md:text-xl lg:text-2xl text-navy text-center lg:text-left">
                       <strong>Security Focused:</strong> Every solution is built
                       with cybersecurity and data protection as core principles.
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-2xl text-navy">
+                    <p className="text-lg md:text-xl lg:text-2xl text-navy text-center lg:text-left">
                       <strong>People-Centered:</strong> We design solutions that
                       enhance user experience and improve operational
                       efficiency.
@@ -116,7 +116,7 @@ export default function LeadershipSection() {
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-2xl text-navy">
+                    <p className="text-lg md:text-xl lg:text-2xl text-navy text-center lg:text-left">
                       <strong>Local Impact:</strong> Committed to empowering
                       South African communities through technology and digital
                       inclusion.

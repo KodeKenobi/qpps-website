@@ -60,10 +60,10 @@ export default function ContactSection() {
               className="space-y-6 mt-8 lg:mt-0"
             >
               <div className="space-y-4">
-                <h4 className="font-satoshi text-xl md:text-2xl lg:text-3xl text-gold">
+                <h4 className="font-satoshi text-xl md:text-2xl lg:text-3xl text-gold text-center lg:text-left">
                   Quality Projects People and Solutions (QPPS)
                 </h4>
-                <div className="space-y-2 text-base md:text-lg lg:text-xl">
+                <div className="space-y-2 text-base md:text-lg lg:text-xl text-center lg:text-left">
                   <p>Unit 03 Fernwick close</p>
                   <p>4th avenue, Gonubie</p>
                   <p>East London, 5201</p>
@@ -72,7 +72,7 @@ export default function ContactSection() {
               </div>
 
               <div className="space-y-4 pt-4">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <span className="text-gold font-semibold">Phone:</span>
                   <Link
                     href={"tel:+27768629222"}
@@ -81,7 +81,7 @@ export default function ContactSection() {
                     076 8629 222
                   </Link>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <span className="text-gold font-semibold">Email:</span>
                   <Link
                     href={"mailto:abongile@qpp.co.za"}
