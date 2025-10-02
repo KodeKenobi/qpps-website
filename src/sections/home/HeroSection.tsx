@@ -15,7 +15,7 @@ export default function HeroSection() {
       <section
         ref={ref}
         id={id}
-        className="flex flex-col lg:min-h-screen overflow-x-clip relative justify-center bg-slate text-white lg:mx-0 px-8 lg:pr-0 lg:pb-0 pb-44 pt-44 lg:pt-[200px]"
+        className="flex flex-col lg:min-h-screen overflow-x-clip relative justify-center bg-slate text-white lg:mx-0 px-4 md:px-8 lg:pr-0 lg:pb-0 pb-32 pt-32 md:pt-40 lg:pt-[200px]"
       >
         <Image
           src="/hero/hero.jpg"
@@ -27,8 +27,8 @@ export default function HeroSection() {
           sizes="100vw"
         />
 
-        <div className="relative py-auto w-fit max-w-2xl mx-auto lg:ml-auto lg:mr-[12%] my-auto">
-          <h1 className="text-5xl lg:text-left text-center lg:text-white text-navy lg:text-7xl lg:justify-start justify-center font-satoshi font-normal lg:pr-24 flex flex-wrap lg:gap-x-3 gap-x-2">
+        <div className="relative py-auto w-fit max-w-2xl mx-auto lg:ml-auto lg:mr-[12%] my-auto px-4 md:px-8">
+          <h1 className="text-4xl md:text-5xl lg:text-left text-center text-white lg:text-7xl lg:justify-start justify-center font-satoshi font-normal lg:pr-24 flex flex-wrap lg:gap-x-3 gap-x-2 leading-tight">
             <span
               className={`font-satoshi italic leading-tight delay-200 fade-up ${
                 isVis ? "open" : "closed"
@@ -57,7 +57,7 @@ export default function HeroSection() {
             <LandingArrow />
           </div>
           <p
-            className={`w-full lg:max-w-[500px] text-lg text-center lg:text-left lg:text-2xl lg:ml-auto delay-700 fade-up ${
+            className={`w-full lg:max-w-[500px] text-base md:text-lg text-center lg:text-left lg:text-2xl lg:ml-auto delay-700 fade-up mt-4 md:mt-6 ${
               isVis ? "open" : "closed"
             }`}
           >
@@ -110,8 +110,8 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="px-8 lg:px-0 lg:hidden -mt-28 -mb-28">
-        <div className="text-white mx-auto lg:mr-0 lg:ml-auto w-full lg:w-5/6 bg-navy relative z-10 lg:min-h-32 lg:translate-y-1/2 py-16 lg:py-20">
+      <section className="px-4 md:px-8 lg:px-0 lg:hidden -mt-20 -mb-20">
+        <div className="text-white mx-auto lg:mr-0 lg:ml-auto w-full lg:w-5/6 bg-navy relative z-10 lg:min-h-32 lg:translate-y-1/2 py-12 md:py-16 lg:py-20">
           <div className="border-b-gold/40 lg:border-b flex flex-col lg:flex-row justify-between gap-[10%] lg:px-28">
             <TimelineItem
               index={0}
@@ -151,12 +151,12 @@ const TimelineItem = ({
   index: number;
 }) => {
   return (
-    <div className="flex flex-col relative pb-8 lg:text-left text-center py-8 lg:pt-0 first:pt-0 lg:border-b-0 border-b border-b-gold/40">
+    <div className="flex flex-col relative pb-6 md:pb-8 lg:text-left text-center py-6 md:py-8 lg:pt-0 first:pt-0 lg:border-b-0 border-b border-b-gold/40">
       <motion.h4
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1 * index }}
-        className={`font-satoshi text-gold text-5xl lg:text-6xl`}
+        className={`font-satoshi text-gold text-4xl md:text-5xl lg:text-6xl`}
       >
         {prefix}
         <Counter target={number} />
@@ -166,7 +166,7 @@ const TimelineItem = ({
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 * index }}
-        className={`text-lg lg:text-xl mt-2`}
+        className={`text-base md:text-lg lg:text-xl mt-2`}
         dangerouslySetInnerHTML={{
           __html: description,
         }}

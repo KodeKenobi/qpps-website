@@ -16,7 +16,7 @@ export default function AboutSection() {
       className="relative w-screen overflow-x-clip lg:pt-20 lg:pl-20 text-navy"
     >
       <Image src={CImage} alt="C" className="absolute top-20 right-0 z-0" />
-      <div className="w-full px-8 lg:px-24 pt-44 pb-20 lg:pb-44 bg-gray/25">
+      <div className="w-full px-4 md:px-8 lg:px-24 pt-32 md:pt-40 lg:pt-44 pb-16 md:pb-20 lg:pb-44 bg-gray/25">
         <h2
           className={`font-sans text-gold uppercase lg:text-left text-center lg:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
             isVis ? "open" : "closed"
@@ -24,7 +24,7 @@ export default function AboutSection() {
         >
           About
         </h2>
-        <h3 className="font-satoshi mt-1 lg:mt-2 text-4xl lg:text-7xl lg:text-left text-center lg:leading-[-0.1em] flex flex-wrap lg:justify-start justify-center gap-x-1 lg:gap-x-1">
+        <h3 className="font-satoshi mt-1 lg:mt-2 text-3xl md:text-4xl lg:text-7xl lg:text-left text-center lg:leading-[-0.1em] flex flex-wrap lg:justify-start justify-center gap-x-1 lg:gap-x-1">
           <span
             className={`font-satoshi italic leading-tight delay-200 fade-up ${
               isVis ? "open" : "closed"
@@ -57,7 +57,7 @@ export default function AboutSection() {
             </span>
           </div>
         </h3>
-        <div className="lg:grid lg:grid-cols-2 lg:gap-0 lg:-mt-20 mt-0">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-0 lg:-mt-20 mt-6 md:mt-8">
           <div className="relative">
             <motion.i
               initial={{
@@ -76,9 +76,9 @@ export default function AboutSection() {
               className="absolute bottom-0 left-0 w-1/2 h-px bg-slate opacity-50 lg:block hidden"
             />
           </div>
-          <div className="relative lg:pt-16 lg:pl-0 lg:pb-0">
+          <div className="relative lg:pt-16 lg:pl-0 lg:pb-0 mt-6 md:mt-8 lg:mt-0">
             <p
-              className={`text-lg lg:text-left text-center lg:font-normal font-light lg:text-xl delay-1000 fade-up ${
+              className={`text-base md:text-lg lg:text-left text-center lg:font-normal font-light lg:text-xl delay-1000 fade-up leading-relaxed ${
                 isVis ? "open" : "closed"
               }`}
             >

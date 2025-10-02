@@ -15,9 +15,9 @@ export default function ApproachSection() {
     <section
       ref={ref}
       id={id}
-      className="relative min-h-screen pt-20 lg:pt-16 lg:mt-8 lg:px-20 text-navy"
+      className="relative min-h-screen pt-16 md:pt-20 lg:pt-16 lg:mt-8 lg:px-20 text-navy"
     >
-      <div className="mx-auto w-full relative z-10 px-8 lg:px-24">
+      <div className="mx-auto w-full relative z-10 px-4 md:px-8 lg:px-24">
         <h2
           className={`font-sans text-gold uppercase lg:text-left text-center lg:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
             isVis ? "open" : "closed"
@@ -25,7 +25,7 @@ export default function ApproachSection() {
         >
           OUR SERVICES
         </h2>
-        <h3 className="font-satoshi mt-2 lg:mt-8 text-4xl lg:text-7xl leading-[-0.1em] lg:text-left text-center lg:leading-[-0.1em] flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
+        <h3 className="font-satoshi mt-2 lg:mt-8 text-3xl md:text-4xl lg:text-7xl leading-[-0.1em] lg:text-left text-center lg:leading-[-0.1em] flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
           <span
             className={`font-satoshi italic leading-none delay-200 fade-up ${
               isVis ? "open" : "closed"
@@ -49,7 +49,7 @@ export default function ApproachSection() {
           </div>
         </h3>
         <p
-          className={`lg:font-normal font-light lg:text-left text-center mt-0 lg:pl-32 lg:mt-8 text-lg lg:text-2xl delay-500 fade-up ${
+          className={`lg:font-normal font-light lg:text-left text-center mt-4 md:mt-6 lg:pl-32 lg:mt-8 text-base md:text-lg lg:text-2xl delay-500 fade-up leading-relaxed ${
             isVis ? "open" : "closed"
           }`}
         >
@@ -60,7 +60,7 @@ export default function ApproachSection() {
           South Africa.
         </p>
       </div>
-      <div className="w-full grid lg:grid-cols-3 lg:px-0 px-8 gap-7 mt-12 lg:mt-32 relative z-10 pb-1">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-0 px-4 md:px-8 gap-6 md:gap-7 mt-8 md:mt-12 lg:mt-32 relative z-10 pb-1">
         <div className="relative z-20">
           <ServiceCard
             title={"Digital Transformation"}
@@ -450,7 +450,7 @@ const ServiceCard = ({
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      className="w-full xl:aspect-square min-h-[362px] lg:min-h-[515px] overflow-hidden relative bg-navy rounded-lg flex flex-col items-center justify-center text-white p-8"
+      className="w-full xl:aspect-square min-h-[320px] md:min-h-[362px] lg:min-h-[515px] overflow-hidden relative bg-navy rounded-lg flex flex-col items-center justify-center text-white p-6 md:p-8"
     >
       <div className="w-full relative z-20 text-center flex flex-col items-center justify-center h-full">
         <AnimatePresence mode="wait">
@@ -461,7 +461,7 @@ const ServiceCard = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="lg:text-lg text-sm lg:py-0 py-8 space-y-4"
+              className="lg:text-lg text-sm md:text-base lg:py-0 py-6 md:py-8 space-y-3 md:space-y-4"
             >
               {getCardContent()}
             </motion.div>
@@ -472,13 +472,13 @@ const ServiceCard = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="space-y-6"
+              className="space-y-4 md:space-y-6"
             >
-              <h4 className="font-satoshi text-3xl lg:text-4xl font-bold uppercase leading-tight">
+              <h4 className="font-satoshi text-2xl md:text-3xl lg:text-4xl font-bold uppercase leading-tight">
                 {title}
               </h4>
-              <p className="text-lg lg:text-xl font-light">{description}</p>
-              <div className="flex justify-center items-center gap-6 mt-8 text-white">
+              <p className="text-base md:text-lg lg:text-xl font-light">{description}</p>
+              <div className="flex justify-center items-center gap-4 md:gap-6 mt-6 md:mt-8 text-white">
                 <div className="w-12 h-12 flex items-center justify-center">
                   {icon1}
                 </div>
@@ -495,7 +495,7 @@ const ServiceCard = ({
       </div>
       <button
         onMouseDown={() => setOpen(!open)}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-gold text-navy px-8 py-3 font-bold uppercase tracking-wider hover:bg-gold/80 transition-colors duration-300 z-30 rounded"
+        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 bg-gold text-navy px-6 md:px-8 py-2 md:py-3 font-bold uppercase tracking-wider hover:bg-gold/80 transition-colors duration-300 z-30 rounded text-sm md:text-base"
       >
         {open ? "Back" : "Read More"}
       </button>

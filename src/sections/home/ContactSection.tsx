@@ -14,8 +14,8 @@ export default function ContactSection() {
       id="contact"
       className="relative bg-navy lg:pt-20 text-white"
     >
-      <div className="w-full pt-16 lg:w-1/2 lg:pl-24 lg:pt-[58px] relative z-10">
-        <div className="mx-auto w-full relative z-10 lg:px-0 px-8">
+      <div className="w-full pt-12 md:pt-16 lg:w-1/2 lg:pl-24 lg:pt-[58px] relative z-10">
+        <div className="mx-auto w-full relative z-10 lg:px-0 px-4 md:px-8">
           <h2
             className={`font-sans text-gold uppercase lg:text-left text-center lg:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
               isVis ? "open" : "closed"
@@ -23,7 +23,7 @@ export default function ContactSection() {
           >
             Contact
           </h2>
-          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-2 lg:gap-x-3 flex-wrap">
+          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-2 lg:gap-x-3 flex-wrap">
             <span
               className={`lg:block inline leading-tight delay-200 fade-up ${
                 isVis ? "open" : "closed"
@@ -49,7 +49,7 @@ export default function ContactSection() {
           </h3>
         </div>
 
-        <div className="px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[32px] border-slate/25 text-xl">
+        <div className="px-4 md:px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[32px] border-slate/25 text-lg md:text-xl">
           <div className="relative flex flex-col gap-10 lg:gap-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -58,10 +58,10 @@ export default function ContactSection() {
               className="space-y-6 mt-8 lg:mt-0"
             >
               <div className="space-y-4">
-                <h4 className="font-satoshi text-2xl lg:text-3xl text-gold">
+                <h4 className="font-satoshi text-xl md:text-2xl lg:text-3xl text-gold">
                   Quality Projects People and Solutions (QPPS)
                 </h4>
-                <div className="space-y-2 text-lg lg:text-xl">
+                <div className="space-y-2 text-base md:text-lg lg:text-xl">
                   <p>Unit 03 Fernwick close</p>
                   <p>4th avenue, Gonubie</p>
                   <p>East London, 5201</p>
@@ -100,14 +100,14 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-16 lg:pb-20 lg:mt-8 flex items-center lg:flex-row flex-col lg:items-end lg:justify-between text-lg lg:text-xl"
+            className="mt-12 md:mt-16 lg:pb-20 lg:mt-8 flex items-center lg:flex-row flex-col lg:items-end lg:justify-between text-base md:text-lg lg:text-xl"
           >
             <div className="w-fit flex items-center flex-col justify-center lg:items-start lg:text-left text-center space-y-4">
               <div className="space-y-2">
-                <h5 className="font-satoshi text-xl text-gold">
+                <h5 className="font-satoshi text-lg md:text-xl text-gold">
                   Ready to start your digital transformation?
                 </h5>
-                <p className="text-sm lg:text-base opacity-80">
+                <p className="text-sm md:text-base lg:text-base opacity-80">
                   Contact us today to discuss how QPPS can help your
                   organization leverage technology for growth.
                 </p>

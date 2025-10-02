@@ -11,7 +11,7 @@ export default function LeadershipSection() {
   return (
     <section ref={ref} id={id} className="text-navy lg:pr-20 z-0">
       <div className="absolute bottom-0 right-0 w-20 z-0 h-72 bg-navy"></div>
-      <div className="overflow-hidden w-full z-10 bg-alt-gray pt-20 lg:pt-32">
+      <div className="overflow-hidden w-full z-10 bg-alt-gray pt-16 md:pt-20 lg:pt-32">
         <div className="absolute bottom-0 left-0 w-full h-3/4 z-0">
           <Image
             src={LeadershipBackground}
@@ -20,7 +20,7 @@ export default function LeadershipSection() {
             className="object-contain object-bottom-left opacity-50"
           />
         </div>
-        <div className="px-8 lg:pl-24 lg:pr-28">
+        <div className="px-4 md:px-8 lg:pl-24 lg:pr-28">
           <h2
             className={`font-sans text-gold uppercase lg:text-right text-center lg:text-base text-xs font-semibold tracking-[0.25em] delay-100 fade-up ${
               isVis ? "open" : "closed"
@@ -28,7 +28,7 @@ export default function LeadershipSection() {
           >
             LEADERSHIP
           </h2>
-          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-4xl lg:text-7xl leading-[-0.1em] lg:text-right justify-center lg:justify-end text-center lg:leading-[-0.1em] flex flex-wrap gap-x-0 lg:gap-x-0">
+          <h3 className="font-satoshi mt-2 lg:mt-8 mb-6 md:mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-[-0.1em] lg:text-right justify-center lg:justify-end text-center lg:leading-[-0.1em] flex flex-wrap gap-x-0 lg:gap-x-0">
             <span
               className={`font-satoshi italic leading-none delay-200 fade-up ${
                 isVis ? "open" : "closed"
