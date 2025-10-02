@@ -142,7 +142,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
               className="mx-auto w-full max-w-[480px] min-h-0 grid overflow-hidden"
             >
               <div className="min-h-0">
-                <h2 className="font-serif text-2xl">
+                <h2 className="font-satoshi text-2xl">
                   Choose your cookie preferences
                 </h2>
 
@@ -229,7 +229,7 @@ export default function CookiesModal({ cookiesValues }: CookiesModalProps) {
               className="mx-auto max-w-[480px] w-full min-h-0 grid overflow-hidden"
             >
               <div className="min-h-0">
-                <h2 className="font-serif text-2xl">Welcome to QPPS</h2>
+                <h2 className="font-satoshi text-2xl">Welcome to QPPS</h2>
 
                 <p className="mt-8 mx-auto font-light leading-[1.37em]">
                   Our website uses essential cookies that are required for the

@@ -100,5 +100,5 @@ const Icon = ({ isLoading }: { isVisible: boolean; isLoading: boolean }) => {
 };
 
 const Text = ({}: { isVisible: boolean; isLoading: boolean }) => {
-  return <div className="text-white text-2xl font-serif font-bold">QPPS</div>;
+  return <div className="text-white text-2xl font-satoshi font-bold">QPPS</div>;
 };

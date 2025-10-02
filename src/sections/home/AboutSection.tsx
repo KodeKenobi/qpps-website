@@ -24,9 +24,9 @@ export default function AboutSection() {
         >
           About
         </h2>
-        <h3 className="font-satoshi mt-2 lg:mt-8 text-4xl lg:text-7xl lg:text-left text-center lg:leading-24 flex flex-wrap lg:justify-start justify-center gap-x-2 lg:gap-x-3">
+        <h3 className="font-satoshi mt-1 lg:mt-2 text-4xl lg:text-7xl lg:text-left text-center lg:leading-[-0.1em] flex flex-wrap lg:justify-start justify-center gap-x-1 lg:gap-x-1">
           <span
-            className={`font-satoshi leading-tight delay-200 fade-up ${
+            className={`font-satoshi italic leading-tight delay-200 fade-up ${
               isVis ? "open" : "closed"
             }`}
           >
@@ -37,18 +37,19 @@ export default function AboutSection() {
               isVis ? "open" : "closed"
             }`}
           >
-            innovation.
+            {" "}
+            &nbsp;innovation.
           </span>
-          <div className="lg:ml-32 w-full leading-tight flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
+          <div className="lg:ml-32 w-full leading-none flex lg:justify-start justify-center flex-wrap gap-x-1 lg:gap-x-1">
             <span
-              className={`font-satoshi leading-tight delay-400 fade-up ${
+              className={`font-satoshi leading-none delay-400 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
               Local
             </span>{" "}
             <span
-              className={`lg:pl-3 delay-500 fade-up leading-tight ${
+              className={`lg:pl-3 delay-500 fade-up leading-none ${
                 isVis ? "open" : "closed"
               }`}
             >
@@ -56,7 +57,7 @@ export default function AboutSection() {
             </span>
           </div>
         </h3>
-        <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:-mt-4 mt-3">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-0 lg:-mt-20 mt-0">
           <div className="relative">
             <motion.i
               initial={{
@@ -70,9 +71,9 @@ export default function AboutSection() {
               initial={{
                 width: 0,
               }}
-              animate={isVis ? { width: "100%" } : { width: 0 }}
+              animate={isVis ? { width: "50%" } : { width: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className="absolute bottom-0 left-0 w-full h-px bg-slate opacity-50 lg:block hidden"
+              className="absolute bottom-0 left-0 w-1/2 h-px bg-slate opacity-50 lg:block hidden"
             />
           </div>
           <div className="relative lg:pt-16 lg:pl-0 lg:pb-0">
@@ -84,7 +85,6 @@ export default function AboutSection() {
               Quality Projects People and Solutions (QPPS) is a newly
               established company proudly founded by a previously disadvantaged
               candidate and is based in East London, South Africa.
-              <br />
               <br />
               Our core objective is to play a meaningful and significant role in
               government, municipal, and private sector projects by leveraging

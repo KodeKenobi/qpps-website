@@ -108,7 +108,7 @@ const FirstLayout = ({ data, index }: { data: Leader; index: number }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
-            className="text-slate font-serif text-4xl lg:text-6xl"
+            className="text-slate font-satoshi text-4xl lg:text-6xl"
           >
             {data.name}
           </motion.h4>
@@ -165,7 +165,7 @@ const SecondLayout = ({ data, index }: { data: Leader; index: number }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={inVis ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}
-            className="text-slate font-serif text-4xl lg:text-6xl"
+            className="text-slate font-satoshi text-4xl lg:text-6xl"
           >
             {data.name}
           </motion.h4>
@@ -230,7 +230,7 @@ const ThirdLayout = ({ data, index }: { data: Leader; index: number }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={inVis ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
-          className="text-slate font-serif text-4xl lg:text-6xl"
+          className="text-slate font-satoshi text-4xl lg:text-6xl"
         >
           {data.name}
         </motion.h4>
@@ -340,7 +340,7 @@ const BiographyModal = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-            className="font-serif text-4xl lg:text-left text-center lg:text-6xl"
+            className="font-satoshi text-4xl lg:text-left text-center lg:text-6xl"
           >
             {data.name}
           </motion.h4>
@@ -433,7 +433,7 @@ const MobileLayout = ({ data, index }: { data: Leader; index: number }) => {
         </span>
       </div>
       <div className="pb-12 pt-6 text-center px-8">
-        <h4 className="text-slate font-serif text-4xl">{data.name}</h4>
+        <h4 className="text-slate font-satoshi text-4xl">{data.name}</h4>
         <p
           className="text-navy font-light italic text-lg lg:text-xl mt-3"
           dangerouslySetInnerHTML={{

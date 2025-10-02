@@ -23,7 +23,7 @@ export default function ContactSection() {
           >
             Contact
           </h2>
-          <h3 className="font-serif mt-2 lg:mt-8 mb-8 lg:mb-0 text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-2 lg:gap-x-3 flex-wrap">
+          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-2 lg:gap-x-3 flex-wrap">
             <span
               className={`lg:block inline leading-tight delay-200 fade-up ${
                 isVis ? "open" : "closed"
@@ -39,7 +39,7 @@ export default function ContactSection() {
               transform
             </span>
             <div
-              className={`lg:pl-26 leading-tight font-serif-italic lg:block inline lg:w-full delay-400 fade-up ${
+              className={`lg:pl-26 leading-tight font-satoshi italic lg:block inline lg:w-full delay-400 fade-up -mt-2 lg:-mt-4 ${
                 isVis ? "open" : "closed"
               }`}
             >
@@ -49,7 +49,7 @@ export default function ContactSection() {
           </h3>
         </div>
 
-        <div className="px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[60px] border-slate/25 text-xl">
+        <div className="px-8 lg:border-l mx-auto w-full relative z-10 lg:pl-26 lg:pt-[32px] border-slate/25 text-xl">
           <div className="relative flex flex-col gap-10 lg:gap-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export default function ContactSection() {
               className="space-y-6 mt-8 lg:mt-0"
             >
               <div className="space-y-4">
-                <h4 className="font-serif text-2xl lg:text-3xl text-gold">
+                <h4 className="font-satoshi text-2xl lg:text-3xl text-gold">
                   Quality Projects People and Solutions (QPPS)
                 </h4>
                 <div className="space-y-2 text-lg lg:text-xl">
@@ -95,16 +95,16 @@ export default function ContactSection() {
       </div>
 
       <div className="w-full lg:pl-24 lg:pr-[86px] relative z-10">
-        <div className="w-full lg:pt-20 lg:pl-26 relative z-10 lg:border-l lg:border-b border-slate/25">
+        <div className="w-full lg:pt-2 lg:pl-26 relative z-10 lg:border-l lg:border-b border-slate/25">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-16 lg:pb-20 lg:mt-12 flex items-center lg:flex-row flex-col lg:items-end lg:justify-between text-lg lg:text-xl"
+            className="mt-16 lg:pb-20 lg:mt-8 flex items-center lg:flex-row flex-col lg:items-end lg:justify-between text-lg lg:text-xl"
           >
             <div className="w-fit flex items-center flex-col justify-center lg:items-start lg:text-left text-center space-y-4">
               <div className="space-y-2">
-                <h5 className="font-serif text-xl text-gold">
+                <h5 className="font-satoshi text-xl text-gold">
                   Ready to start your digital transformation?
                 </h5>
                 <p className="text-sm lg:text-base opacity-80">

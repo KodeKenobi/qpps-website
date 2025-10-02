@@ -42,7 +42,7 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex items-center justify-end h-full">
           <nav className="border-r border-slate/40 h-full">
-            <ul className="justify-end items-center h-full  text-xs font-light uppercase tracking-widest text-navy flex md:pr-8 lg:pr-[57px] md:gap-x-4 lg:gap-x-12 xl:gap-x-[69px]">
+            <ul className="justify-end items-center h-full  text-xs font-bold uppercase tracking-widest text-navy flex md:pr-8 lg:pr-[57px] md:gap-x-4 lg:gap-x-12 xl:gap-x-[69px]">
               {navs.map((nav) => (
                 <NavButton key={nav.url} nav={nav} position={position} />
               ))}
@@ -71,9 +71,7 @@ export default function Header() {
         </div>
       </div>
       <nav
-        className={`mobile-nav-menu pt-8 lg:hidden ${
-          open ? "open" : "closed"
-        }`}
+        className={`mobile-nav-menu pt-8 lg:hidden ${open ? "open" : "closed"}`}
       >
         <nav className="flex flex-col items-center justify-start h-full gap-y-8">
           <ul className="text-2xl font-light uppercase tracking-widest text-white flex flex-col min-h-[185px] gap-y-[12%] h-full text-center">

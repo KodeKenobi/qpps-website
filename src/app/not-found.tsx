@@ -20,10 +20,10 @@ export default function NotFound() {
       <section className="min-h-screen pt-[116px] relative w-full overflow-hidden flex">
         <div className="relative w-full min-h-full bg-white flex items-center justify-center z-10">
           <div className="w-11/12 max-w-3xl mx-auto my-auto flex flex-col relative z-20">
-            <h1 className="font-serif leading-none text-slate text-[314px]">
+            <h1 className="font-satoshi leading-none text-slate text-[314px]">
               404
             </h1>
-            <h2 className="ml-auto font-serif-italic text-7xl text-navy -translate-y-[40px] pr-[48px]">
+            <h2 className="ml-auto font-satoshi italic text-7xl text-navy -translate-y-[40px] pr-[48px]">
               Page not found
             </h2>
             <p className="ml-auto text-xl mt-10 text-navy font-light">

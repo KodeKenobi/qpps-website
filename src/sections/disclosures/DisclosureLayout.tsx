@@ -37,7 +37,7 @@ export default function DisclosureLayout({ title, children }: Props) {
           </Link>
         </div>
         <div className="lg:px-0 px-9 pt-[67px]">
-          <h1 className="font-serif text-4xl lg:text-7xl">{title}</h1>
+          <h1 className="font-satoshi text-4xl lg:text-7xl">{title}</h1>
         </div>
         <hr className="my-[73px] text-slate/50" />
         <div

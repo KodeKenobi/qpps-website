@@ -28,57 +28,57 @@ export default function LeadershipSection() {
           >
             LEADERSHIP
           </h2>
-          <h3 className="font-serif mt-2 lg:mt-8 mb-8 lg:mb-0 text-4xl lg:text-7xl leading-tight lg:text-right justify-center lg:justify-end text-center lg:leading-24 flex flex-wrap gap-x-2 lg:gap-x-3">
+          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-4xl lg:text-7xl leading-[-0.1em] lg:text-right justify-center lg:justify-end text-center lg:leading-[-0.1em] flex flex-wrap gap-x-0 lg:gap-x-0">
             <span
-              className={`font-serif-italic leading-tight delay-200 fade-up ${
+              className={`font-satoshi italic leading-none delay-200 fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
               Expert
             </span>
             <span
-              className={`delay-300 leading-tight fade-up ${
+              className={`delay-300 leading-none fade-up ${
                 isVis ? "open" : "closed"
               }`}
             >
-              ICT
+              &nbsp;ICT
             </span>
             <div
-              className={`lg:ml-12 leading-tight w-full flex lg:justify-end justify-center flex-wrap gap-x-3`}
+              className={`lg:ml-12 leading-none w-full flex lg:justify-end justify-center flex-wrap gap-x-0`}
             >
               <span
-                className={`delay-400 leading-tight fade-up ${
+                className={`delay-400 leading-none fade-up ${
                   isVis ? "open" : "closed"
                 }`}
               >
-                expertise
+                &nbsp;expertise
               </span>
               <span
-                className={`delay-500  leading-tight fade-up ${
+                className={`delay-500  leading-none fade-up ${
                   isVis ? "open" : "closed"
                 }`}
               >
-                team
+                &nbsp;team
               </span>
             </div>
           </h3>
         </div>
 
-        <div className="px-8 lg:pl-24 lg:pr-28 pb-20 lg:pb-32">
+        <div className="px-8 lg:pl-24 lg:pr-28 pb-20 lg:pb-32 mt-0 lg:mt-12">
           <div className={`delay-600 fade-up ${isVis ? "open" : "closed"}`}>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <div className="space-y-6 mt-8 lg:mt-0">
-                <h4 className="font-serif text-2xl lg:text-3xl text-navy">
+                <h2 className="font-satoshi text-2xl lg:text-3xl text-navy">
                   Our Expertise
-                </h4>
-                <p className="text-lg text-navy leading-relaxed">
+                </h2>
+                <p className="text-2xl text-navy leading-relaxed">
                   QPPS is powered by a highly skilled workforce, with the
                   majority of our professionals holding degrees and
                   internationally recognized certifications including ITIL v3,
                   Cisco, Microsoft Certified Solutions Associate, Fortinet NSE
                   4, VMware, and AWS.
                 </p>
-                <p className="text-lg text-navy leading-relaxed">
+                <p className="text-2xl text-navy leading-relaxed">
                   Our organizational structure demonstrates a balance of
                   leadership, technical expertise, and operational capacity,
                   ensuring we deliver end-to-end ICT and digital transformation
@@ -87,13 +87,13 @@ export default function LeadershipSection() {
               </div>
 
               <div className="space-y-6 mt-8 lg:mt-0">
-                <h4 className="font-serif text-2xl lg:text-3xl text-navy">
+                <h2 className="font-satoshi text-2xl lg:text-3xl text-navy">
                   Our Approach
-                </h4>
+                </h2>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-navy">
+                    <p className="text-2xl text-navy">
                       <strong>Innovation First:</strong> We leverage
                       cutting-edge technology to solve complex challenges and
                       drive digital transformation.
@@ -101,14 +101,14 @@ export default function LeadershipSection() {
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-navy">
+                    <p className="text-2xl text-navy">
                       <strong>Security Focused:</strong> Every solution is built
                       with cybersecurity and data protection as core principles.
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-navy">
+                    <p className="text-2xl text-navy">
                       <strong>People-Centered:</strong> We design solutions that
                       enhance user experience and improve operational
                       efficiency.
@@ -116,7 +116,7 @@ export default function LeadershipSection() {
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-navy">
+                    <p className="text-2xl text-navy">
                       <strong>Local Impact:</strong> Committed to empowering
                       South African communities through technology and digital
                       inclusion.
