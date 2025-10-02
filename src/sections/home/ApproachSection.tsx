@@ -399,6 +399,166 @@ export default function ApproachSection() {
           className="absolute bottom-0 left-0 z-10 translate-y-1/2 -translate-x-20"
         />
       </div>
+      
+      {/* Trusted Partners Carousel */}
+      <div className="w-full mt-16 lg:mt-20 relative z-10">
+        <div className="text-center mb-8 lg:mb-12">
+          <h3 className="font-satoshi text-2xl md:text-3xl lg:text-4xl font-bold text-navy mb-4">
+            Our Trusted Partners
+          </h3>
+          <p className="text-base md:text-lg lg:text-xl text-slate max-w-3xl mx-auto px-4">
+            We collaborate with industry-leading technology partners to deliver comprehensive solutions
+          </p>
+        </div>
+        
+        <div className="relative overflow-hidden bg-white py-8 lg:py-12">
+          <div className="flex animate-scroll">
+            {/* First set of logos */}
+            <div className="flex items-center space-x-16 lg:space-x-24 px-8">
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">FD</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">First Distribution</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-white border border-gray-200 rounded-lg flex items-center justify-center">
+                  <div className="flex items-center space-x-2">
+                    <div className="grid grid-cols-2 gap-1">
+                      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+                      <div className="w-3 h-3 bg-blue-500 rounded-sm"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-sm"></div>
+                    </div>
+                    <span className="text-gray-700 font-semibold text-xs lg:text-sm">Microsoft</span>
+                  </div>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Solutions Partner</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-900 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">mimecast</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Email Security</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl lg:text-2xl">acer</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Hardware Solutions</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl italic">Mustek</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">LIMITED</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">Veeam</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Backup Solutions</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-teal-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">ESET</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Cybersecurity</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-red-600 rounded-lg flex items-center justify-center relative">
+                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
+                    <div className="w-6 h-6 bg-red-700 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">H</span>
+                    </div>
+                  </div>
+                  <span className="text-white font-bold text-lg lg:text-xl">HUAWEI</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Enterprise Partner</p>
+              </div>
+            </div>
+            
+            {/* Duplicate set for seamless loop */}
+            <div className="flex items-center space-x-16 lg:space-x-24 px-8">
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">FD</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">First Distribution</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-white border border-gray-200 rounded-lg flex items-center justify-center">
+                  <div className="flex items-center space-x-2">
+                    <div className="grid grid-cols-2 gap-1">
+                      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+                      <div className="w-3 h-3 bg-blue-500 rounded-sm"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-sm"></div>
+                    </div>
+                    <span className="text-gray-700 font-semibold text-xs lg:text-sm">Microsoft</span>
+                  </div>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Solutions Partner</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-900 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">mimecast</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Email Security</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl lg:text-2xl">acer</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Hardware Solutions</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl italic">Mustek</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">LIMITED</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">Veeam</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Backup Solutions</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-teal-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg lg:text-xl">ESET</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Cybersecurity</p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-red-600 rounded-lg flex items-center justify-center relative">
+                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
+                    <div className="w-6 h-6 bg-red-700 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">H</span>
+                    </div>
+                  </div>
+                  <span className="text-white font-bold text-lg lg:text-xl">HUAWEI</span>
+                </div>
+                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">Enterprise Partner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Image
         src={ApproachBackground}
         alt="Approach Background"
