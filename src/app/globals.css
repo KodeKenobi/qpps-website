@@ -20,11 +20,19 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;700;900&display=swap");
+  font-weight: 300 900;
+  font-style: normal;
+}
+
 :root {
   --font-ivyOra-serif: "IvyOra Text Reg", serif;
   --font-lunaquete-serif: "Lunaquete-TextRegular", serif;
   --font-ivyOra-italic: "IvyOraText-RegularItalic", serif;
   --font-lunaquete: "Lunaquete-TextItalic", serif;
+  --font-satoshi: "Satoshi", sans-serif;
 }
 
 @theme inline {
@@ -43,6 +51,7 @@
   --font-sans: var(--font-albert-sans);
   --font-serif: var(--font-lunaquete-serif);
   --font-serif-italic: var(--font-lunaquete);
+  --font-satoshi: var(--font-satoshi);
 }
 
 body {
