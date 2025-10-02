@@ -44,7 +44,7 @@ export default function Mifidpru8DisclosurePage() {
         <strong>Management Team</strong>
       </p>
       <p>
-        QPPS is led by our Managing Director, Simlindile Abongile Bantom, who
+        QPPS is led by our experienced management team, who
         brings over 11 years of experience in ICT, cybersecurity, and digital
         transformation. Our management team is supported by qualified
         professionals with internationally recognized certifications including

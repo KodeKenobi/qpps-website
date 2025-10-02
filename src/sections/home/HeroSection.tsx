@@ -81,7 +81,7 @@ export default function HeroSection() {
             <TimelineItem
               index={0}
               number={2024}
-              description="QPPS founded <br> by Simlindile Bantom"
+              description="QPPS founded <br> in 2024"
             />
             <TimelineItem
               index={1}
@@ -116,7 +116,7 @@ export default function HeroSection() {
             <TimelineItem
               index={0}
               number={2024}
-              description="QPPS founded <br> by Simlindile Bantom"
+              description="QPPS founded <br> in 2024"
             />
             <TimelineItem
               index={1}
