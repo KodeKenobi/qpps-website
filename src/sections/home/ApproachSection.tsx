@@ -402,223 +402,78 @@ export default function ApproachSection() {
 
       {/* Trusted Partners Carousel */}
       <div className="w-full mt-16 lg:mt-20 relative z-10">
-        <div className="text-center mb-8 lg:mb-12">
-          <h3 className="font-satoshi text-2xl md:text-3xl lg:text-4xl font-bold text-navy mb-4">
+        <div className="text-center mb-8">
+          <h3 className="font-satoshi text-2xl lg:text-3xl font-bold text-navy">
             Our Trusted Partners
           </h3>
-          <p className="text-base md:text-lg lg:text-xl text-slate max-w-3xl mx-auto px-4">
-            We collaborate with industry-leading technology partners to deliver
-            comprehensive solutions
-          </p>
         </div>
 
-        <div className="relative overflow-hidden bg-white py-8 lg:py-12">
+        <div className="relative overflow-hidden py-12">
           <div className="flex animate-scroll">
             {/* First set of logos */}
-            <div className="flex items-center space-x-16 lg:space-x-24 px-8">
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    FD
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  First Distribution
-                </p>
+            <div className="flex items-center space-x-20 lg:space-x-32 px-12">
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/veeam.jpg"
+                  alt="Veeam"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
 
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-white border border-gray-200 rounded-lg flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <div className="grid grid-cols-2 gap-1">
-                      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
-                      <div className="w-3 h-3 bg-blue-500 rounded-sm"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-sm"></div>
-                    </div>
-                    <span className="text-gray-700 font-semibold text-xs lg:text-sm">
-                      Microsoft
-                    </span>
-                  </div>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Solutions Partner
-                </p>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/first_distribution.jpg"
+                  alt="First Distribution"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
 
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-900 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    mimecast
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Email Security
-                </p>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/microsoft.jpg"
+                  alt="Microsoft Solutions Partner"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
 
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl lg:text-2xl">
-                    acer
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Hardware Solutions
-                </p>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/huawei.jpg"
+                  alt="Huawei Enterprise Partner"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
 
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl italic">
-                    Mustek
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  LIMITED
-                </p>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/mustek.jpg"
+                  alt="Mustek Limited"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
 
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    Veeam
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Backup Solutions
-                </p>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/acer.jpg"
+                  alt="Acer"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
 
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-teal-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    ESET
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Cybersecurity
-                </p>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/eset.jpg"
+                  alt="ESET"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
 
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-red-600 rounded-lg flex items-center justify-center relative">
-                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
-                    <div className="w-6 h-6 bg-red-700 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs">H</span>
-                    </div>
-                  </div>
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    HUAWEI
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Enterprise Partner
-                </p>
-              </div>
-            </div>
-
-            {/* Duplicate set for seamless loop */}
-            <div className="flex items-center space-x-16 lg:space-x-24 px-8">
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    FD
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  First Distribution
-                </p>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-white border border-gray-200 rounded-lg flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <div className="grid grid-cols-2 gap-1">
-                      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
-                      <div className="w-3 h-3 bg-blue-500 rounded-sm"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-sm"></div>
-                    </div>
-                    <span className="text-gray-700 font-semibold text-xs lg:text-sm">
-                      Microsoft
-                    </span>
-                  </div>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Solutions Partner
-                </p>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-900 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    mimecast
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Email Security
-                </p>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl lg:text-2xl">
-                    acer
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Hardware Solutions
-                </p>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl italic">
-                    Mustek
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  LIMITED
-                </p>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    Veeam
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Backup Solutions
-                </p>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-teal-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    ESET
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Cybersecurity
-                </p>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-32 h-16 lg:w-40 lg:h-20 bg-red-600 rounded-lg flex items-center justify-center relative">
-                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
-                    <div className="w-6 h-6 bg-red-700 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs">H</span>
-                    </div>
-                  </div>
-                  <span className="text-white font-bold text-lg lg:text-xl">
-                    HUAWEI
-                  </span>
-                </div>
-                <p className="text-xs lg:text-sm text-center mt-2 text-slate font-semibold">
-                  Enterprise Partner
-                </p>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/assets/logos/mimecast.jpg"
+                  alt="Mimecast"
+                  className="h-16 lg:h-24 w-auto object-contain"
+                />
               </div>
             </div>
           </div>
@@ -651,7 +506,7 @@ const ServiceCard = ({
   const getCardContent = () => {
     if (title === "ESG") {
       return (
-        <div className="text-white text-base space-y-2">
+        <div className="text-white text-lg md:text-xl lg:text-2xl space-y-3">
           <p>• Sustainable technology and resource management</p>
           <p>• Corporate social responsibility initiatives</p>
           <p>• Ethical procurement and supply chain practices</p>
@@ -661,7 +516,7 @@ const ServiceCard = ({
       );
     }
     return (
-      <div className="text-white text-base space-y-2">
+      <div className="text-white text-lg md:text-xl lg:text-2xl space-y-3">
         <p>• {description}</p>
         <p>• Comprehensive service delivery</p>
         <p>• Expert implementation support</p>
@@ -686,7 +541,7 @@ const ServiceCard = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="lg:text-xl text-base md:text-lg lg:py-0 py-6 md:py-8 space-y-3 md:space-y-4"
+              className="lg:text-2xl text-lg md:text-xl lg:py-0 py-6 md:py-8 space-y-3 md:space-y-4"
             >
               {getCardContent()}
             </motion.div>

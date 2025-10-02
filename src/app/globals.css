@@ -72,6 +72,23 @@
   animation-play-state: paused;
 }
 
+@keyframes smooth-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-smooth-scroll {
+  animation: smooth-scroll 35s linear infinite;
+}
+
+.animate-smooth-scroll:hover {
+  animation-play-state: paused;
+}
+
 body {
   font-family: var(--font-albert-sans);
 }
