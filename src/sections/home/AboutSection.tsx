@@ -24,7 +24,7 @@ export default function AboutSection() {
         >
           About
         </h2>
-        <h3 className="font-satoshi mt-1 lg:mt-2 text-3xl md:text-4xl lg:text-7xl lg:text-left text-center lg:leading-[-0.1em] flex flex-wrap lg:justify-start justify-center gap-x-1 lg:gap-x-1">
+        <h3 className="font-satoshi mt-1 lg:mt-2 text-3xl md:text-4xl lg:text-7xl text-center lg:text-left lg:leading-[-0.1em] flex flex-wrap lg:justify-start justify-center gap-x-1 lg:gap-x-1">
           <span
             className={`font-satoshi italic leading-tight delay-200 fade-up ${
               isVis ? "open" : "closed"
@@ -78,7 +78,7 @@ export default function AboutSection() {
           </div>
           <div className="relative lg:pt-16 lg:pl-0 lg:pb-0 mt-6 md:mt-8 lg:mt-0">
             <p
-              className={`text-base md:text-lg lg:text-left text-center lg:font-normal font-light lg:text-xl delay-1000 fade-up leading-relaxed ${
+              className={`text-base md:text-lg text-center lg:text-left lg:font-normal font-light lg:text-xl delay-1000 fade-up leading-relaxed ${
                 isVis ? "open" : "closed"
               }`}
             >

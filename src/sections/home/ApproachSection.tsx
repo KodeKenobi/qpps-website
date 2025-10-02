@@ -25,7 +25,7 @@ export default function ApproachSection() {
         >
           OUR SERVICES
         </h2>
-        <h3 className="font-satoshi mt-2 lg:mt-8 text-3xl md:text-4xl lg:text-7xl leading-[-0.1em] lg:text-left text-center lg:leading-[-0.1em] flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
+        <h3 className="font-satoshi mt-2 lg:mt-8 text-3xl md:text-4xl lg:text-7xl leading-[-0.1em] text-center lg:text-left lg:leading-[-0.1em] flex lg:justify-start justify-center flex-wrap gap-x-2 lg:gap-x-3">
           <span
             className={`font-satoshi italic leading-none delay-200 fade-up ${
               isVis ? "open" : "closed"
@@ -49,7 +49,7 @@ export default function ApproachSection() {
           </div>
         </h3>
         <p
-          className={`lg:font-normal font-light lg:text-left text-center mt-4 md:mt-6 lg:pl-32 lg:mt-8 text-base md:text-lg lg:text-2xl delay-500 fade-up leading-relaxed ${
+          className={`lg:font-normal font-light text-center lg:text-left mt-4 md:mt-6 lg:pl-32 lg:mt-8 text-base md:text-lg lg:text-2xl delay-500 fade-up leading-relaxed ${
             isVis ? "open" : "closed"
           }`}
         >

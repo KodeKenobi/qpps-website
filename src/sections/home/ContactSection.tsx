@@ -23,7 +23,7 @@ export default function ContactSection() {
           >
             Contact
           </h2>
-          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24">
+          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-tight text-center lg:text-left lg:leading-24">
             <div className="flex flex-col lg:flex-row lg:items-start items-center justify-center lg:justify-start gap-0 lg:gap-x-2">
               <span
                 className={`leading-tight delay-200 fade-up ${

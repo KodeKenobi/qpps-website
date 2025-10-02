@@ -28,7 +28,7 @@ export default function LeadershipSection() {
           >
             LEADERSHIP
           </h2>
-          <h3 className="font-satoshi mt-2 lg:mt-8 mb-6 md:mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-[-0.1em] lg:text-right justify-center lg:justify-end text-center lg:leading-[-0.1em] flex flex-wrap gap-x-0 lg:gap-x-0">
+          <h3 className="font-satoshi mt-2 lg:mt-8 mb-6 md:mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-[-0.1em] text-center lg:text-right justify-center lg:justify-end lg:leading-[-0.1em] flex flex-wrap gap-x-0 lg:gap-x-0">
             <span
               className={`font-satoshi italic leading-none delay-200 fade-up ${
                 isVis ? "open" : "closed"

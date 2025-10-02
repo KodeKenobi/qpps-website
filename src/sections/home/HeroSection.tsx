@@ -28,7 +28,7 @@ export default function HeroSection() {
         />
 
         <div className="relative py-auto w-fit max-w-2xl mx-auto lg:ml-auto lg:mr-[12%] my-auto px-4 md:px-8">
-          <h1 className="text-4xl md:text-5xl lg:text-left text-center text-white lg:text-7xl lg:justify-start justify-center font-satoshi font-normal lg:pr-24 flex flex-wrap lg:gap-x-3 gap-x-2 leading-tight">
+          <h1 className="text-4xl md:text-5xl text-center text-white lg:text-left lg:text-7xl lg:justify-start justify-center font-satoshi font-normal lg:pr-24 flex flex-wrap lg:gap-x-3 gap-x-2 leading-tight">
             <span
               className={`font-satoshi italic leading-tight delay-200 fade-up ${
                 isVis ? "open" : "closed"
