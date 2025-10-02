@@ -23,27 +23,29 @@ export default function ContactSection() {
           >
             Contact
           </h2>
-          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24 flex justify-center lg:justify-start gap-x-2 lg:gap-x-3 flex-wrap">
-            <span
-              className={`lg:block inline leading-tight delay-200 fade-up ${
-                isVis ? "open" : "closed"
-              }`}
-            >
-              Let&apos;s
-            </span>
-            <span
-              className={`lg:block inline leading-tight delay-300 fade-up ${
-                isVis ? "open" : "closed"
-              }`}
-            >
-              transform
-            </span>
-            <div
-              className={`lg:pl-26 leading-tight font-satoshi italic lg:block inline lg:w-full delay-400 fade-up -mt-2 lg:-mt-4 ${
-                isVis ? "open" : "closed"
-              }`}
-            >
-              together
+          <h3 className="font-satoshi mt-2 lg:mt-8 mb-8 lg:mb-0 text-3xl md:text-4xl lg:text-7xl leading-tight lg:text-left text-center lg:leading-24">
+            <div className="flex flex-col lg:flex-row lg:items-start items-center justify-center lg:justify-start gap-0 lg:gap-x-2">
+              <span
+                className={`leading-tight delay-200 fade-up ${
+                  isVis ? "open" : "closed"
+                }`}
+              >
+                Let&apos;s
+              </span>
+              <span
+                className={`leading-tight delay-300 fade-up ${
+                  isVis ? "open" : "closed"
+                }`}
+              >
+                transform
+              </span>
+              <span
+                className={`font-satoshi italic leading-tight delay-400 fade-up ${
+                  isVis ? "open" : "closed"
+                }`}
+              >
+                together
+              </span>
             </div>
             <div className="absolute hidden lg:block bottom-0 left-0 h-14 w-px bg-slate/25" />
           </h3>

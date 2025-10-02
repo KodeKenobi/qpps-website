@@ -477,7 +477,9 @@ const ServiceCard = ({
               <h4 className="font-satoshi text-2xl md:text-3xl lg:text-4xl font-bold uppercase leading-tight">
                 {title}
               </h4>
-              <p className="text-base md:text-lg lg:text-xl font-light">{description}</p>
+              <p className="text-base md:text-lg lg:text-xl font-light">
+                {description}
+              </p>
               <div className="flex justify-center items-center gap-4 md:gap-6 mt-6 md:mt-8 text-white">
                 <div className="w-12 h-12 flex items-center justify-center">
                   {icon1}
