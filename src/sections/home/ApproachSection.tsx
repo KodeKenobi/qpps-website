@@ -497,7 +497,7 @@ const ServiceCard = ({
       </div>
       <button
         onMouseDown={() => setOpen(!open)}
-        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 bg-gold text-navy px-6 md:px-8 py-2 md:py-3 font-bold uppercase tracking-wider hover:bg-gold/80 transition-colors duration-300 z-30 rounded text-sm md:text-base"
+        className="absolute bottom-3 md:bottom-5 left-1/2 -translate-x-1/2 bg-gold text-navy px-6 md:px-8 py-2 md:py-3 font-bold uppercase tracking-wider hover:bg-gold/80 transition-colors duration-300 z-30 rounded text-sm md:text-base"
       >
         {open ? "Back" : "Read More"}
       </button>
